@@ -56,7 +56,7 @@ export default function App() {
           <AboutResume />
         </Section>
 
-        <Section id="tech" title="Tech">
+        <Section id="tech" title="">
           <TechTags />
         </Section>
 
@@ -68,7 +68,7 @@ export default function App() {
           <Timeline />
         </Section>
 
-        <Section id="contact" title="Contact">
+        <Section id="contact" title="">
           <Contact />
         </Section>
       </main>
