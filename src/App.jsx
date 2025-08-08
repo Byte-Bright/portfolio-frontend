@@ -52,20 +52,20 @@ export default function App() {
           <Hero />
         </Section>
 
-        <Section id="tech" title="Tech">
-          <TechTags />
-        </Section>
-
         <Section id="about" title="About + Resume">
           <AboutResume />
         </Section>
 
-        <Section id="timeline" title="Project timeline">
-          <Timeline />
+        <Section id="tech" title="Tech">
+          <TechTags />
         </Section>
 
         <Section id="skills" title="Skills matrix">
           <SkillsMatrix />
+        </Section>
+
+        <Section id="timeline" title="Project timeline">
+          <Timeline />
         </Section>
 
         <Section id="contact" title="Contact">
