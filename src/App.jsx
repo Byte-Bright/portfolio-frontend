@@ -47,13 +47,9 @@ export default function App() {
           </button>
         </div>
       </header>
-
       
-
-        <div className="min-h-screen">
-          <Aurora /> 
-        </div>
-
+        <Aurora /> 
+        
       <main className="mx-auto max-w-6xl px-4">
         <Section id="hero" title="">
           <Hero />
