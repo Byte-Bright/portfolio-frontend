@@ -27,6 +27,8 @@ export default function App() {
   }, [dark])
 
   return (
+    
+    <Aurora /> ,
     <div className="min-h-screen">
       <header className="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-zinc-900/70 border-b border-zinc-200 dark:border-zinc-800">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
@@ -48,8 +50,6 @@ export default function App() {
         </div>
       </header>
       
-        <Aurora /> 
-        
       <main className="mx-auto max-w-6xl px-4">
         <Section id="hero" title="">
           <Hero />
