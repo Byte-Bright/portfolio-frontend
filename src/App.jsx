@@ -6,7 +6,6 @@ import Timeline from './components/Timeline.jsx'
 import SkillsMatrix from './components/SkillsMatrix.jsx'
 import Contact from './components/Contact.jsx'
 import CodeTracker from './components/CodeTracker.jsx'
-import Aurora from './components/Aurora.jsx'
 
 function Section({ id, title, children }) {
   return (
@@ -29,7 +28,6 @@ export default function App() {
   return (
     
     <div className="min-h-screen">
-      <Aurora />
       <header className="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-zinc-900/70 border-b border-zinc-200 dark:border-zinc-800">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <nav className="flex gap-4 text-sm">
