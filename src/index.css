@@ -11,6 +11,17 @@ body {
     height: 0;
 }
 
+
+.defaultButton {
+    text-decoration: none;
+}
+.defaultButton:hover, .defaultButton:focus {
+    background-color: rgba(131, 120, 27, 0.27);
+    color: #111 !important;
+    transition: all 0.3s;
+}
+
+
 /* === Aurora Background (lightweight, CSS-only) === */
 
 :root {
@@ -54,7 +65,7 @@ body {
   position: absolute;
   width: 60vw;
   height: 60vw;
-  filter: blur(80px);
+  filter: blur(160px);
   mix-blend-mode: screen;
   opacity: 0.45; /* overall softness */
   will-change: transform;
@@ -63,16 +74,16 @@ body {
 /* Individual blobs with different gradients + timings */
 .aurora-blob.gold {
   background: radial-gradient(45% 60% at 50% 50%,
-    rgba(var(--aurora-gold), 0.35) 0%,
-    rgba(var(--aurora-gold), 0.08) 45%,
+    rgba(var(--aurora-gold), 0.65) 0%,
+    rgba(var(--aurora-gold), 0.16) 45%,
     rgba(var(--aurora-gold), 0.00) 70%);
   animation: driftA 18s ease-in-out infinite;
 }
 
 .aurora-blob.blue {
   background: radial-gradient(45% 60% at 50% 50%,
-    rgba(var(--aurora-blue), 0.33) 0%,
-    rgba(var(--aurora-blue), 0.08) 45%,
+    rgba(var(--aurora-blue), 0.63) 0%,
+    rgba(var(--aurora-blue), 0.16) 45%,
     rgba(var(--aurora-blue), 0.00) 70%);
   animation: driftB 22s ease-in-out infinite;
 }
@@ -81,10 +92,10 @@ body {
   /* a subtle mix of both for depth */
   background:
     radial-gradient(40% 55% at 55% 45%,
-      rgba(var(--aurora-gold), 0.22) 0%,
+      rgba(var(--aurora-gold), 0.44) 0%,
       rgba(var(--aurora-gold), 0.00) 65%),
     radial-gradient(45% 60% at 45% 55%,
-      rgba(var(--aurora-blue), 0.20) 0%,
+      rgba(var(--aurora-blue), 0.40) 0%,
       rgba(var(--aurora-blue), 0.00) 70%);
   animation: driftC 26s ease-in-out infinite;
 }

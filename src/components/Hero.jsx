@@ -21,16 +21,15 @@ export default function Hero() {
         </ul>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a href="/resume.pdf" className="rounded-lg border px-4 py-2">View résumé</a>
-          <a href="/resume.pdf" download className="rounded-lg border px-4 py-2">Download PDF</a>
+          <a href="/resume.pdf" className="rounded-lg border px-4 py-2 defaultButton">View Resume</a>
           <a
-            className="rounded-lg border px-4 py-2"
+            className="rounded-lg border px-4 py-2 defaultButton"
             href={`mailto:justinstede@yahoo.com?subject=${encodeURIComponent('Portfolio inquiry — Justin Caldwell')}`}
           >
             Email me
           </a>
           <a
-            className="rounded-lg border px-4 py-2"
+            className="rounded-lg border px-4 py-2 defaultButton"
             href="https://www.linkedin.com/in/justin-caldwell" target="_blank" rel="noreferrer"
           >
             LinkedIn

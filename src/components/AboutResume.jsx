@@ -22,11 +22,6 @@ export default function AboutResume() {
         <li>• Built <strong>Graphics Asset Library</strong> and <strong>Code Asset Library</strong> to cut install time & errors.</li>
       </ul>
 
-      {/* Actions */}
-      <div className="flex gap-3 pt-2">
-        <a href="public/resume.pdf" className="rounded-lg border px-4 py-2">View résumé</a>
-        <a href="public/resume.pdf" download className="rounded-lg border px-4 py-2">Download PDF</a>
-      </div>
     </div>
   )
 }
