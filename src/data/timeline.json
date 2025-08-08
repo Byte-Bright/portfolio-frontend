@@ -6,15 +6,15 @@
     "summary": "Flags 20+ ADA/QA issues pre-review; reduced QA cycles."
   },
   {
-    "title": "Graphics Asset Library",
-    "period": "2024",
-    "category": "Leadership",
-    "summary": "Auto-generates clean, accessible tables from sheets."
-  },
-  {
     "title": "Code Asset Library",
     "period": "2024",
     "category": "Website Dev",
+    "summary": "Faster installs, less errors."
+  },
+  {
+    "title": "Graphics Asset Library",
+    "period": "2024",
+    "category": "Graphic Design",
     "summary": "Faster client approvals, cleaner installs."
   }
 ]
