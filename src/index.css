@@ -7,6 +7,9 @@ html, body, #root { height: 100%; }
 body { @apply bg-white text-gray-900 dark:bg-zinc-900 dark:text-zinc-100; }
 a { @apply underline decoration-2 underline-offset-4; }
 
+body {
+    height: 0;
+}
 
 /* === Aurora Background (lightweight, CSS-only) === */
 

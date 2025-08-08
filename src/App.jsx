@@ -6,6 +6,7 @@ import Timeline from './components/Timeline.jsx'
 import SkillsMatrix from './components/SkillsMatrix.jsx'
 import Contact from './components/Contact.jsx'
 import CodeTracker from './components/CodeTracker.jsx'
+import Aurora from './components/Aurora.jsx'
 
 function Section({ id, title, children }) {
   return (
@@ -73,6 +74,9 @@ export default function App() {
           <Contact />
         </Section>
       </main>
+
+      
+      <Aurora />
 
       
       
