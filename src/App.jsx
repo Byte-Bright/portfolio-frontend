@@ -48,6 +48,12 @@ export default function App() {
         </div>
       </header>
 
+      
+
+        <div className="min-h-screen">
+          <Aurora /> 
+        </div>
+
       <main className="mx-auto max-w-6xl px-4">
         <Section id="hero" title="">
           <Hero />
@@ -72,10 +78,6 @@ export default function App() {
         <Section id="contact" title="">
           <Contact />
         </Section>
-
-        <div className="min-h-screen">
-          <Aurora /> 
-        </div>
       </main>
 
       
