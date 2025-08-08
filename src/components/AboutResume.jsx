@@ -18,10 +18,8 @@ export default function AboutResume() {
 
       {/* Highlights */}
       <ul className="space-y-2 text-zinc-700 dark:text-zinc-300">
-        <li>• Created a <strong>QA Helper</strong> that flags 20+ common ADA/QA issues before review.</li>
-        <li>• Built <strong>HTML Table</strong> and <strong>Rate Slider</strong> generators to cut install time & errors.</li>
-        <li>• Maintained a <strong>Code & Image Asset Library</strong> with 75+ reusable components/fixes.</li>
-        <li>• Led adoption of the <strong>“Stellar” wireframe</strong> to speed client approvals & installs.</li>
+        <li>• Led development of a <strong>QA Helper</strong> that flags 20+ common ADA/QA issues before review.</li>
+        <li>• Built <strong>Graphics Asset Library</strong> and <strong>Code Asset Library</strong> to cut install time & errors.</li>
       </ul>
 
       {/* Actions */}
