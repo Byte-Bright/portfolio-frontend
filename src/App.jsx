@@ -72,12 +72,14 @@ export default function App() {
         <Section id="contact" title="">
           <Contact />
         </Section>
+
+        <div className="min-h-screen">
+          <Aurora /> 
+        </div>
       </main>
 
       
-      <div className="min-h-screen">
-        <Aurora /> 
-      </div>
+      
 
       <CodeTracker />
     </div>
