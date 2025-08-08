@@ -6,10 +6,11 @@ import Timeline from './components/Timeline.jsx'
 import SkillsMatrix from './components/SkillsMatrix.jsx'
 import Contact from './components/Contact.jsx'
 import CodeTracker from './components/CodeTracker.jsx'
+import './aurora.css' // <-- NEW
 
 function Section({ id, title, children }) {
   return (
-    <section id={id} className="py-16 border-t first:border-0 dark:border-zinc-800">
+    <section id={id} className="py-16 border-t first:border-0 dark:border-zinc-800 relative z-10">
       {title && <h2 className="text-2xl font-semibold mb-4">{title}</h2>}
       {children}
     </section>
@@ -26,8 +27,11 @@ export default function App() {
   }, [dark])
 
   return (
-    <div className="min-h-screen">
-      <header className="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-zinc-900/70 border-b border-zinc-200 dark:border-zinc-800">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Aurora background */}
+      <div className="aurora-bg"></div>
+
+      <header className="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-zinc-900/70 border-b border-zinc-200 dark:border-zinc-800 relative">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <nav className="flex gap-4 text-sm">
             <a href="#hero">Hello</a>
@@ -47,8 +51,8 @@ export default function App() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4">
-        <Section id="hero" title="">
+      <main className="mx-auto max-w-6xl px-4 relative z-10">
+        <Section id="hero">
           <Hero />
         </Section>
 
@@ -56,7 +60,7 @@ export default function App() {
           <AboutResume />
         </Section>
 
-        <Section id="tech" title="">
+        <Section id="tech">
           <TechTags />
         </Section>
 
@@ -68,7 +72,7 @@ export default function App() {
           <Timeline />
         </Section>
 
-        <Section id="contact" title="">
+        <Section id="contact">
           <Contact />
         </Section>
       </main>
