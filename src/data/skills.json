@@ -1,7 +1,48 @@
 [
-  { "name": "HTML/CSS", "level": "Expert" },
-  { "name": "JavaScript", "level": "Advanced" },
-  { "name": "React", "level": "Advanced" },
-  { "name": "Accessibility (WCAG)", "level": "Advanced" },
-  { "name": "JSON / APIs", "level": "Advanced" }
+  {
+    "category": "Languages & Frameworks",
+    "items": [
+      { "name": "HTML5", "tooltip": "Semantic, accessible markup for the modern web" },
+      { "name": "CSS3", "tooltip": "Responsive, mobile-first styling" },
+      { "name": "JavaScript (ES6+)", "tooltip": "Dynamic, interactive front-end logic" },
+      { "name": "React", "tooltip": "Component-based UI library" },
+      { "name": "jQuery", "tooltip": "DOM manipulation and event handling" }
+    ]
+  },
+  {
+    "category": "CMS Platforms",
+    "items": [
+      { "name": "Squarespace 7.0 + Developer Mode", "tooltip": "Custom backend and GitHub deployments" },
+      { "name": "Webflow", "tooltip": "Visual CMS with custom code integration" },
+      { "name": "Duda", "tooltip": "White-label website builder for client sites" },
+      { "name": "Shopify", "tooltip": "E-commerce platform and theme customization" },
+      { "name": "Wix", "tooltip": "Quick-deploy website builder" }
+    ]
+  },
+  {
+    "category": "Design & UX Tools",
+    "items": [
+      { "name": "Adobe Photoshop", "tooltip": "Image editing and optimization" },
+      { "name": "Adobe Illustrator", "tooltip": "Vector graphics and branding" },
+      { "name": "Figma", "tooltip": "Collaborative UI/UX design" },
+      { "name": "Adobe XD", "tooltip": "Wireframes and prototypes" }
+    ]
+  },
+  {
+    "category": "Accessibility & QA",
+    "items": [
+      { "name": "WCAG 2.2 Compliance", "tooltip": "Accessible web standards" },
+      { "name": "Section 508", "tooltip": "Federal accessibility compliance" },
+      { "name": "QA Helper", "tooltip": "Custom QA checker tool" }
+    ]
+  },
+  {
+    "category": "Version Control & DevOps",
+    "items": [
+      { "name": "Git", "tooltip": "Version control for code projects" },
+      { "name": "GitHub", "tooltip": "Cloud repository hosting" },
+      { "name": "Netlify", "tooltip": "Frontend hosting and CI/CD" },
+      { "name": "Render", "tooltip": "Backend/API hosting" }
+    ]
+  }
 ]
