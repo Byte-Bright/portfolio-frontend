@@ -31,10 +31,10 @@ export default function SkillsMatrix() {
       {/* Grid */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
         {filtered.map((s, i) => (
-          <article key={`${s.name}-${i}`} className="border rounded-lg p-3">
+          <article key={`${s.name}-${i}`} className="border rounded-lg p-3 defaultTag">
             <div className="flex items-center justify-between gap-2">
               <h3 className="font-medium">{s.name}</h3>
-              <span className="text-xs px-2 py-0.5 rounded-full border">{s.level}</span>
+              <span className="text-xs px-2 py-0.5 rounded-full border levelTag">{s.level}</span>
             </div>
             <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">{s.category || 'Other'}</div>
             {s.evidence && (

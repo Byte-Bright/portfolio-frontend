@@ -14,11 +14,33 @@ body {
 
 .defaultButton {
     text-decoration: none;
+    background-image: linear-gradient(to right, transparent 50%, rgba(131, 120, 27, 0.66) 50%);
+    background-size: 250% 100%;
+    background-position: left center;
 }
 .defaultButton:hover, .defaultButton:focus {
-    background-color: rgba(131, 120, 27, 0.27);
+    /* background-color: rgba(131, 120, 27, 0.66); */
+    
+    background-position: right center;
     color: #111 !important;
     transition: all 0.3s;
+    border-color: rgba(131, 120, 27, 1);
+}
+
+.defaultTag {
+    transition: all 0.3s;
+}
+.defaultTag:hover, .defaultTag:focus {
+    border-color: rgba(131, 120, 27, 1);
+}
+
+.defaultTag:hover .levelTag, .defaultTag:focus .levelTag {
+    background-color: rgba(131, 120, 27, 1);
+}
+
+.defaultTooltip {
+    padding: 10px;  
+    display: inline-block;
 }
 
 
@@ -63,27 +85,28 @@ body {
 /* Big soft blobs with blend for glow */
 .aurora-blob {
   position: absolute;
-  width: 60vw;
-  height: 60vw;
+  width: 90vw;
+  height: 160%;
   filter: blur(160px);
   mix-blend-mode: screen;
   opacity: 0.45; /* overall softness */
   will-change: transform;
+  filter: blur(50px);
 }
 
 /* Individual blobs with different gradients + timings */
 .aurora-blob.gold {
   background: radial-gradient(45% 60% at 50% 50%,
-    rgba(var(--aurora-gold), 0.65) 0%,
-    rgba(var(--aurora-gold), 0.16) 45%,
+    rgba(var(--aurora-gold), 0.33) 0%,
+    rgba(var(--aurora-gold), 0.1) 45%,
     rgba(var(--aurora-gold), 0.00) 70%);
   animation: driftA 18s ease-in-out infinite;
 }
 
 .aurora-blob.blue {
   background: radial-gradient(45% 60% at 50% 50%,
-    rgba(var(--aurora-blue), 0.63) 0%,
-    rgba(var(--aurora-blue), 0.16) 45%,
+    rgba(var(--aurora-blue), 0.33) 0%,
+    rgba(var(--aurora-blue), 0.1) 45%,
     rgba(var(--aurora-blue), 0.00) 70%);
   animation: driftB 22s ease-in-out infinite;
 }
@@ -92,10 +115,10 @@ body {
   /* a subtle mix of both for depth */
   background:
     radial-gradient(40% 55% at 55% 45%,
-      rgba(var(--aurora-gold), 0.44) 0%,
+      rgba(var(--aurora-gold), 0.33) 0%,
       rgba(var(--aurora-gold), 0.00) 65%),
     radial-gradient(45% 60% at 45% 55%,
-      rgba(var(--aurora-blue), 0.40) 0%,
+      rgba(var(--aurora-blue), 0.33) 0%,
       rgba(var(--aurora-blue), 0.00) 70%);
   animation: driftC 26s ease-in-out infinite;
 }

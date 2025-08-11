@@ -54,7 +54,7 @@ export default function App() {
           <Hero />
         </Section>
 
-        <Section id="about" title="About + Resume">
+        <Section id="about" title="Proven Results">
           <AboutResume />
         </Section>
 

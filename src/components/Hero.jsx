@@ -11,13 +11,13 @@ export default function Hero() {
 
         <p className="text-lg text-zinc-700 dark:text-zinc-300">
           I build clean, accessible, high‑performance web apps. 10+ years crafting
-          responsive UIs, WCAG‑compliant patterns, and developer‑friendly systems.
+          responsive UIs, WCAG best practices, and developer‑friendly systems.
         </p>
 
         <ul className="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
-          <li>• Shipped <strong>150+ responsive sites</strong> for financial institutions</li>
-          <li>• Led “QA Helper” (flags 20+ ADA/QA issues before review)</li>
-          <li>• Built library of assets to cut install time & errors</li>
+          <li>• I build interfaces that work <strong>for everyone, everywhere</strong></li>
+          <li>• I have optimized processes to deliver <strong>more in less time</strong></li>
+          <li>• I bring <strong>calm, clarity, and focus</strong> to fast-paced projects</li>
         </ul>
 
         <div className="flex flex-wrap gap-3 pt-2">

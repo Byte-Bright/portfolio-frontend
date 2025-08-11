@@ -17,7 +17,7 @@ export default function TechTags() {
                 <span
                   className="px-3 py-1 rounded-lg border border-zinc-300 dark:border-zinc-600
                              bg-zinc-50 dark:bg-zinc-800 text-sm text-zinc-700 dark:text-zinc-200
-                             hover:shadow-md hover:scale-105 transform transition"
+                             hover:shadow-md hover:scale-105 transform transition defaultTag"
                 >
                   {item.name}
                 </span>
@@ -28,7 +28,7 @@ export default function TechTags() {
                     className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-xs
                                bg-zinc-900 text-white text-xs rounded py-1 px-2 opacity-0
                                group-hover:opacity-100 pointer-events-none
-                               transition-opacity duration-200"
+                               transition-opacity duration-200 defaultTooltip"
                   >
                     {item.tooltip}
                   </span>

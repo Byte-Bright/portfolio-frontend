@@ -1,13 +1,19 @@
 [
-  { "name": "HTML/CSS", "category": "Frontend", "level": "Expert", "evidence": "https://jcaldwell.netlify.app/#hero" },
-  { "name": "JavaScript (ES6+)", "category": "Frontend", "level": "Advanced" },
-  { "name": "React", "category": "Frontend", "level": "Advanced" },
-  { "name": "Accessibility (WCAG/508)", "category": "Accessibility", "level": "Advanced", "evidence": "https://jcaldwell.netlify.app/#timeline" },
-  { "name": "JSON / APIs", "category": "Backend", "level": "Advanced" },
-  { "name": "Git & GitHub", "category": "DevOps", "level": "Advanced", "evidence": "https://github.com/Byte-Bright/portfolio-frontend" },
-  { "name": "Netlify (CI/CD)", "category": "DevOps", "level": "Advanced", "evidence": "https://jcaldwell.netlify.app/" },
+  { "name": "HTML", "category": "Frontend", "level": "Expert", "evidence": "#" },
+  { "name": "CSS", "category": "Frontend", "level": "Expert", "evidence": "#" },
+
+  { "name": "JavaScript", "category": "Frontend", "level": "Advanced" },
+  { "name": "Accessibility (WCAG/508)", "category": "Accessibility", "level": "Advanced", "evidence": "#" },
+  { "name": "JSON", "category": "Backend", "level": "Advanced" },
+  { "name": "Git & GitHub", "category": "DevOps", "level": "Advanced", "evidence": "#" },
+  { "name": "Wordpress / Drupal / Shopify / etc", "category": "CMS", "level": "Advanced" },
+
+  { "name": "React", "category": "Frontend", "level": "Intermediate" },
+  { "name": "APIs", "category": "Backend", "level": "Intermediate" },
+  { "name": "Netlify (CI/CD)", "category": "DevOps", "level": "Intermediate", "evidence": "#" },
   { "name": "Render (Python API)", "category": "Backend", "level": "Intermediate" },
-  { "name": "Squarespace / Duda / Shopify / Wix", "category": "CMS", "level": "Advanced" },
-  { "name": "QA Helper (Directed Dev)", "category": "Leadership", "level": "Advanced", "evidence": "https://jcaldwell.netlify.app/#timeline" },
-  { "name": "Rate/Table Generators", "category": "Leadership", "level": "Advanced", "evidence": "https://jcaldwell.netlify.app/#timeline" }
+
+  { "name": "AI Prompt Engineering", "category": "AI/ML", "level": "Beginner" },
+  { "name": "AI Agents", "category": "AI/ML", "level": "Beginner" },
+  { "name": "Machine Learning", "category": "AI/ML", "level": "Beginner" }
 ]

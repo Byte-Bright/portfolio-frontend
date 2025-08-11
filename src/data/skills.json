@@ -6,17 +6,20 @@
       { "name": "CSS3", "tooltip": "Responsive, mobile-first styling" },
       { "name": "JavaScript (ES6+)", "tooltip": "Dynamic, interactive front-end logic" },
       { "name": "React", "tooltip": "Component-based UI library" },
-      { "name": "jQuery", "tooltip": "DOM manipulation and event handling" }
+      { "name": "Python", "tooltip": "Backend development, APIs, and automation scripts" },
+      { "name": "JSON", "tooltip": "Data format and reusable templates for configuration and content" }
     ]
   },
   {
     "category": "CMS Platforms",
     "items": [
-      { "name": "Squarespace 7.0 + Developer Mode", "tooltip": "Custom backend and GitHub deployments" },
-      { "name": "Webflow", "tooltip": "Visual CMS with custom code integration" },
-      { "name": "Duda", "tooltip": "White-label website builder for client sites" },
+      { "name": "WordPress", "tooltip": "Custom themes, plugins, and site optimization" },
       { "name": "Shopify", "tooltip": "E-commerce platform and theme customization" },
-      { "name": "Wix", "tooltip": "Quick-deploy website builder" }
+      { "name": "Drupal", "tooltip": "Enterprise-grade, secure content management" },
+      { "name": "Webflow", "tooltip": "Visual CMS with custom code integration" },
+      { "name": "Squarespace", "tooltip": "Custom backend and GitHub deployments" },
+      { "name": "Django", "tooltip": "Python Django-based CMS with flexible templates and plugins" }
+
     ]
   },
   {
