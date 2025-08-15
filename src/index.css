@@ -11,6 +11,13 @@ body {
     height: 0;
 }
 
+main, main .text-lg, main p, main ul, main ol, main li, main span, main a, header nav a {
+  font-size: 20px;
+}
+main .text-sm {
+  font-size: 16px;
+}
+
 
 .defaultButton {
     text-decoration: none;
@@ -30,17 +37,20 @@ body {
 .defaultTag {
     transition: all 0.3s;
 }
-.defaultTag:hover, .defaultTag:focus {
+
+.defaultTag:hover, .defaultTag:focus, .defaultTag:hover .levelTag, .defaultTag:focus .levelTag, .projectHighlights:hover, .projectHighlights:focus, .projectHighlights:hover .defaultTag, .projectHighlights:focus .defaultTag {
     border-color: rgba(131, 120, 27, 1);
 }
 
-.defaultTag:hover .levelTag, .defaultTag:focus .levelTag {
-    background-color: rgba(131, 120, 27, 1);
+.defaultTooltip {
+    padding: 10px !important;  
+    display: inline-block !important;
 }
 
-.defaultTooltip {
-    padding: 10px;  
-    display: inline-block;
+.headshot {
+    background-image: url("assets/jcaldwell-headshot.jpg"); 
+    background-size: cover; 
+    background-position: center center;
 }
 
 
@@ -85,7 +95,7 @@ body {
 /* Big soft blobs with blend for glow */
 .aurora-blob {
   position: absolute;
-  width: 90vw;
+  width: 60vw;
   height: 160%;
   filter: blur(160px);
   mix-blend-mode: screen;

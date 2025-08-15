@@ -31,7 +31,8 @@ export default function Timeline() {
                         ${active === cat
                           ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900'
                           : 'bg-white dark:bg-zinc-900'
-                        }`}
+                        }
+                        defaultButton`}
           >
             {cat}
           </button>
@@ -41,10 +42,10 @@ export default function Timeline() {
       {/* Cards */}
       <ul className="grid gap-3">
         {items.map((t, i) => (
-          <li key={`${t.title}-${i}`} className="border rounded-lg p-4">
+          <li key={`${t.title}-${i}`} className="border rounded-lg p-4 projectHighlights">
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-semibold">{t.title}</h3>
-              <span className="text-xs px-2 py-1 rounded-full border">
+              <span className="text-xs px-2 py-1 rounded-full border defaultTag">
                 {t.category || 'Other'}
               </span>
             </div>

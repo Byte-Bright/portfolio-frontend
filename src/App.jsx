@@ -33,11 +33,11 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <nav className="flex gap-4 text-sm">
             <a href="#hero">Hello</a>
-            <a href="#about">About</a>
-            <a href="#tech">Tech</a>
-            <a href="#skills">Skills</a>
-            <a href="#timeline">Timeline</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">Why Me?</a>
+            <a href="#tech">Tech Stack</a>
+            <a href="#skills">Skills Matrix</a>
+            <a href="#timeline">Highlights</a>
+            <a href="#contact">Get in Touch</a>
           </nav>
           <button
             onClick={() => setDark(d => !d)}
@@ -66,7 +66,7 @@ export default function App() {
           <SkillsMatrix />
         </Section>
 
-        <Section id="timeline" title="Project timeline">
+        <Section id="timeline" title="Highlights">
           <Timeline />
         </Section>
 

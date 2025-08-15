@@ -2,22 +2,23 @@
   {
     "category": "Languages & Frameworks",
     "items": [
+      
+      { "name": "JavaScript", "tooltip": "Dynamic, interactive front-end logic" },
+      { "name": "React", "tooltip": "Component-based UI library" },
       { "name": "HTML5", "tooltip": "Semantic, accessible markup for the modern web" },
       { "name": "CSS3", "tooltip": "Responsive, mobile-first styling" },
-      { "name": "JavaScript (ES6+)", "tooltip": "Dynamic, interactive front-end logic" },
-      { "name": "React", "tooltip": "Component-based UI library" },
-      { "name": "Python", "tooltip": "Backend development, APIs, and automation scripts" },
-      { "name": "JSON", "tooltip": "Data format and reusable templates for configuration and content" }
+      { "name": "JSON", "tooltip": "Data format and reusable templates for configuration and content" },
+      { "name": "Python", "tooltip": "Backend development, APIs, and automation scripts" }
     ]
   },
   {
     "category": "CMS Platforms",
     "items": [
       { "name": "WordPress", "tooltip": "Custom themes, plugins, and site optimization" },
-      { "name": "Shopify", "tooltip": "E-commerce platform and theme customization" },
-      { "name": "Drupal", "tooltip": "Enterprise-grade, secure content management" },
       { "name": "Webflow", "tooltip": "Visual CMS with custom code integration" },
+      { "name": "Shopify", "tooltip": "E-commerce platform and theme customization" },
       { "name": "Squarespace", "tooltip": "Custom backend and GitHub deployments" },
+      { "name": "Drupal", "tooltip": "Enterprise-grade, secure content management" },
       { "name": "Django", "tooltip": "Python Django-based CMS with flexible templates and plugins" }
 
     ]
@@ -25,9 +26,10 @@
   {
     "category": "Design & UX Tools",
     "items": [
+      
+      { "name": "Figma", "tooltip": "Collaborative UI/UX design" },
       { "name": "Adobe Photoshop", "tooltip": "Image editing and optimization" },
       { "name": "Adobe Illustrator", "tooltip": "Vector graphics and branding" },
-      { "name": "Figma", "tooltip": "Collaborative UI/UX design" },
       { "name": "Adobe XD", "tooltip": "Wireframes and prototypes" }
     ]
   },
@@ -35,8 +37,7 @@
     "category": "Accessibility & QA",
     "items": [
       { "name": "WCAG 2.2 Compliance", "tooltip": "Accessible web standards" },
-      { "name": "Section 508", "tooltip": "Federal accessibility compliance" },
-      { "name": "QA Helper", "tooltip": "Custom QA checker tool" }
+      { "name": "Section 508", "tooltip": "Federal accessibility compliance" }
     ]
   },
   {

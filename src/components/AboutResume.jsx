@@ -19,7 +19,7 @@ export default function AboutResume() {
       <ul className="space-y-2 text-zinc-700 dark:text-zinc-300">
         <li>• Led development of a <strong>QA Helper</strong> that flags 20+ common ADA/QA issues before review.</li>
         <li>• Built <strong>Graphics Asset Library</strong> and <strong>Code Asset Library</strong> to cut install time & errors.</li>
-        <li>• Collaborated across teams to <strong>refine processes, align goals, and streamline</strong> project flow.</li>
+        <li>• Collaborated across teams to <strong>align goals, refine processes, and streamline</strong> project flow.</li>
       </ul>
 
     </div>

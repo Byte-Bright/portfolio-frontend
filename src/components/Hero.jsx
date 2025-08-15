@@ -44,8 +44,8 @@ export default function Hero() {
 
         {/* Simple fallback badge */}
         <div className="mx-auto w-48 h-48 rounded-2xl grid place-items-center border shadow-sm
-                        bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-800 dark:to-zinc-900">
-          <span className="text-3xl font-semibold">JC</span>
+                        bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-800 dark:to-zinc-900 headshot">
+          
         </div>
       </div>
     </div>
