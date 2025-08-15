@@ -11,8 +11,11 @@ body {
     height: 0;
 }
 
-main, main .text-lg, main p, main ul, main ol, main li, main span, main a, header nav a {
+main, main .text-lg, main p, main ul, main ol, main li, main span, main a {
   font-size: 20px;
+}
+header nav a {
+  font-size: 18px;
 }
 main .text-sm {
   font-size: 16px;
