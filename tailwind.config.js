@@ -6,5 +6,11 @@ export default {
     extend: {},
   },
   plugins: [],
+  safelist: [
+  {
+    pattern: /(text|bg|border)-(stone|rose|teal|amber)-(100|300|400|500|600|900)/,
+  },
+],
+
 }
 
