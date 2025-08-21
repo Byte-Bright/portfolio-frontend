@@ -31,12 +31,12 @@ export default function SkillsMatrix() {
       {/* Grid */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
         {filtered.map((s, i) => (
-          <article key={`${s.name}-${i}`} className="border rounded-lg p-3 defaultTag">
+          <article key={`${s.name}-${i}`} className="border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:shadow-md rounded-lg p-3 transition group">
             <div className="flex items-center justify-between gap-2">
-              <h3 className="font-medium">{s.name}</h3>
-              <span className="text-xs px-2 py-0.5 rounded-full border levelTag">{s.level}</span>
+              <h3 className="font-medium text-stone-500 dark:text-stone-500 group-hover:text-lime-700">{s.name}</h3>
+              <span className="text-xs px-2 py-0.5 rounded-full border border-stone-400 group-hover:bg-lime-600 group-hover:text-white transition">{s.level}</span>
             </div>
-            <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">{s.category || 'Other'}</div>
+            <div className="text-xs mt-1">{s.category || 'Other'}</div>
             {s.evidence && (
               <a
                 href={s.evidence}
@@ -53,7 +53,7 @@ export default function SkillsMatrix() {
 
       {/* Empty state */}
       {filtered.length === 0 && (
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm">
           No skills match the selected filters.
         </p>
       )}
@@ -64,11 +64,11 @@ export default function SkillsMatrix() {
 function Filter({ label, options, value, onChange }) {
   return (
     <label className="text-sm flex items-center gap-2">
-      <span className="text-zinc-600 dark:text-zinc-300">{label}</span>
+      <span className="">{label}</span>
       <select
         value={value}
         onChange={e => onChange(e.target.value)}
-        className="rounded-md border bg-white dark:bg-zinc-900 px-2 py-1"
+        className="rounded-md border bg-white dark:bg-stone-700/70 px-2 py-1 text-stone-600 dark:text-stone-300"
       >
         {options.map(o => (
           <option key={o} value={o}>{o}</option>

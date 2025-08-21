@@ -2,14 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
 :root { color-scheme: light dark; }
 html, body, #root { height: 100%; }
-body { @apply bg-white text-gray-900 dark:bg-zinc-900 dark:text-zinc-100; }
+body { @apply bg-white text-gray-900 dark:bg-stone-900 dark:text-stone-100; }
 a { @apply underline decoration-2 underline-offset-4; }
+*/
 
 body {
-    height: 0;
+  height: 0;
 }
+
+#root {
+  /* background-color: black; */
+}
+
+select>option:hover {background-color: yellow;}
 
 main, main .text-lg, main p, main ul, main ol, main li, main span, main a {
   font-size: 20px;
@@ -24,7 +32,7 @@ main .text-sm {
 
 .defaultButton {
     text-decoration: none;
-    background-image: linear-gradient(to right, transparent 50%, rgba(131, 120, 27, 0.66) 50%);
+    background-image: linear-gradient(to right, transparent 50%,  rgba(101, 163, 13, .7) 50%);
     background-size: 250% 100%;
     background-position: left center;
 }
@@ -32,7 +40,7 @@ main .text-sm {
     /* background-color: rgba(131, 120, 27, 0.66); */
     
     background-position: right center;
-    color: #111 !important;
+    color: #fff !important;
     transition: all 0.3s;
     border-color: rgba(131, 120, 27, 1);
 }
@@ -41,9 +49,9 @@ main .text-sm {
     transition: all 0.3s;
 }
 
-.defaultTag:hover, .defaultTag:focus, .defaultTag:hover .levelTag, .defaultTag:focus .levelTag, .projectHighlights:hover, .projectHighlights:focus, .projectHighlights:hover .defaultTag, .projectHighlights:focus .defaultTag {
-    border-color: rgba(131, 120, 27, 1);
-}
+/* .defaultTag:hover, .defaultTag:focus, .defaultTag:hover .levelTag, .defaultTag:focus .levelTag, .projectHighlights:hover, .projectHighlights:focus, .projectHighlights:hover .defaultTag, .projectHighlights:focus .defaultTag {
+    border-color: rgba(101, 163, 13, .7);
+} */
 
 .defaultTooltip {
     padding: 10px !important;  
@@ -87,13 +95,17 @@ main .text-sm {
   position: fixed;
   inset: 0;
   z-index: -10;
-  background: #181A1B; /* base */
+  /* background-color: lightseagreen; */
   pointer-events: none;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
 }
+/* .dark .aurora-wrap {
+  background-color: #222;
+} */
+
 
 /* Big soft blobs with blend for glow */
 .aurora-blob {

@@ -29,8 +29,8 @@ export default function Timeline() {
             className={`px-3 py-1 rounded-lg border text-sm
                         focus:outline-none focus:ring-2 focus:ring-offset-2
                         ${active === cat
-                          ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900'
-                          : 'bg-white dark:bg-zinc-900'
+                          ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900'
+                          : 'bg-white dark:bg-stone-900'
                         }
                         defaultButton`}
           >
@@ -45,15 +45,15 @@ export default function Timeline() {
           <li key={`${t.title}-${i}`} className="border rounded-lg p-4 projectHighlights">
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-semibold">{t.title}</h3>
-              <span className="text-xs px-2 py-1 rounded-full border defaultTag">
+              <span className="text-xs px-2 py-1 rounded-full border">
                 {t.category || 'Other'}
               </span>
             </div>
             {t.period && (
-              <div className="text-sm text-zinc-600 dark:text-zinc-300 mt-1">{t.period}</div>
+              <div className="text-sm text-stone-600 dark:text-stone-300 mt-1">{t.period}</div>
             )}
             {t.summary && (
-              <p className="text-sm mt-2 text-zinc-700 dark:text-zinc-200">{t.summary}</p>
+              <p className="text-sm mt-2 text-stone-700 dark:text-stone-200">{t.summary}</p>
             )}
           </li>
         ))}
