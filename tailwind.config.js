@@ -7,10 +7,19 @@ export default {
   },
   plugins: [],
   safelist: [
-  {
-    pattern: /(text|bg|border)-(stone|rose|teal|amber)-(100|300|400|500|600|900)/,
-  },
-],
-
+    {
+      // Base text/bg/border colors
+      pattern: /(text|bg|border)-(stone|rose|teal|amber|lime)-(100|200|300|400|500|600|700|800|900)/,
+      variants: ['hover', 'focus', 'dark', 'group-hover'],
+    },
+    {
+      // Arbitrary selectors like dark:[&_h1]:text-rose-300
+      pattern: /dark:\[&_h(1|2)\]:text-(stone|rose|teal|amber|lime)-(100|200|300|400|500|600|700|800|900)/,
+    },
+    {
+      // Arbitrary selectors for hover/focus/group-hover with h1/h2
+      pattern: /(hover|focus|group-hover):\[&_h(1|2)\]:text-(stone|rose|teal|amber|lime)-(100|200|300|400|500|600|700|800|900)/,
+    }
+  ],
 }
 
