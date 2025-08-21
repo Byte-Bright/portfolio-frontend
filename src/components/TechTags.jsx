@@ -17,7 +17,7 @@ export default function TechTags() {
                 <span
                   className="px-3 py-1 rounded-lg border border-stone-300 dark:border-stone-600
                              bg-stone-50 dark:bg-stone-800 text-sm text-stone-700 dark:text-stone-200
-                             hover:shadow-md hover:scale-105 transform transition defaultTag"
+                             hover:shadow-md hover:scale-105 transform transition"
                 >
                   {item.name}
                 </span>
