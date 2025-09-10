@@ -9,15 +9,22 @@ body { @apply bg-white text-gray-900 dark:bg-stone-900 dark:text-stone-100; }
 a { @apply underline decoration-2 underline-offset-4; }
 */
 
-body {
+/* body {
   height: 0;
-}
+} */
 
 #root {
   /* background-color: black; */
 }
 
-select>option:hover {background-color: yellow;}
+/* select>option:hover {background-color: yellow;} */
+
+
+
+main {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
 
 main, main .text-lg, main p, main ul, main ol, main li, main span, main a {
   font-size: 20px;
@@ -36,14 +43,32 @@ main .text-sm {
     background-size: 250% 100%;
     background-position: left center;
 }
-.defaultButton:hover, .defaultButton:focus {
-    /* background-color: rgba(131, 120, 27, 0.66); */
-    
+.defaultButton:hover, .defaultButton:focus {    
     background-position: right center;
     color: #fff !important;
     transition: all 0.3s;
     border-color: rgba(131, 120, 27, 1);
 }
+.dark .defaultButton {
+    background-image: linear-gradient(to right, transparent 50%,  rgba(101, 163, 13, .7) 50%);
+}
+.dark .defaultButton:hover, .dark .defaultButton:focus {    
+    background-position: right center;
+    color: #fff !important;
+    border-color: rgba(131, 120, 27, 1);
+}
+
+.neon .defaultButton {
+    border-color: rgba(226, 194, 59, 1);
+    background-image: linear-gradient(to right, rgba(226, 194, 59, 1) 50%,  rgba(201, 46, 62, 1) 50%);
+}
+.neon .defaultButton:hover, .neon .defaultButton:focus {    
+    background-position: right center;
+    color: #fff !important;
+    border-color: rgba(131, 120, 27, 1);
+}
+
+
 
 .defaultTag {
     transition: all 0.3s;

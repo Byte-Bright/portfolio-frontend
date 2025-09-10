@@ -5,7 +5,11 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("neon", ".neon &"); 
+    }
+  ],
   safelist: [
     {
       // Base text/bg/border colors
@@ -22,4 +26,5 @@ export default {
     }
   ],
 }
+
 

@@ -1,19 +1,18 @@
 [
+  { "name": "Accessibility (WCAG/508)", "category": "Accessibility", "level": "Expert", "evidence": "#" },
+  { "name": "Wordpress / Drupal / Shopify / etc", "category": "CMS", "level": "Expert" },
   { "name": "HTML", "category": "Frontend", "level": "Expert", "evidence": "#" },
   { "name": "CSS", "category": "Frontend", "level": "Expert", "evidence": "#" },
+  { "name": "JavaScript", "category": "Frontend", "level": "Expert" },
 
-  { "name": "JavaScript", "category": "Frontend", "level": "Advanced" },
-  { "name": "Accessibility (WCAG/508)", "category": "Accessibility", "level": "Advanced", "evidence": "#" },
+  { "name": "React", "category": "Frontend", "level": "Advanced" },
   { "name": "JSON", "category": "Backend", "level": "Advanced" },
+  { "name": "APIs", "category": "Backend", "level": "Advanced" },
+  { "name": "Render (Python API)", "category": "Backend", "level": "Advanced" },
   { "name": "Git & GitHub", "category": "DevOps", "level": "Advanced", "evidence": "#" },
-  { "name": "Wordpress / Drupal / Shopify / etc", "category": "CMS", "level": "Advanced" },
+  { "name": "Netlify (CI/CD)", "category": "DevOps", "level": "Advanced", "evidence": "#" },
 
-  { "name": "React", "category": "Frontend", "level": "Intermediate" },
-  { "name": "APIs", "category": "Backend", "level": "Intermediate" },
-  { "name": "Netlify (CI/CD)", "category": "DevOps", "level": "Intermediate", "evidence": "#" },
-  { "name": "Render (Python API)", "category": "Backend", "level": "Intermediate" },
-
-  { "name": "AI Prompt Engineering", "category": "AI/ML", "level": "Beginner" },
+  { "name": "Machine Learning", "category": "AI/ML", "level": "Beginner" },
   { "name": "AI Agents", "category": "AI/ML", "level": "Beginner" },
-  { "name": "Machine Learning", "category": "AI/ML", "level": "Beginner" }
+  { "name": "AI Prompt Engineering", "category": "AI/ML", "level": "Beginner" }
 ]

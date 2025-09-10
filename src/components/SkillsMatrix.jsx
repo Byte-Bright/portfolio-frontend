@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import data from '../data/skills-matrix.json'
 
-const LEVELS = ['All', 'Beginner', 'Intermediate', 'Advanced', 'Expert']
+const LEVELS = ['All', 'Beginner', 'Advanced', 'Expert']
 
 export default function SkillsMatrix() {
   // Build category list from data

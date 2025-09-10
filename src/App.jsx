@@ -7,11 +7,30 @@ import SkillsMatrix from './components/SkillsMatrix.jsx'
 import Contact from './components/Contact.jsx'
 import CodeTracker from './components/CodeTracker.jsx'
 import Aurora from './components/Aurora.jsx'
+import ThemeToggle from "./components/ThemeToggle";
 
 function Section({ id, title, children }) {
   return (
-    <section id={id} className="py-16 border-t first:border-0 dark:border-zinc-800">
-      {title && <h2 className="text-2xl font-semibold mb-4">{title}</h2>}
+    <section 
+      id={id} 
+      className="
+        py-16 border-t first:border-0 
+        dark:border-stone-800 
+        light:border-stone-300 
+        neon:border-rose-200
+      "
+    >
+      {title && (
+        <h2 className="
+          text-2xl font-semibold mb-4 
+          [&]:text-stone-800 
+          dark:[&]:text-stone-200 
+          light:[&]:text-stone-950 
+          neon:[&]:text-zinc-950
+        ">
+          {title}
+        </h2>
+      )}
       {children}
     </section>
   )
@@ -27,36 +46,65 @@ export default function App() {
   }, [dark])
 
   return (
-    
-    <div className="min-h-screen">
-      <header className="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-zinc-900/70 border-b border-zinc-200 dark:border-zinc-800 text-stone-800 dark:text-stone-200 ">
+    <div className="min-h-screen transition-colors duration-700">
+      <header className="
+        sticky top-0 z-50 backdrop-blur 
+        bg-white/70 text-stone-800 border-b border-stone-200
+        dark:bg-stone-900/70 dark:text-stone-200 dark:border-stone-800
+        light:bg-stone-100/80 light:text-stone-950 light:border-stone-300
+        neon:bg-pink-700/80 neon:text-rose-100 neon:border-rose-200
+      ">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <nav className="flex gap-4 text-sm">
-            <a href="#hero" className='hover:text-lime-700 dark:hover:text-lime-400'>Hello</a>
-            <a href="#about" className='hover:text-lime-700 dark:hover:text-lime-400'>Why Me?</a>
-            <a href="#tech" className='hover:text-lime-700 dark:hover:text-lime-400'>Tech Stack</a>
-            <a href="#skills" className='hover:text-lime-700 dark:hover:text-lime-400'>Skills Matrix</a>
-            <a href="#timeline" className='hover:text-lime-700 dark:hover:text-lime-400'>Project Highlights</a>
-            <a href="#contact" className='hover:text-lime-700 dark:hover:text-lime-400'>Get in Touch</a>
+            <a href="#hero" className="
+              hover:text-lime-700 
+              dark:hover:text-lime-400 
+              light:hover:text-cyan-600 
+              neon:hover:text-rose-300
+            ">Hello</a>
+            <a href="#about" className="
+              hover:text-lime-700 
+              dark:hover:text-lime-400 
+              light:hover:text-cyan-600 
+              neon:hover:text-rose-300
+            ">Why Me?</a>
+            <a href="#tech" className="
+              hover:text-lime-700 
+              dark:hover:text-lime-400 
+              light:hover:text-cyan-600 
+              neon:hover:text-rose-300
+            ">Tech Stack</a>
+            <a href="#skills" className="
+              hover:text-lime-700 
+              dark:hover:text-lime-400 
+              light:hover:text-cyan-600 
+              neon:hover:text-rose-300
+            ">Skills Matrix</a>
+            <a href="#timeline" className="
+              hover:text-lime-700 
+              dark:hover:text-lime-400 
+              light:hover:text-cyan-600 
+              neon:hover:text-rose-300
+            ">Project Highlights</a>
+            <a href="#contact" className="
+              hover:text-lime-700 
+              dark:hover:text-lime-400 
+              light:hover:text-cyan-600 
+              neon:hover:text-rose-300
+            ">Get in Touch</a>
           </nav>
-          <button
-            onClick={() => setDark(d => !d)}
-            className="rounded-lg border px-3 py-1 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800"
-            aria-label="Toggle dark mode"
-          >
-            {dark ? 'Light' : 'Dark'}
-          </button>
+          <ThemeToggle />   {/* 👈 toggle color mode */}
         </div>
       </header>
       
       <main className="
-      mx-auto max-w-6xl px-4 
-    text-stone-800 
-    dark:text-stone-200 
-    [&_h1]:text-lime-600 
-    [&_h2]:text-lime-600 
-    dark:[&_h1]:text-lime-500 
-    dark:[&_h2]:text-lime-500
+        mx-auto max-w-6xl px-4 transition-colors duration-700
+        text-stone-800 dark:text-stone-200 light:text-stone-950 neon:text-zinc-950
+        [&_h1]:text-lime-600 [&_h2]:text-lime-600
+        dark:[&_h1]:text-lime-500 dark:[&_h2]:text-lime-500
+        light:[&_h1]:text-cyan-600 light:[&_h2]:text-cyan-600
+        neon:[&_h1]:text-rose-100 neon:[&_h2]:text-rose-100
+        neon:bg-pink-400
       ">
         <Section id="hero" title="">
           <Hero />
@@ -83,12 +131,7 @@ export default function App() {
         </Section>
       </main>
 
-      
       <Aurora />
-
-      
-      
-
       <CodeTracker />
     </div>
   )
