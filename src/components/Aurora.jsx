@@ -5,7 +5,7 @@ export default function Aurora() {
         aurora-wrap 
         bg-stone-100 
         dark:bg-stone-950 
-        neon:bg-pink-200
+        neon:bg-pink-400
       " 
       aria-hidden="true"
     >

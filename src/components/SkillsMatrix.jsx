@@ -31,10 +31,10 @@ export default function SkillsMatrix() {
       {/* Grid */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
         {filtered.map((s, i) => (
-          <article key={`${s.name}-${i}`} className="border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:shadow-md rounded-lg p-3 transition group">
+          <article key={`${s.name}-${i}`} className="border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:shadow-md rounded-lg p-3 transition group neon:bg-rose-600 neon:text-white neon:hover:text-black neon:hover:bg-yellow-400  transition-colors duration-400">
             <div className="flex items-center justify-between gap-2">
-              <h3 className="font-medium text-stone-500 dark:text-stone-500 group-hover:text-lime-700">{s.name}</h3>
-              <span className="text-xs px-2 py-0.5 rounded-full border border-stone-400 group-hover:bg-lime-600 group-hover:text-white dark:group-hover:bg-lime-700 transition">{s.level}</span>
+              <h3 className="font-medium text-stone-500 dark:text-stone-500 group-hover:text-lime-700 neon:text-rose-200 neon:group-hover:text-rose-600">{s.name}</h3>
+              <span className="text-xs px-2 py-0.5 rounded-full border border-stone-400 group-hover:bg-lime-600 group-hover:text-white dark:group-hover:bg-lime-700 neon:group-hover:text-yellow-400 transition neon:group-hover:bg-rose-600">{s.level}</span>
             </div>
             <div className="text-xs mt-1">{s.category || 'Other'}</div>
             {s.evidence && (

@@ -28,9 +28,24 @@ export default function AboutResume() {
 
 function Fact({ k, v }) {
   return (
-    <div className="border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:shadow-md rounded-lg p-3 text-center group">
-      <div className="text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">{k}</div>
-      <div className="text-xl font-semibold provenData group-hover:text-lime-600">{v}</div>
+    <div className="
+    border border-stone-300 dark:border-stone-600 
+    bg-stone-50 dark:bg-stone-800 
+    text-stone-700 dark:text-stone-200 
+    hover:shadow-md rounded-lg p-3 text-center transition-shadow duration-200 
+    neon:bg-rose-600 light:bg-white transition-colors duration-400
+    group
+     ">
+      <div className="
+      text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400
+      neon:text-rose-200
+      neon:group-hover:text-yellow-400 transition-colors duration-400
+      ">{k}</div>
+      <div className="
+      text-xl font-semibold provenData group-hover:text-lime-600
+      neon:text-white
+      neon:group-hover:text-yellow-400 transition-colors duration-400
+      ">{v}</div>
     </div>
   )
 }

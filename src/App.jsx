@@ -17,7 +17,7 @@ function Section({ id, title, children }) {
         py-16 border-t first:border-0 
         dark:border-stone-800 
         light:border-stone-300 
-        neon:border-rose-200
+        neon:border-rose-400
       "
     >
       {title && (
@@ -103,8 +103,8 @@ export default function App() {
         [&_h1]:text-lime-600 [&_h2]:text-lime-600
         dark:[&_h1]:text-lime-500 dark:[&_h2]:text-lime-500
         light:[&_h1]:text-cyan-600 light:[&_h2]:text-cyan-600
-        neon:[&_h1]:text-rose-100 neon:[&_h2]:text-rose-100
-        neon:bg-pink-400
+        neon:[&_h1]:text-rose-600 neon:[&_h2]:text-rose-600
+        neon:bg-pink-200
       ">
         <Section id="hero" title="">
           <Hero />

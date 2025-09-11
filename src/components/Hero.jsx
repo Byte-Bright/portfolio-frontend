@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="space-y-4">
         <p className="text-sm tracking-wide">Denver, CO · Front‑End Developer</p>
 
-        <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+        <h1 className="text-4xl md:text-5xl font-semibold leading-tight neon:text-rose-600">
           Justin Caldwell
         </h1>
 

@@ -127,9 +127,13 @@ main .text-sm {
   top: 0;
   left: 0;
 }
-/* .dark .aurora-wrap {
-  background-color: #222;
-} */
+.neon .aurora-wrap {
+  background-image: url("assets/pinkypopout.png"); 
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 13vw auto;
+}
 
 
 /* Big soft blobs with blend for glow */

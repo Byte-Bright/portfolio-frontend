@@ -42,18 +42,34 @@ export default function Timeline() {
       {/* Cards */}
       <ul className="grid gap-3">
         {items.map((t, i) => (
-          <li key={`${t.title}-${i}`} className="border rounded-lg p-4 projectHighlights">
+          <li key={`${t.title}-${i}`} className="
+          border rounded-lg p-4 projectHighlights
+          light:bg-white neon:bg-rose-600 neon:hover:bg-yellow-400  transition-colors duration-400
+           group
+          ">
             <div className="flex items-center justify-between gap-3">
-              <h3 className="text-lg font-semibold">{t.title}</h3>
-              <span className="text-xs px-2 py-1 rounded-full border">
+              <h3 className="
+              text-lg font-semibold
+              neon:text-rose-200 neon:group-hover:text-rose-600  transition-colors duration-400
+              ">{t.title}</h3>
+              <span className="
+              text-xs px-2 py-1 rounded-full border
+              neon:border-rose-600 neon:bg-yellow-400 neon:text-black neon:group-hover:bg-rose-600 neon:group-hover:text-white transition-colors duration-400
+              ">
                 {t.category || 'Other'}
               </span>
             </div>
             {t.period && (
-              <div className="text-sm text-stone-600 dark:text-stone-300 mt-1">{t.period}</div>
+              <div className="
+              text-sm text-stone-600 dark:text-stone-300 mt-1
+              neon:text-yellow-400 neon:group-hover:text-pink-600
+              ">{t.period}</div>
             )}
             {t.summary && (
-              <p className="text-sm mt-2 text-stone-700 dark:text-stone-200">{t.summary}</p>
+              <p className="
+              text-sm mt-2 text-stone-700 dark:text-stone-200
+              neon:text-white neon:group-hover:text-black
+              ">{t.summary}</p>
             )}
           </li>
         ))}
