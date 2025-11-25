@@ -128,7 +128,7 @@ main .text-sm {
   left: 0;
 }
 .neon .aurora-wrap {
-  background-image: url("/assets/pinkypopout.png"); 
+  background-image: url("pinkypopout.png"); 
   background-position: right bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
