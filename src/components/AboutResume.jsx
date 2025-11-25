@@ -32,19 +32,21 @@ function Fact({ k, v }) {
     border border-stone-300 dark:border-stone-600 
     bg-stone-50 dark:bg-stone-800 
     text-stone-700 dark:text-stone-200 
-    hover:shadow-md rounded-lg p-3 text-center transition-shadow duration-200 
+    hover:shadow-md rounded-lg p-3 text-center duration-200 
     neon:bg-rose-600 light:bg-white transition-colors duration-400
-    group
+    group tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:bg-black/50 tron:hover:shadow-tron tron:hover:animate-tronpulse
      ">
       <div className="
       text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400
       neon:text-rose-200
-      neon:group-hover:text-yellow-400 transition-colors duration-400
+      neon:group-hover:text-yellow-400 duration-400
+      tron:text-red-400 tron:group-hover:text-red-600 transition-colors duration-400
       ">{k}</div>
       <div className="
       text-xl font-semibold provenData group-hover:text-lime-600
       neon:text-white
-      neon:group-hover:text-yellow-400 transition-colors duration-400
+      neon:group-hover:text-yellow-400 duration-400 
+      tron:text-red-500 tron:group-hover:text-white transition-colors duration-400
       ">{v}</div>
     </div>
   )

@@ -21,15 +21,15 @@ export default function Hero() {
         </ul>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a href="/resume.pdf" className="rounded-lg border border-stone-400 hover:border-lime-600 px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 defaultButton">View Resume</a>
+          <a href="/resume.pdf" className="rounded-lg border border-stone-400 hover:border-lime-700 hover:bg-lime-600 hover:text-white  dark:hover:bg-lime-700/50 transition-colors px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-800 tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white">View Resume</a>
           <a
-            className="rounded-lg border border-stone-400 hover:border-lime-600 px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 defaultButton"
+            className="rounded-lg border border-stone-400 hover:border-lime-700 hover:bg-lime-600 hover:text-white  dark:hover:bg-lime-700/50 transition-colors px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-800 tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white"
             href={`mailto:justinstede@yahoo.com?subject=${encodeURIComponent('Portfolio inquiry — Justin Caldwell')}`}
           >
             Email me
           </a>
           <a
-            className="rounded-lg border border-stone-400 hover:border-lime-600 px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 defaultButton"
+            className="rounded-lg border border-stone-400 hover:border-lime-700 hover:bg-lime-600 hover:text-white  dark:hover:bg-lime-700/50 transition-colors px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-800 tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white"
             href="https://www.linkedin.com/in/justin-caldwell" target="_blank" rel="noreferrer"
           >
             LinkedIn
@@ -44,7 +44,7 @@ export default function Hero() {
 
         {/* Simple fallback badge */}
         <div className="mx-auto w-48 h-48 rounded-2xl grid place-items-center border shadow-sm
-                        bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-800 dark:to-stone-900 headshot">
+                        bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-800 dark:to-stone-900 tron:border-red-700 headshot">
           
         </div>
       </div>

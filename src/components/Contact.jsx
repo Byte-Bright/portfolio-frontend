@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="mailto:justinstede@yahoo.com?subject=Portfolio Inquiry"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:border-lime-600 neon:border-yellow-400 neon:bg-yellow-400 defaultButton"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-lime-600 hover:border-lime-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
           >
             Email Me
           </a>
@@ -17,7 +17,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/justinstede"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:border-lime-600 neon:border-yellow-400 neon:bg-yellow-400 defaultButton"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-lime-600 hover:border-lime-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
           >
             LinkedIn
           </a>
@@ -25,7 +25,7 @@ export default function Contact() {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/your-schedule-id"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:border-lime-600 neon:border-yellow-400 neon:bg-yellow-400 defaultButton"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-lime-600 hover:border-lime-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
           >
             Book a Meeting
           </a>

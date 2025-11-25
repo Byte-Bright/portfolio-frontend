@@ -28,14 +28,15 @@ export default function SkillsMatrix() {
         {filtered.map((s, i) => (
           <article
             key={`${s.name}-${i}`}
-            className="border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:shadow-md rounded-lg p-3 transition group neon:bg-rose-600 neon:text-white neon:hover:text-black neon:hover:bg-yellow-400 duration-400"
-          >
+            className="border border-stone-300 dark:border-stone-600 bg-stone-50 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:shadow-md rounded-lg p-3 transition group neon:bg-rose-600 neon:text-white neon:hover:text-black neon:hover:bg-yellow-400 duration-400 
+             tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:shadow-tron tron:hover:animate-tronpulse
+            ">
             <div className="flex items-center justify-between gap-2">
-              <h3 className="font-medium text-stone-500 dark:text-stone-500 group-hover:text-lime-600 neon:text-rose-200 neon:group-hover:text-rose-600">
+              <h3 className="font-medium text-stone-500 dark:text-stone-500 group-hover:text-lime-600 neon:text-rose-200 neon:group-hover:text-rose-600 tron:text-red-700 tron:group-hover:text-white transition-colors duration-400">
                 {s.name}
               </h3>
             </div>
-            <div className="text-xs mt-1">{s.category || 'Other'}</div>
+            <div className="text-xs mt-1 tron:text-red-400 tron:group-hover:text-red-700">{s.category || 'Other'}</div>
             {/* {s.evidence && (
               <a
                 href={s.evidence}

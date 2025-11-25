@@ -85,9 +85,9 @@ export default function Timeline() {
                         focus:outline-none focus:ring-2 focus:ring-offset-2
                         ${active === cat
                           ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900 neon:bg-rose-600'
-                          : 'bg-white dark:bg-stone-900 neon:bg-yellow-400'
+                          : 'bg-white dark:bg-stone-900 neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700 tron:hover:shadow-tron tron:hover:animate-tronpulse'
                         }
-                        defaultButton`}
+                        `}
           >
             {cat}
           </button>
@@ -101,14 +101,14 @@ export default function Timeline() {
             key={`${t.title}-${i}`}
             className="border rounded-lg p-4 projectHighlights
                        bg-stone-50 dark:bg-stone-800 dark:border-stone-600 
-                       neon:bg-rose-600 neon:hover:bg-yellow-400 
+                       neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:shadow-tron tron:hover:animate-tronpulse
                        transition-colors duration-400 group"
           >
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-semibold group-hover:text-lime-600
                              dark:group-hover:text-lime-500
                              neon:text-rose-200 neon:group-hover:text-rose-600
-                             transition-colors duration-400">
+                             transition-colors duration-400 tron:text-red-700 tron:group-hover:text-white">
                 {t.title}
               </h3>
               <span className="text-xs px-2 py-1 rounded-full border
@@ -116,30 +116,30 @@ export default function Timeline() {
                                dark:border-stone-500 
                                neon:border-rose-200 neon:bg-transparent neon:text-white 
                                neon:group-hover:bg-rose-600 neon:group-hover:text-white
-                               transition-colors duration-400">
+                               transition-colors duration-400 tron:border-red-700 tron:text-red-400 tron:group-hover:text-red-400 tron:group-hover:bg-red-700/50">
                 {t.category || 'Other'}
               </span>
             </div>
 
             {t.period && (
               <div className="text-sm text-stone-600 dark:text-stone-300 mt-1
-                              neon:text-yellow-400 neon:group-hover:text-pink-600">
+                              neon:text-yellow-400 neon:group-hover:text-pink-600 tron:text-red-500 tron:group-hover:text-white transition-colors duration-400">
                 {t.period}
               </div>
             )}
 
             {t.summary && (
               <p className="text-sm mt-2 text-stone-700 dark:text-stone-200
-                            neon:text-white neon:group-hover:text-black">
+                            neon:text-white neon:group-hover:text-black tron:text-red-400 tron:group-hover:text-white transition-colors duration-400">
                 {t.summary}
               </p>
             )}
 
             {/* Always-expanded details */}
             {t.details && (
-              <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 neon:border-rose-200">
+              <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 neon:border-rose-200 tron:border-red-700">
                 {t.details.description && (
-                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white">
+                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400">
                     {t.details.description}
                   </p>
                 )}
@@ -148,7 +148,7 @@ export default function Timeline() {
                   <div className="flex flex-wrap gap-2 text-xs">
                     {t.details.tools.map((tool, j) => (
                       <span key={j}
-                        className="px-2 py-1 border rounded bg-stone-100 dark:bg-stone-700 neon:bg-rose-400 neon:text-black">
+                        className="px-2 py-1 border rounded bg-stone-100 dark:bg-stone-700 neon:bg-rose-400 neon:text-black tron:bg-transparent tron:border-red-700 tron:text-red-700 transition-colors duration-400">
                         {tool}
                       </span>
                     ))}

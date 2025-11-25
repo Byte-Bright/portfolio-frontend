@@ -17,7 +17,8 @@ function Section({ id, title, children }) {
         py-16 border-t first:border-0 
         dark:border-stone-800 
         light:border-stone-300 
-        neon:border-rose-400
+        neon:border-rose-400 
+        tron:border-red-700
       "
     >
       {title && (
@@ -52,7 +53,8 @@ export default function App() {
         bg-white/70 text-stone-800 border-b border-stone-200
         dark:bg-stone-900/70 dark:text-stone-200 dark:border-stone-800
         light:bg-stone-100/80 light:text-stone-950 light:border-stone-300
-        neon:bg-pink-700/80 neon:text-rose-100 neon:border-rose-200
+        neon:bg-pink-700/80 neon:text-rose-100 neon:border-rose-200 
+        tron:bg-black/80 tron:text-white tron:border-red-700
       ">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <nav className="flex gap-4 text-sm">
@@ -104,7 +106,8 @@ export default function App() {
         dark:[&_h1]:text-lime-500 dark:[&_h2]:text-lime-500
         light:[&_h1]:text-cyan-600 light:[&_h2]:text-cyan-600
         neon:[&_h1]:text-rose-600 neon:[&_h2]:text-rose-600
-        neon:bg-pink-200
+        neon:bg-pink-200 
+        tron:text-red-400 tron:[&_h1]:text-red-700 tron:[&_h2]:text-red-700
       ">
         <Section id="hero" title="">
           <Hero />

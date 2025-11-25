@@ -68,6 +68,35 @@ main .text-sm {
     border-color: rgba(131, 120, 27, 1);
 }
 
+/* Tron Theme */
+.tron {
+  background-color: #000;
+  color: #f5f5f5;
+}
+
+.tron a {
+  color: #ef4444;
+  transition: color 0.3s ease;
+}
+.tron a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ef4444;
+}
+
+.tron .btn-default {
+  border: 1px solid #ef4444;
+  color: #f5f5f5;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.tron .btn-default:hover {
+  background-color: #ef4444;
+  color: #000;
+  box-shadow: 0 0 15px rgba(239,68,68,0.6);
+}
+
+
+
 
 
 .defaultTag {
@@ -176,4 +205,35 @@ main .text-sm {
       rgba(var(--aurora-blue), 0.00) 70%);
   animation: driftC 26s ease-in-out infinite;
 }
+
+/*    TRON    */
+.tron .aurora-blob.gold {
+  background: radial-gradient(45% 60% at 50% 50%,
+    rgba(220, 38, 38, 0.5) 0%,
+    rgba(220, 38, 38, 0.1) 45%,
+    rgba(220, 38, 38, 0.00) 70%);
+  animation: driftA 18s ease-in-out infinite;
+}
+
+.tron .aurora-blob.blue {
+  background: radial-gradient(45% 60% at 50% 50%,
+    rgba(220, 38, 38, 0.5) 0%,
+    rgba(220, 38, 38, 0.1) 45%,
+    rgba(220, 38, 38, 0.00) 70%);
+  animation: driftB 22s ease-in-out infinite;
+}
+
+.tron .aurora-blob.mix {
+  /* a subtle mix of both for depth */
+  background:
+    radial-gradient(40% 55% at 55% 45%,
+      rgba(220, 38, 38, 0.5) 0%,
+      rgba(220, 38, 38, 0.00) 65%),
+    radial-gradient(45% 60% at 45% 55%,
+      rgba(220, 38, 38, 0.5) 0%,
+      rgba(220, 38, 38, 0.00) 70%);
+  animation: driftC 26s ease-in-out infinite;
+}
+
+
 /* === END === Aurora Background (lightweight, CSS-only) === */

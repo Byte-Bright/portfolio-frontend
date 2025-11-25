@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 
-const themes = ["dark", "light", "neon"];
+const themes = ["light", "dark", "neon", "tron"];
 const INTERVAL = 45000; // 45 seconds
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
+  const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
 
-  // Apply theme class to <html>
+  // Apply theme to <html>
   useEffect(() => {
     const root = document.documentElement;
     themes.forEach(t => root.classList.remove(t));
@@ -15,9 +16,10 @@ export default function ThemeToggle() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // Function to start/reset timer
+  // Timer control
   const startTimer = () => {
     if (timerRef.current) clearInterval(timerRef.current);
+    if (paused) return;
     timerRef.current = setInterval(() => {
       setTheme(prev => {
         const currentIndex = themes.indexOf(prev);
@@ -27,25 +29,22 @@ export default function ThemeToggle() {
     }, INTERVAL);
   };
 
-  // Start timer on mount
   useEffect(() => {
     startTimer();
     return () => clearInterval(timerRef.current);
-  }, []);
+  }, [paused]);
 
-  // Manual toggle
-  const handleClick = () => {
+  const handleThemeChange = () => {
     setTheme(prev => {
       const currentIndex = themes.indexOf(prev);
       const nextIndex = (currentIndex + 1) % themes.length;
       return themes[nextIndex];
     });
-
-    // Reset the timer whenever the button is clicked
     startTimer();
   };
 
-  // Compute next theme + emoji
+  const togglePause = () => setPaused(p => !p);
+
   const nextTheme = (() => {
     const currentIndex = themes.indexOf(theme);
     const nextIndex = (currentIndex + 1) % themes.length;
@@ -55,17 +54,32 @@ export default function ThemeToggle() {
   const themeIcons = {
     dark: "🌙",
     light: "☀️",
-    neon: "⚡"
+    neon: "⚡",
+    tron: "💀"
   };
 
   return (
-    <button
-      onClick={handleClick}
-      className="rounded-lg border px-3 py-1 text-sm transition 
-                 hover:bg-zinc-50 dark:hover:bg-zinc-800 neon:hover:bg-rose-600"
-      aria-label={`Switch to ${nextTheme} mode`}
-    >
-      {themeIcons[nextTheme]} {nextTheme.charAt(0).toUpperCase() + nextTheme.slice(1)} Theme
-    </button>
+    <div className="flex items-center gap-1 border rounded-lg overflow-hidden backdrop-blur-sm border-stone-400/50">
+      
+      <button
+        onClick={handleThemeChange}
+        className={`px-3 py-1 text-sm transition border-r border-stone-400/50
+          hover:bg-zinc-50 dark:hover:bg-zinc-800 neon:hover:bg-rose-600 
+          tron:hover:bg-red-700 tron:shadow-tron tron:animate-tronpulse`}
+        aria-label={`Switch to ${nextTheme} mode`}
+      >
+        {themeIcons[nextTheme]}{" "}
+        {nextTheme.charAt(0).toUpperCase() + nextTheme.slice(1)}
+      </button>
+      
+      <button
+        onClick={togglePause}
+        className="text-xs px-2 py-1 border-l border-stone-400/50 hover:bg-white/10 transition-colors text-stone-700 dark:text-stone-200"
+        aria-label={paused ? "Resume theme rotation" : "Pause theme rotation"}
+      >
+        {paused ? "▶️" : "⏸"}
+      </button>
+    </div>
   );
+
 }

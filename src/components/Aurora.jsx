@@ -6,6 +6,7 @@ export default function Aurora() {
         bg-stone-100 
         dark:bg-stone-950 
         neon:bg-pink-400
+        tron:bg-black
       " 
       aria-hidden="true"
     >
