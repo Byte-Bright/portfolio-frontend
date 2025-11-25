@@ -9,7 +9,7 @@
     "details": {
       "tools": ["Duda", "Photoshop", "Custom Widgets", "Google Fonts"],
       "screenshots": [
-        "public/assets/portfolio-images//website-mockups/CEFCU.jpg"
+        "/assets/portfolio-images//website-mockups/CEFCU.jpg"
       ]
     }
   },
@@ -31,7 +31,7 @@
         "Website Configuration & Optimization"
       ],
       "screenshots": [
-        "public/assets/portfolio-images/independent-projects/logo-series-04.jpg"
+        "/assets/portfolio-images/independent-projects/logo-series-04.jpg"
       ]
     }
   },
@@ -45,46 +45,46 @@
     "details": {
       "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Adobe Suite"],
       "screenshots": [
-  "public/assets/portfolio-images/omnicommander/website-mockups/CEFCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/CRRC.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/CMCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/CURC.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/select7.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/Sync1Systems.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/GCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/GIFCU-v3.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/ICCU-v2.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/KIT.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/casco-fcu.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/colorado-fire.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/roswellcu.png",
-  "public/assets/portfolio-images/omnicommander/website-mockups/SignetFCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/SLFCU-v2.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/SOCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/strata.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/team-wheel.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/ziacu-v4.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/georgia-power.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/greater-valley.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/JACOM.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/liberty-one.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/natural-resources.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/NCCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/charlotte-fcu.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/ferguson.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/georgia-power-valdosta.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/JCTCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/PFCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/connections-cu.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/ferguson-b.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/GIFCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/MCCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/new-alliance.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/southwest-louisiana.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/WNCCCU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/cm-members.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/SACU.jpg",
-  "public/assets/portfolio-images/omnicommander/website-mockups/valley-first.jpg"
+  "/assets/portfolio-images/omnicommander/website-mockups/CEFCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/CRRC.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/CMCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/CURC.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/select7.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/Sync1Systems.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/GCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/GIFCU-v3.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/ICCU-v2.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/KIT.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/casco-fcu.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/colorado-fire.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/roswellcu.png",
+  "/assets/portfolio-images/omnicommander/website-mockups/SignetFCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/SLFCU-v2.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/SOCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/strata.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/team-wheel.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/ziacu-v4.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/georgia-power.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/greater-valley.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/JACOM.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/liberty-one.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/natural-resources.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/NCCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/charlotte-fcu.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/ferguson.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/georgia-power-valdosta.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/JCTCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/PFCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/connections-cu.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/ferguson-b.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/GIFCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/MCCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/new-alliance.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/southwest-louisiana.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/WNCCCU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/cm-members.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/SACU.jpg",
+  "/assets/portfolio-images/omnicommander/website-mockups/valley-first.jpg"
 ]
 
     }
