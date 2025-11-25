@@ -60,7 +60,7 @@ main .text-sm {
 
 .neon .defaultButton {
     border-color: rgba(226, 194, 59, 1);
-    background-image: linear-gradient(to right, rgba(226, 194, 59, 1) 50%,  rgba(201, 46, 62, 1) 50%);
+    background-image: linear-gradient(to right, transparent 50%,  rgba(201, 46, 62, 1) 50%);
 }
 .neon .defaultButton:hover, .neon .defaultButton:focus {    
     background-position: right center;

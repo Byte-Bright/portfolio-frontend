@@ -57,37 +57,37 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <nav className="flex gap-4 text-sm">
             <a href="#hero" className="
-              hover:text-lime-700 
+              hover:text-lime-600 
               dark:hover:text-lime-400 
               light:hover:text-cyan-600 
               neon:hover:text-rose-300
             ">Hello</a>
             <a href="#about" className="
-              hover:text-lime-700 
+              hover:text-lime-600 
               dark:hover:text-lime-400 
               light:hover:text-cyan-600 
               neon:hover:text-rose-300
             ">Why Me?</a>
             <a href="#tech" className="
-              hover:text-lime-700 
+              hover:text-lime-600 
               dark:hover:text-lime-400 
               light:hover:text-cyan-600 
               neon:hover:text-rose-300
             ">Tech Stack</a>
             <a href="#skills" className="
-              hover:text-lime-700 
+              hover:text-lime-600 
               dark:hover:text-lime-400 
               light:hover:text-cyan-600 
               neon:hover:text-rose-300
             ">Skills Matrix</a>
             <a href="#timeline" className="
-              hover:text-lime-700 
+              hover:text-lime-600 
               dark:hover:text-lime-400 
               light:hover:text-cyan-600 
               neon:hover:text-rose-300
             ">Project Highlights</a>
             <a href="#contact" className="
-              hover:text-lime-700 
+              hover:text-lime-600 
               dark:hover:text-lime-400 
               light:hover:text-cyan-600 
               neon:hover:text-rose-300
@@ -114,11 +114,11 @@ export default function App() {
           <AboutResume />
         </Section>
 
-        <Section id="tech" title="">
+        {/* <Section id="tech" title="">
           <TechTags />
-        </Section>
+        </Section> */}
 
-        <Section id="skills" title="Skills matrix">
+        <Section id="skills" title="Skills Matrix">
           <SkillsMatrix />
         </Section>
 

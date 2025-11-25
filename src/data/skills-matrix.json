@@ -1,18 +1,10 @@
 [
-  { "name": "Accessibility (WCAG/508)", "category": "Accessibility", "level": "Expert", "evidence": "#" },
-  { "name": "Wordpress / Drupal / Shopify / etc", "category": "CMS", "level": "Expert" },
-  { "name": "HTML", "category": "Frontend", "level": "Expert", "evidence": "#" },
-  { "name": "CSS", "category": "Frontend", "level": "Expert", "evidence": "#" },
-  { "name": "JavaScript", "category": "Frontend", "level": "Expert" },
-
-  { "name": "React", "category": "Frontend", "level": "Advanced" },
-  { "name": "JSON", "category": "Backend", "level": "Advanced" },
-  { "name": "APIs", "category": "Backend", "level": "Advanced" },
-  { "name": "Render (Python API)", "category": "Backend", "level": "Advanced" },
-  { "name": "Git & GitHub", "category": "DevOps", "level": "Advanced", "evidence": "#" },
-  { "name": "Netlify (CI/CD)", "category": "DevOps", "level": "Advanced", "evidence": "#" },
-
-  { "name": "Machine Learning", "category": "AI/ML", "level": "Beginner" },
-  { "name": "AI Agents", "category": "AI/ML", "level": "Beginner" },
-  { "name": "AI Prompt Engineering", "category": "AI/ML", "level": "Beginner" }
+  { "name": "Wireframing, Prototyping", "category": "UI/UX" },
+  { "name": "Figma, Adobe Photoshop, Adobe Illustrator", "category": "UI/UX" },
+  { "name": "React, JavaScript, HTML, CSS, Responsive Design", "category": "Frontend" },
+  { "name": "API, JSON, Render (Python API)", "category": "Backend" },
+  { "name": "WordPress, Shopify, Squarespace, Drupal", "category": "CMS / SaaS" },
+  { "name": "Accessibility (WCAG 2.2 / Section 508), Accessibility Audits, Screen Readers, Usability Testing", "category": "Accessibility", "evidence": "#" },
+  { "name": "Git & GitHub, Netlify (CI/CD), Vite", "category": "DevOps" },
+  { "name": "AI Prompt Engineering, AI Agents, Machine Learning", "category": "AI / Automation" }
 ]

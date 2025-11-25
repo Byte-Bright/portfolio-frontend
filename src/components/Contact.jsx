@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="mailto:justinstede@yahoo.com?subject=Portfolio Inquiry"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-400 hover:border-lime-700 defaultButton"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:border-lime-600 neon:border-yellow-400 neon:bg-yellow-400 defaultButton"
           >
             Email Me
           </a>
@@ -17,7 +17,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/justinstede"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-400 hover:border-lime-700 defaultButton"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:border-lime-600 neon:border-yellow-400 neon:bg-yellow-400 defaultButton"
           >
             LinkedIn
           </a>
@@ -25,7 +25,7 @@ export default function Contact() {
             href="https://calendar.google.com/calendar/u/0/appointments/schedules/your-schedule-id"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-400 hover:border-lime-700 defaultButton"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:border-lime-600 neon:border-yellow-400 neon:bg-yellow-400 defaultButton"
           >
             Book a Meeting
           </a>

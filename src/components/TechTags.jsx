@@ -15,10 +15,12 @@ export default function TechTags() {
                 className="relative group"
               >
                 <span
-                  className="px-3 py-1 rounded-lg border border-stone-300 dark:border-stone-600 neon:border-rose-600
-                  bg-stone-50 dark:bg-stone-800 neon:bg-rose-600 text-sm hover:neon:bg-yellow-400
+                  className="px-3 py-1 rounded-lg border border-stone-300 dark:border-stone-600 
+                  hover:bg-lime-600 hover:text-white neon:border-rose-600
+                  bg-stone-50 dark:bg-stone-800 neon:bg-rose-600 text-sm 
+                  neon:hover:bg-yellow-400 dark:hover:bg-lime-600
                   text-stone-700 dark:text-stone-200 neon:text-white hover:neon:text-black
-                  hover:shadow-md hover:scale-105 transform transition transition-colors duration-400
+                  hover:shadow-md hover:scale-105 transform transition duration-400
                   ">
                   {item.name}
                 </span>
@@ -27,8 +29,10 @@ export default function TechTags() {
                 {item.tooltip && (
                   <span
                     className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-xs
-                               bg-stone-900 text-white text-xs rounded py-1 px-2 opacity-0
-                               group-hover:opacity-100 pointer-events-none
+                               bg-stone-900 text-white text-sm rounded py-1 px-2 opacity-0 
+                               border border-stone-500 neon:border-rose-200 
+                               group-hover:opacity-100 pointer-events-none 
+                               neon:bg-pink-400 
                                transition-opacity duration-200 defaultTooltip"
                   >
                     {item.tooltip}
