@@ -84,7 +84,7 @@ main .text-sm {
 }
 
 .headshot {
-    background-image: url("assets/jcaldwell-headshot.jpg"); 
+    background-image: url("public/assets/jcaldwell-headshot.jpg"); 
     background-size: cover; 
     background-position: center center;
 }
