@@ -31,28 +31,27 @@ export default function Timeline() {
     setLightbox({ open: false, project: null, index: 0, webcrop: false, fade: false })
 
   const nextImage = () => {
-    setLightbox((l) => ({
+    setLightbox(l => ({
       ...l,
       index: (l.index + 1) % (l.project?.details?.screenshots?.length || 1),
       fade: false
     }))
-    setTimeout(() => setLightbox((l) => ({ ...l, fade: true })), 50)
+    setTimeout(() => setLightbox(l => ({ ...l, fade: true })), 50)
   }
 
   const prevImage = () => {
-    setLightbox((l) => ({
+    setLightbox(l => ({
       ...l,
       index:
         (l.index - 1 + (l.project?.details?.screenshots?.length || 1)) %
         (l.project?.details?.screenshots?.length || 1),
       fade: false
     }))
-    setTimeout(() => setLightbox((l) => ({ ...l, fade: true })), 50)
+    setTimeout(() => setLightbox(l => ({ ...l, fade: true })), 50)
   }
 
-  const toggleWebcrop = () => setLightbox((l) => ({ ...l, webcrop: !l.webcrop }))
+  const toggleWebcrop = () => setLightbox(l => ({ ...l, webcrop: !l.webcrop }))
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e) => {
       if (!lightbox.open) return
@@ -64,16 +63,9 @@ export default function Timeline() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [lightbox.open])
 
-  // ✅ Lock body scroll when lightbox is open
   useEffect(() => {
-    if (lightbox.open) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => {
-      document.body.style.overflow = ''
-    }
+    document.body.style.overflow = lightbox.open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
   }, [lightbox.open])
 
   return (
@@ -90,13 +82,13 @@ export default function Timeline() {
             role="tab"
             aria-selected={active === cat}
             onClick={() => setActive(cat)}
-            className={`px-3 py-1 rounded-lg border text-sm sm:text-base
-                        focus:outline-none focus:ring-2 focus:ring-offset-2
-                        ${
-                          active === cat
-                            ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900 neon:bg-rose-600'
-                            : 'bg-white dark:bg-stone-900 neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700 tron:hover:shadow-tron tron:hover:animate-tronpulse'
-                        }`}
+            className={`px-3 py-1 rounded-lg border text-sm sm:text-base break-words
+              focus:outline-none focus:ring-2 focus:ring-offset-2
+              ${
+                active === cat
+                  ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900 neon:bg-rose-600'
+                  : 'bg-white dark:bg-stone-900 neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700 tron:hover:shadow-tron tron:hover:animate-tronpulse'
+              }`}
           >
             {cat}
           </button>
@@ -108,61 +100,66 @@ export default function Timeline() {
         {items.map((t, i) => (
           <li
             key={`${t.title}-${i}`}
-            className="border rounded-lg p-3 sm:p-4 projectHighlights w-full
+            className="border rounded-lg p-3 sm:p-4 projectHighlights w-full break-words
                        bg-stone-50 dark:bg-stone-800 dark:border-stone-600 
                        neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:shadow-tron tron:hover:animate-tronpulse
                        transition-colors duration-400 group"
           >
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 w-full">
               <h3
                 className="text-base sm:text-lg font-semibold group-hover:text-lime-600
-                             dark:group-hover:text-lime-500
-                             neon:text-rose-200 neon:group-hover:text-rose-600
-                             transition-colors duration-400 tron:text-red-700 tron:group-hover:text-white"
+                  dark:group-hover:text-lime-500
+                  neon:text-rose-200 neon:group-hover:text-rose-600
+                  transition-colors duration-400 tron:text-red-700 tron:group-hover:text-white
+                  break-words"
               >
                 {t.title}
               </h3>
               <span
-                className="text-xs sm:text-sm px-2 py-1 rounded-full border self-start sm:self-auto
-                               group-hover:text-white group-hover:bg-lime-600 
-                               dark:border-stone-500 
-                               neon:border-rose-200 neon:bg-transparent neon:text-white 
-                               neon:group-hover:bg-rose-600 neon:group-hover:text-white
-                               transition-colors duration-400 tron:border-red-700 tron:text-red-400 tron:group-hover:text-red-400 tron:group-hover:bg-red-700/50"
+                className="text-xs sm:text-sm px-2 py-1 rounded-full border w-fit
+                  group-hover:text-white group-hover:bg-lime-600 
+                  dark:border-stone-500 
+                  neon:border-rose-200 neon:bg-transparent neon:text-white 
+                  neon:group-hover:bg-rose-600 neon:group-hover:text-white
+                  transition-colors duration-400 tron:border-red-700 tron:text-red-400 tron:group-hover:text-red-400 tron:group-hover:bg-red-700/50"
               >
                 {t.category || 'Other'}
               </span>
             </div>
 
+            {/* Period */}
             {t.period && (
               <div
-                className="text-sm text-stone-600 dark:text-stone-300 mt-1
-                              neon:text-yellow-400 neon:group-hover:text-pink-600 tron:text-red-500 tron:group-hover:text-white transition-colors duration-400"
+                className="text-sm text-stone-600 dark:text-stone-300 mt-1 break-words
+                  neon:text-yellow-400 neon:group-hover:text-pink-600 tron:text-red-500 tron:group-hover:text-white transition-colors duration-400"
               >
                 {t.period}
               </div>
             )}
 
+            {/* Summary */}
             {t.summary && (
               <p
                 className="text-sm mt-2 text-stone-700 dark:text-stone-200
-                            neon:text-white neon:group-hover:text-black tron:text-red-400 tron:group-hover:text-white transition-colors duration-400"
+                  neon:text-white neon:group-hover:text-black tron:text-red-400 tron:group-hover:text-white transition-colors duration-400
+                  break-words"
               >
                 {t.summary}
               </p>
             )}
 
-            {/* Always-expanded details */}
+            {/* Details */}
             {t.details && (
               <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 neon:border-rose-200 tron:border-red-700">
                 {t.details.description && (
-                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400">
+                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-words">
                     {t.details.description}
                   </p>
                 )}
 
                 {t.details.tools && (
-                  <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
+                  <div className="flex flex-wrap gap-2 text-xs sm:text-sm break-words">
                     {t.details.tools.map((tool, j) => (
                       <span
                         key={j}
@@ -174,7 +171,7 @@ export default function Timeline() {
                   </div>
                 )}
 
-                {/* Thumbnail scroller */}
+                {/* Thumbnails */}
                 {t.details.screenshots && t.details.screenshots.length > 0 && (
                   <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-stone-400 dark:scrollbar-thumb-stone-600">
                     {t.details.screenshots.map((src, idx) => (
@@ -184,7 +181,7 @@ export default function Timeline() {
                         alt=""
                         onClick={() => openLightbox(t, idx)}
                         className={`h-24 sm:h-28 w-auto rounded cursor-pointer border hover:opacity-80 transition 
-                                    ${t.lightbox ? 'hover:scale-[1.02]' : ''}`}
+                          ${t.lightbox ? 'hover:scale-[1.02]' : ''}`}
                       />
                     ))}
                   </div>
@@ -208,7 +205,6 @@ export default function Timeline() {
             ✕
           </button>
 
-          {/* Image Display */}
           <div
             className="w-full max-w-[95vw] sm:max-w-[90vw] max-h-[75vh] flex items-center justify-center transition-opacity duration-300"
             style={{ opacity: lightbox.fade ? 1 : 0 }}
@@ -232,9 +228,8 @@ export default function Timeline() {
             )}
           </div>
 
-          {/* Controls Bar */}
+          {/* Controls */}
           <div className="relative w-full flex flex-wrap justify-center items-center gap-6 mt-3 pb-4 text-center">
-            {/* Left arrow */}
             <button
               onClick={prevImage}
               className="flex items-center justify-center text-white text-5xl sm:text-6xl leading-none hover:text-gray-300 transition select-none"
@@ -242,7 +237,6 @@ export default function Timeline() {
               &#x21e6;
             </button>
 
-            {/* Desktop Preview Button */}
             {lightbox.project.webcrop && (
               <button
                 onClick={toggleWebcrop}
@@ -252,7 +246,6 @@ export default function Timeline() {
               </button>
             )}
 
-            {/* Right arrow */}
             <button
               onClick={nextImage}
               className="flex items-center justify-center text-white text-5xl sm:text-6xl leading-none hover:text-gray-300 transition select-none"
