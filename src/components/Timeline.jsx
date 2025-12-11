@@ -58,7 +58,7 @@ export default function Timeline() {
   const toggleWebcrop = () =>
     setLightbox(l => ({ ...l, webcrop: !l.webcrop }))
 
-  // Keyboard controls
+  // Keyboard + scroll lock
   useEffect(() => {
     const handleKey = (e) => {
       if (!lightbox.open) return
@@ -70,7 +70,6 @@ export default function Timeline() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [lightbox.open])
 
-  // Lock body scroll
   useEffect(() => {
     document.body.style.overflow = lightbox.open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -78,11 +77,12 @@ export default function Timeline() {
 
   return (
     <div className="grid gap-6 max-w-full overflow-x-hidden px-3 sm:px-0">
+      
       {/* Category Tabs */}
       <div
         role="tablist"
         aria-label="Timeline categories"
-        className="flex flex-wrap gap-2 justify-center sm:justify-start"
+        className="flex flex-wrap gap-2 justify-start sm:justify-start"
       >
         {categories.map((cat) => (
           <button
@@ -90,7 +90,7 @@ export default function Timeline() {
             role="tab"
             aria-selected={active === cat}
             onClick={() => setActive(cat)}
-            className={`px-3 py-1 rounded-lg border text-sm sm:text-base break-words whitespace-normal
+            className={`px-3 py-1 rounded-lg border text-sm sm:text-base break-normal text-left
               focus:outline-none focus:ring-2 focus:ring-offset-2
               ${
                 active === cat
@@ -104,19 +104,19 @@ export default function Timeline() {
       </div>
 
       {/* Project Cards */}
-      <ul className="grid gap-4 sm:gap-6 max-w-full">
+      <ul className="grid gap-4 sm:gap-6 max-w-full justify-start">
         {items.map((t, i) => (
           <li
             key={`${t.title}-${i}`}
-            className="border rounded-lg p-4 w-full break-words min-w-0
+            className="border rounded-lg p-4 w-full break-words min-w-0 text-left
               bg-stone-50 dark:bg-stone-800 dark:border-stone-600 
               neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px]
               tron:hover:shadow-tron tron:hover:animate-tronpulse
               transition-colors duration-400 group"
           >
             {/* Header */}
-            <div className="flex flex-wrap sm:flex-nowrap items-start sm:items-center justify-between gap-2 sm:gap-3 min-w-0">
-              <h3 className="text-base sm:text-lg font-semibold leading-snug flex-1 min-w-0 break-words
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 min-w-0">
+              <h3 className="text-base sm:text-lg font-semibold leading-snug flex-1 min-w-0 break-normal
                 group-hover:text-lime-600 dark:group-hover:text-lime-500
                 neon:text-rose-200 neon:group-hover:text-rose-600
                 tron:text-red-700 tron:group-hover:text-white
@@ -136,7 +136,7 @@ export default function Timeline() {
 
             {/* Period */}
             {t.period && (
-              <div className="text-sm text-stone-600 dark:text-stone-300 mt-1 break-words">
+              <div className="text-sm text-stone-600 dark:text-stone-300 mt-1 break-normal">
                 {t.period}
               </div>
             )}
@@ -146,7 +146,7 @@ export default function Timeline() {
               <p className="text-sm mt-2 text-stone-700 dark:text-stone-200
                 neon:text-white neon:group-hover:text-black
                 tron:text-red-400 tron:group-hover:text-white
-                transition-colors duration-400 break-words">
+                transition-colors duration-400 break-normal">
                 {t.summary}
               </p>
             )}
@@ -155,18 +155,18 @@ export default function Timeline() {
             {t.details && (
               <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 neon:border-rose-200 tron:border-red-700 min-w-0">
                 {t.details.description && (
-                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-words">
+                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-normal">
                     {t.details.description}
                   </p>
                 )}
 
                 {t.details.tools && (
-                  <div className="flex flex-wrap gap-2 text-xs sm:text-sm break-words whitespace-normal">
+                  <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
                     {t.details.tools.map((tool, j) => (
                       <span key={j}
                         className="px-2 py-1 border rounded bg-stone-100 dark:bg-stone-700
                           neon:bg-rose-400 neon:text-black tron:bg-transparent tron:border-red-700 tron:text-red-700
-                          transition-colors duration-400 break-words">
+                          transition-colors duration-400">
                         {tool}
                       </span>
                     ))}
@@ -201,7 +201,6 @@ export default function Timeline() {
         >
           <button onClick={closeLightbox} className="absolute top-3 right-4 text-white text-2xl sm:text-3xl">✕</button>
 
-          {/* Image */}
           <div className="w-full max-w-[95vw] sm:max-w-[90vw] max-h-[75vh] flex items-center justify-center transition-opacity duration-300">
             {lightbox.webcrop && lightbox.project.webcrop ? (
               <div className="w-full sm:w-[80%] max-w-[1920px] aspect-[16/9] overflow-y-auto bg-black/90 rounded-lg flex justify-center items-start">
@@ -216,7 +215,6 @@ export default function Timeline() {
             )}
           </div>
 
-          {/* Controls */}
           <div className="relative w-full flex flex-wrap justify-center items-center gap-6 mt-3 pb-4 text-center">
             <button onClick={prevImage} className="text-white text-5xl sm:text-6xl leading-none hover:text-gray-300 select-none">‹</button>
             {lightbox.project.webcrop && (
