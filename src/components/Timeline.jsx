@@ -77,12 +77,12 @@ export default function Timeline() {
   }, [lightbox.open])
 
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6 max-w-full overflow-x-hidden px-2 sm:px-0">
       {/* Tabs */}
       <div
         role="tablist"
         aria-label="Timeline categories"
-        className="flex flex-wrap gap-2"
+        className="flex flex-wrap gap-2 justify-center sm:justify-start"
       >
         {categories.map((cat) => (
           <button
@@ -90,7 +90,7 @@ export default function Timeline() {
             role="tab"
             aria-selected={active === cat}
             onClick={() => setActive(cat)}
-            className={`px-3 py-1 rounded-lg border text-sm
+            className={`px-3 py-1 rounded-lg border text-sm sm:text-base
                         focus:outline-none focus:ring-2 focus:ring-offset-2
                         ${
                           active === cat
@@ -104,18 +104,18 @@ export default function Timeline() {
       </div>
 
       {/* Cards */}
-      <ul className="grid gap-3">
+      <ul className="grid gap-4 sm:gap-6 max-w-full">
         {items.map((t, i) => (
           <li
             key={`${t.title}-${i}`}
-            className="border rounded-lg p-4 projectHighlights
+            className="border rounded-lg p-3 sm:p-4 projectHighlights w-full
                        bg-stone-50 dark:bg-stone-800 dark:border-stone-600 
                        neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:shadow-tron tron:hover:animate-tronpulse
                        transition-colors duration-400 group"
           >
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
               <h3
-                className="text-lg font-semibold group-hover:text-lime-600
+                className="text-base sm:text-lg font-semibold group-hover:text-lime-600
                              dark:group-hover:text-lime-500
                              neon:text-rose-200 neon:group-hover:text-rose-600
                              transition-colors duration-400 tron:text-red-700 tron:group-hover:text-white"
@@ -123,7 +123,7 @@ export default function Timeline() {
                 {t.title}
               </h3>
               <span
-                className="text-xs px-2 py-1 rounded-full border
+                className="text-xs sm:text-sm px-2 py-1 rounded-full border self-start sm:self-auto
                                group-hover:text-white group-hover:bg-lime-600 
                                dark:border-stone-500 
                                neon:border-rose-200 neon:bg-transparent neon:text-white 
@@ -162,7 +162,7 @@ export default function Timeline() {
                 )}
 
                 {t.details.tools && (
-                  <div className="flex flex-wrap gap-2 text-xs">
+                  <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
                     {t.details.tools.map((tool, j) => (
                       <span
                         key={j}
@@ -183,7 +183,7 @@ export default function Timeline() {
                         src={src}
                         alt=""
                         onClick={() => openLightbox(t, idx)}
-                        className={`h-28 w-auto rounded cursor-pointer border hover:opacity-80 transition 
+                        className={`h-24 sm:h-28 w-auto rounded cursor-pointer border hover:opacity-80 transition 
                                     ${t.lightbox ? 'hover:scale-[1.02]' : ''}`}
                       />
                     ))}
@@ -198,23 +198,23 @@ export default function Timeline() {
       {/* Lightbox */}
       {lightbox.open && (
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center z-50 transition-opacity duration-300"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center z-50 transition-opacity duration-300 px-2 sm:px-0"
           style={{ opacity: lightbox.fade ? 1 : 0 }}
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white text-2xl"
+            className="absolute top-3 right-4 text-white text-2xl sm:text-3xl"
           >
             ✕
           </button>
 
           {/* Image Display */}
           <div
-            className="w-full max-w-[90vw] max-h-[80vh] flex items-center justify-center transition-opacity duration-300"
+            className="w-full max-w-[95vw] sm:max-w-[90vw] max-h-[75vh] flex items-center justify-center transition-opacity duration-300"
             style={{ opacity: lightbox.fade ? 1 : 0 }}
           >
             {lightbox.webcrop && lightbox.project.webcrop ? (
-              <div className="w-[80%] max-w-[1920px] aspect-[16/9] overflow-y-auto bg-black/90 rounded-lg flex justify-center items-start">
+              <div className="w-full sm:w-[80%] max-w-[1920px] aspect-[16/9] overflow-y-auto bg-black/90 rounded-lg flex justify-center items-start">
                 <div className="w-full flex flex-col items-center">
                   <img
                     src={lightbox.project.details.screenshots[lightbox.index]}
@@ -227,17 +227,17 @@ export default function Timeline() {
               <img
                 src={lightbox.project.details.screenshots[lightbox.index]}
                 alt=""
-                className="max-h-[80vh] max-w-[90vw] object-contain rounded shadow-lg"
+                className="max-h-[70vh] max-w-[95vw] sm:max-h-[80vh] sm:max-w-[90vw] object-contain rounded shadow-lg"
               />
             )}
           </div>
 
-          {/* Controls Bar (below image, all perfectly aligned) */}
-          <div className="relative w-full flex justify-center items-center gap-8 mt-4 pb-4">
+          {/* Controls Bar */}
+          <div className="relative w-full flex flex-wrap justify-center items-center gap-6 mt-3 pb-4 text-center">
             {/* Left arrow */}
             <button
               onClick={prevImage}
-              className="flex items-center justify-center text-white text-6xl leading-none hover:text-gray-300 transition select-none"
+              className="flex items-center justify-center text-white text-5xl sm:text-6xl leading-none hover:text-gray-300 transition select-none"
             >
               &#x21e6;
             </button>
@@ -246,7 +246,7 @@ export default function Timeline() {
             {lightbox.project.webcrop && (
               <button
                 onClick={toggleWebcrop}
-                className="flex items-center justify-center text-white border border-white/30 px-6 py-2 rounded hover:bg-white/10 transition backdrop-blur-sm bg-black/30 text-sm"
+                className="flex items-center justify-center text-white border border-white/30 px-5 py-2 sm:px-6 sm:py-2 rounded hover:bg-white/10 transition backdrop-blur-sm bg-black/30 text-xs sm:text-sm"
               >
                 🖥 {lightbox.webcrop ? 'Exit Desktop View' : 'Desktop Preview'}
               </button>
@@ -255,7 +255,7 @@ export default function Timeline() {
             {/* Right arrow */}
             <button
               onClick={nextImage}
-              className="flex items-center justify-center text-white text-6xl leading-none hover:text-gray-300 transition select-none"
+              className="flex items-center justify-center text-white text-5xl sm:text-6xl leading-none hover:text-gray-300 transition select-none"
             >
               &#x21e8;
             </button>
