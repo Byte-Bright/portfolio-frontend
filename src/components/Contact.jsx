@@ -21,14 +21,6 @@ export default function Contact() {
           >
             LinkedIn
           </a>
-          <a
-            href="https://calendar.google.com/calendar/u/0/appointments/schedules/your-schedule-id"
-            target="_blank"
-            rel="noreferrer"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-lime-600 hover:border-lime-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
-          >
-            Book a Meeting
-          </a>
         </div>
       </div>
     </section>
