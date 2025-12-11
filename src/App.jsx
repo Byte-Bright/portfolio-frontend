@@ -39,12 +39,24 @@ function Section({ id, title, children }) {
 
 export default function App() {
   const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const r = document.documentElement
     dark ? r.classList.add('dark') : r.classList.remove('dark')
     localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
+
+  const handleNavClick = () => setMenuOpen(false)
+
+  const navLinks = [
+    { href: "#hero", label: "Hello" },
+    { href: "#about", label: "Why Me?" },
+    { href: "#tech", label: "Tech Stack" },
+    { href: "#skills", label: "Skills Matrix" },
+    { href: "#timeline", label: "Project Highlights" },
+    { href: "#contact", label: "Get in Touch" },
+  ]
 
   return (
     <div className="min-h-screen transition-colors duration-700">
@@ -57,46 +69,73 @@ export default function App() {
         tron:bg-black/80 tron:text-white tron:border-red-700
       ">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-          <nav className="flex gap-4 text-sm">
-            <a href="#hero" className="
-              hover:text-lime-600 
-              dark:hover:text-lime-400 
-              light:hover:text-cyan-600 
-              neon:hover:text-rose-300
-            ">Hello</a>
-            <a href="#about" className="
-              hover:text-lime-600 
-              dark:hover:text-lime-400 
-              light:hover:text-cyan-600 
-              neon:hover:text-rose-300
-            ">Why Me?</a>
-            <a href="#tech" className="
-              hover:text-lime-600 
-              dark:hover:text-lime-400 
-              light:hover:text-cyan-600 
-              neon:hover:text-rose-300
-            ">Tech Stack</a>
-            <a href="#skills" className="
-              hover:text-lime-600 
-              dark:hover:text-lime-400 
-              light:hover:text-cyan-600 
-              neon:hover:text-rose-300
-            ">Skills Matrix</a>
-            <a href="#timeline" className="
-              hover:text-lime-600 
-              dark:hover:text-lime-400 
-              light:hover:text-cyan-600 
-              neon:hover:text-rose-300
-            ">Project Highlights</a>
-            <a href="#contact" className="
-              hover:text-lime-600 
-              dark:hover:text-lime-400 
-              light:hover:text-cyan-600 
-              neon:hover:text-rose-300
-            ">Get in Touch</a>
+          {/* Left: Brand */}
+          <a href="#hero" className="font-bold text-lg tracking-wide">
+            JC Portfolio
+          </a>
+
+          {/* Middle: Desktop Nav */}
+          <nav className="hidden md:flex gap-4 text-sm">
+            {navLinks.map(link => (
+              <a 
+                key={link.href}
+                href={link.href}
+                onClick={handleNavClick}
+                className="
+                  hover:text-lime-600 
+                  dark:hover:text-lime-400 
+                  light:hover:text-cyan-600 
+                  neon:hover:text-rose-300
+                "
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
-          <ThemeToggle />   {/* 👈 toggle color mode */}
+
+          {/* Right: Theme toggle + Mobile menu */}
+          <div className="flex items-center gap-3">
+            {/* Theme Toggle always visible */}
+            <ThemeToggle />
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-lg rounded focus:outline-none focus:ring-2"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? "✕" : "☰"}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Dropdown */}
+        {menuOpen && (
+          <div className="
+            md:hidden border-t 
+            bg-white/95 dark:bg-stone-900/95 neon:bg-pink-800/90 tron:bg-black/90 
+            backdrop-blur-sm border-stone-200 dark:border-stone-700 neon:border-rose-200 tron:border-red-700
+            animate-fadeIn
+          ">
+            <nav className="flex flex-col text-sm px-6 py-4 space-y-3">
+              {navLinks.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={handleNavClick}
+                  className="
+                    hover:text-lime-600 
+                    dark:hover:text-lime-400 
+                    light:hover:text-cyan-600 
+                    neon:hover:text-rose-300
+                  "
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        )}
       </header>
       
       <main className="
