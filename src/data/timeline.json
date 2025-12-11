@@ -1,23 +1,59 @@
 [
   {
-    "title": "Homes With Mandee",
-    "category": "UX/UI",
-    "period": "2024",
-    "summary": "Custom real estate website with CMS integration and responsive design.",
+    "title": "Squarespace Custom Development with OMNICOMMANDER",
+    "category": "Custom Web Development",
+    "period": "2017-2025",
+    "summary": "150+ custom website templates developed for financial institutions using Squarespace, enhancing online presence, accessibility and user engagement.",
     "lightbox": true,
     "webcrop": true,
     "details": {
-      "tools": ["Duda", "Photoshop", "Custom Widgets", "Google Fonts"],
+      "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Adobe Suite"],
       "screenshots": [
-        "/assets/portfolio-images//website-mockups/CEFCU.jpg"
+        "/assets/portfolio-images/omnicommander/website-mockups/CEFCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/CRRC.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/CMCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/CURC.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/select7.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/Sync1Systems.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/new-alliance.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/GCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/GIFCU-v3.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/ICCU-v2.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/KIT.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/WNCCCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/casco-fcu.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/colorado-fire.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/SignetFCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/SLFCU-v2.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/SOCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/strata.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/team-wheel.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/ziacu-v4.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/georgia-power.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/greater-valley.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/JACOM.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/liberty-one.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/natural-resources.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/NCCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/charlotte-fcu.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/georgia-power-valdosta.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/JCTCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/PFCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/connections-cu.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/GIFCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/MCCU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/southwest-louisiana.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/cm-members.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/SACU.jpg",
+        "/assets/portfolio-images/omnicommander/website-mockups/valley-first.jpg"
       ]
     }
   },
-   {
+  {
     "title": "Creative Brand Development",
     "category": "Selected Projects",
     "period": "2015–2025",
-    "summary": "A curated collection of independent design and development projects completed for various clients and creative collaborations. Focused on brand identity, web design, and user interface systems that blend aesthetics with usability.",
+    "summary": "A curated collection of independent design, development and printing projects completed for various clients and creative collaborations. Focused on web design, user interface systems, small and large format printing, blending aesthetics with usability.",
     "lightbox": true,
     "webcrop": false,
     "details": {
@@ -31,72 +67,17 @@
         "Website Configuration & Optimization"
       ],
       "screenshots": [
-        "/assets/portfolio-images/independent-projects/logo-series-04.jpg"
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_001.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_002.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_003.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_004.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_005.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_006.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_007.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_008.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_009.jpg",
+        "/assets/portfolio-images/independent-projects/portfolioIMGs_010.jpg"
       ]
     }
-  },
-  {
-    "title": "Squarespace Custom Development with OMNICOMMANDER",
-    "category": "Custom Web Development",
-    "period": "2017-2025",
-    "summary": "150+ custom website templates developed for financial institutions using Squarespace, enhancing online presence, accessibility and user engagement.",
-    "lightbox": true,
-    "webcrop": true,
-    "details": {
-      "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Adobe Suite"],
-      "screenshots": [
-  "/assets/portfolio-images/omnicommander/website-mockups/CEFCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/CRRC.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/CMCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/CURC.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/select7.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/Sync1Systems.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/GCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/GIFCU-v3.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/ICCU-v2.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/KIT.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/casco-fcu.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/colorado-fire.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/SignetFCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/SLFCU-v2.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/SOCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/strata.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/team-wheel.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/ziacu-v4.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/georgia-power.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/greater-valley.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/JACOM.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/liberty-one.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/natural-resources.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/NCCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/charlotte-fcu.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/georgia-power-valdosta.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/JCTCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/PFCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/connections-cu.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/ferguson-b.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/GIFCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/MCCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/new-alliance.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/southwest-louisiana.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/WNCCCU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/cm-members.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/SACU.jpg",
-  "/assets/portfolio-images/omnicommander/website-mockups/valley-first.jpg"
-]
-
-    }
-  },
-  {
-    "title": "UX Pattern Library — OmniCommander",
-    "category": "UX/UI",
-    "period": "2024",
-    "summary": "Built a unified UX pattern library for OmniCommander’s client sites, improving design consistency and accessibility.",
-    "details": {
-      "tools": ["Figma", "WCAG", "HTML5", "CSS3", "React"],
-      "screenshots": ["/src/assets/ux-patterns-1.jpg", "/src/assets/ux-patterns-2.jpg"]
-    },
-    "lightbox": false,
-    "webcrop": false
   }
 ]

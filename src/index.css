@@ -95,7 +95,14 @@ main .text-sm {
   box-shadow: 0 0 15px rgba(239,68,68,0.6);
 }
 
-
+/* .tron #root {
+  background-image: url(/assets/tron.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+} */
 
 
 

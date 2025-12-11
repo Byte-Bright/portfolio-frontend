@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
 const themes = ["light", "dark", "neon", "tron"];
+// const themes = ["Try Light Mode", "Try Dark Mode", "Try Neon Mode", "Try Tron Mode"];
 const INTERVAL = 45000; // 45 seconds
 
 export default function ThemeToggle() {
@@ -13,7 +14,7 @@ export default function ThemeToggle() {
     const root = document.documentElement;
     themes.forEach(t => root.classList.remove(t));
     root.classList.add(theme);
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("theme", theme); 
   }, [theme]);
 
   // Timer control
