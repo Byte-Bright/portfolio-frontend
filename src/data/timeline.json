@@ -51,9 +51,9 @@
   },
   {
     "title": "Creative Brand Development",
-    "category": "Selected Projects",
+    "category": "Custom Web Development",
     "period": "2015–2025",
-    "summary": "A curated collection of independent design, development and printing projects completed for various clients and creative collaborations. Focused on web design, user interface systems, small and large format printing, blending aesthetics with usability.",
+    "summary": "A curated collection of independent design & development projects completed for various clients and creative collaborations. Focused on web design & user interface systems, blending aesthetics with usability.",
     "lightbox": true,
     "webcrop": false,
     "details": {
@@ -77,6 +77,49 @@
         "/assets/portfolio-images/independent-projects/portfolioIMGs_008.jpg",
         "/assets/portfolio-images/independent-projects/portfolioIMGs_009.jpg",
         "/assets/portfolio-images/independent-projects/portfolioIMGs_010.jpg"
+      ]
+    }
+  },
+  {
+    "title": "Small and Large Format Printing",
+    "category": "Print Design",
+    "period": "2015–2025",
+    "summary": "A curated collection of printing projects completed for various clients and creative collaborations. Focused on small and large format printing, blending aesthetics with usability.",
+    "lightbox": true,
+    "webcrop": false,
+    "details": {
+      "tools": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Adobe Indesign"
+      ],
+      "screenshots": [
+        "/assets/portfolio-images/independent-projects/001.jpg",
+        "/assets/portfolio-images/independent-projects/019.jpg",
+        "/assets/portfolio-images/independent-projects/002.jpg",
+        "/assets/portfolio-images/independent-projects/003.jpg",
+        "/assets/portfolio-images/independent-projects/004.jpg",
+        "/assets/portfolio-images/independent-projects/005.jpg",
+        "/assets/portfolio-images/independent-projects/006.jpg",
+        "/assets/portfolio-images/independent-projects/007.jpg",
+        "/assets/portfolio-images/independent-projects/008.jpg",
+        "/assets/portfolio-images/independent-projects/010.jpg",
+        "/assets/portfolio-images/independent-projects/011.jpg",
+        "/assets/portfolio-images/independent-projects/012.jpg",
+        "/assets/portfolio-images/independent-projects/013.jpg",
+        "/assets/portfolio-images/independent-projects/014.jpg",
+        "/assets/portfolio-images/independent-projects/015.jpg",
+        "/assets/portfolio-images/independent-projects/017.jpg",
+        "/assets/portfolio-images/independent-projects/018.jpg",
+        "/assets/portfolio-images/independent-projects/020.jpg",
+        "/assets/portfolio-images/independent-projects/009.jpg",
+        "/assets/portfolio-images/independent-projects/021.jpg",
+        "/assets/portfolio-images/independent-projects/022.jpg",
+        "/assets/portfolio-images/independent-projects/023.png",
+        "/assets/portfolio-images/independent-projects/024.png",
+        "/assets/portfolio-images/independent-projects/025.png",
+        "/assets/portfolio-images/independent-projects/026.jpg",
+        "/assets/portfolio-images/independent-projects/027.jpg"
       ]
     }
   }
