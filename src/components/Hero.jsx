@@ -29,7 +29,7 @@ export default function Hero() {
           </a>
           <a
             className="rounded-lg border border-stone-400 hover:border-lime-700 hover:bg-lime-600 hover:text-white  dark:hover:bg-lime-700/50 transition-colors px-4 py-2 neon:bg-yellow-400 neon:border:yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-800 tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white"
-            href="https://www.linkedin.com/in/justin-caldwell" target="_blank" rel="noreferrer"
+            href="https://www.linkedin.com/in/justinstede" target="_blank" rel="noreferrer"
           >
             LinkedIn
           </a>
