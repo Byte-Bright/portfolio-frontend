@@ -58,6 +58,15 @@ main .text-sm {
     border-color: rgba(131, 120, 27, 1);
 }
 
+.space .defaultButton {
+    background-image: linear-gradient(to right, transparent 50%,  rgba(202, 138, 4, .7) 50%);
+}
+.space .defaultButton:hover, .space .defaultButton:focus {    
+    background-position: right center;
+    color: #fff !important;
+    border-color: rgba(234, 179, 8, 1);
+}
+
 .neon .defaultButton {
     border-color: rgba(226, 194, 59, 1);
     background-image: linear-gradient(to right, transparent 50%,  rgba(201, 46, 62, 1) 50%);
@@ -169,6 +178,14 @@ main .text-sm {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 13vw auto;
+}
+
+.space .aurora-wrap {
+  background-image: url("/assets/nebula-drk.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 

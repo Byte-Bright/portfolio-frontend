@@ -5,6 +5,7 @@ export default function Aurora() {
         aurora-wrap 
         bg-stone-100 
         dark:bg-stone-950 
+        space:bg-stone-950
         neon:bg-pink-400
         tron:bg-black
       " 

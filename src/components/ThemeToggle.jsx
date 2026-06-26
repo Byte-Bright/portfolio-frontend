@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 
-const themes = ["light", "dark", "neon", "tron"];
+// dark, neon, and tron themes are preserved in code but excluded from the active cycle
+const themes = ["light", "space"];
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(() => {
+    const saved = localStorage.getItem("theme");
+    return themes.includes(saved) ? saved : "light";
+  });
 
   // Apply theme to <html>
   useEffect(() => {
@@ -33,15 +37,14 @@ export default function ThemeToggle() {
   const themeIcons = {
     light: "☀️",
     dark: "🌙",
+    space: "🌌",
     neon: "⚡",
     tron: "💀"
   };
 
   const themeLabels = {
-    light: "Try Dark Mode",
-    dark: "Try Neon Mode",
-    neon: "Try Tron Mode",
-    tron: "Try Light Mode"
+    light: "Dark Mode",
+    space: "Light Mode"
   };
 
   return (
@@ -49,7 +52,7 @@ export default function ThemeToggle() {
       <button
         onClick={handleThemeChange}
         className={`px-3 py-1 text-sm transition border-r border-stone-400/50
-          hover:bg-zinc-50 dark:hover:bg-zinc-800 neon:hover:bg-rose-600 
+          hover:bg-zinc-50 dark:hover:bg-zinc-800 space:hover:bg-zinc-800 neon:hover:bg-rose-600 
           tron:hover:bg-red-700 tron:shadow-tron tron:animate-tronpulse`}
         aria-label={`Switch to ${nextTheme} mode`}
       >

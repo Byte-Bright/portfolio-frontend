@@ -30,13 +30,14 @@ export default {
   plugins: [
     function ({ addVariant }) {
       addVariant("neon", ".neon &"); 
-      addVariant("tron", ".tron &"); // ✅ Add tron variant
+      addVariant("tron", ".tron &");
+      addVariant("space", ".space &");
     }
   ],
   safelist: [
     {
-      pattern: /(text|bg|border)-(stone|rose|teal|amber|lime|red|white)-(100|200|300|400|500|600|700|800|900)/,
-      variants: ['hover', 'focus', 'dark', 'neon', 'tron', 'group-hover'],
+      pattern: /(text|bg|border)-(stone|rose|teal|amber|lime|red|white|zinc)-(100|200|300|400|500|600|700|800|900|950)/,
+      variants: ['hover', 'focus', 'dark', 'neon', 'tron', 'space', 'group-hover'],
     },
     {
       pattern: /(hover|focus|group-hover):\[&_h(1|2)\]:text-(stone|rose|teal|amber|lime|red|white)-(100|200|300|400|500|600|700|800|900)/,

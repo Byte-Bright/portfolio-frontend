@@ -94,8 +94,8 @@ export default function Timeline() {
               focus:outline-none focus:ring-2 focus:ring-offset-2
               ${
                 active === cat
-                  ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900 neon:bg-rose-600'
-                  : 'bg-white dark:bg-stone-900 neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700 tron:hover:shadow-tron tron:hover:animate-tronpulse'
+                  ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900 space:bg-white space:text-stone-900 neon:bg-rose-600'
+                  : 'bg-white dark:bg-stone-900 space:bg-stone-900 neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700 tron:hover:shadow-tron tron:hover:animate-tronpulse'
               }`}
           >
             {cat}
@@ -109,7 +109,7 @@ export default function Timeline() {
           <li
             key={`${t.title}-${i}`}
             className="border rounded-lg p-4 w-full break-words min-w-0 text-left
-              bg-stone-50 dark:bg-stone-800 dark:border-stone-600 
+              bg-stone-50 dark:bg-stone-800 dark:border-stone-600 space:bg-stone-800 space:border-stone-600
               neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px]
               tron:hover:shadow-tron tron:hover:animate-tronpulse
               transition-colors duration-400 group"
@@ -117,15 +117,15 @@ export default function Timeline() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 min-w-0">
               <h3 className="text-base sm:text-lg font-semibold leading-snug flex-1 min-w-0 break-normal
-                group-hover:text-lime-600 dark:group-hover:text-lime-500
+                group-hover:text-lime-600 dark:group-hover:text-lime-500 space:group-hover:text-yellow-500
                 neon:text-rose-200 neon:group-hover:text-rose-600
                 tron:text-red-700 tron:group-hover:text-white
                 transition-colors duration-400">
                 {t.title}
               </h3>
               <span className="text-xs sm:text-sm px-2 py-1 rounded-full border shrink-0 whitespace-normal
-                group-hover:text-white group-hover:bg-lime-600 
-                dark:border-stone-500 
+                group-hover:text-white group-hover:bg-lime-600 space:group-hover:bg-yellow-600
+                dark:border-stone-500 space:border-stone-500
                 neon:border-rose-200 neon:bg-transparent neon:text-white 
                 neon:group-hover:bg-rose-600 neon:group-hover:text-white
                 tron:border-red-700 tron:text-red-400 tron:group-hover:text-red-400 tron:group-hover:bg-red-700/50
@@ -136,14 +136,14 @@ export default function Timeline() {
 
             {/* Period */}
             {t.period && (
-              <div className="text-sm text-stone-600 dark:text-stone-300 mt-1 break-normal">
+              <div className="text-sm text-stone-600 dark:text-stone-300 space:text-stone-300 mt-1 break-normal">
                 {t.period}
               </div>
             )}
 
             {/* Summary */}
             {t.summary && (
-              <p className="text-sm mt-2 text-stone-700 dark:text-stone-200
+              <p className="text-sm mt-2 text-stone-700 dark:text-stone-200 space:text-stone-200
                 neon:text-white neon:group-hover:text-black
                 tron:text-red-400 tron:group-hover:text-white
                 transition-colors duration-400 break-normal">
@@ -153,9 +153,9 @@ export default function Timeline() {
 
             {/* Details */}
             {t.details && (
-              <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 neon:border-rose-200 tron:border-red-700 min-w-0">
+              <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 space:border-stone-700 neon:border-rose-200 tron:border-red-700 min-w-0">
                 {t.details.description && (
-                  <p className="text-sm text-stone-700 dark:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-normal">
+                  <p className="text-sm text-stone-700 dark:text-stone-200 space:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-normal">
                     {t.details.description}
                   </p>
                 )}
@@ -164,7 +164,7 @@ export default function Timeline() {
                   <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
                     {t.details.tools.map((tool, j) => (
                       <span key={j}
-                        className="px-2 py-1 border rounded bg-stone-100 dark:bg-stone-700
+                        className="px-2 py-1 border rounded bg-stone-100 dark:bg-stone-700 space:bg-stone-700
                           neon:bg-rose-400 neon:text-black tron:bg-transparent tron:border-red-700 tron:text-red-700
                           transition-colors duration-400">
                         {tool}
@@ -175,7 +175,7 @@ export default function Timeline() {
 
                 {/* Thumbnails */}
                 {t.details.screenshots && t.details.screenshots.length > 0 && (
-                  <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-stone-400 dark:scrollbar-thumb-stone-600">
+                  <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-stone-400 dark:scrollbar-thumb-stone-600 space:scrollbar-thumb-stone-600">
                     {t.details.screenshots.map((src, idx) => (
                       <img
                         key={idx}

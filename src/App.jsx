@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Hero from './components/Hero.jsx'
-import TechTags from './components/TechTags.jsx'
 import AboutResume from './components/AboutResume.jsx'
 import Timeline from './components/Timeline.jsx'
 import SkillsMatrix from './components/SkillsMatrix.jsx'
@@ -16,6 +15,7 @@ function Section({ id, title, children }) {
       className="
         py-16 border-t first:border-0 
         dark:border-stone-800 
+        space:border-stone-800
         light:border-stone-300 
         neon:border-rose-400 
         tron:border-red-700
@@ -26,6 +26,7 @@ function Section({ id, title, children }) {
           text-2xl font-semibold mb-4 
           [&]:text-stone-800 
           dark:[&]:text-stone-200 
+          space:[&]:text-stone-200
           light:[&]:text-stone-950 
           neon:[&]:text-zinc-950
         ">
@@ -38,21 +39,13 @@ function Section({ id, title, children }) {
 }
 
 export default function App() {
-  const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
   const [menuOpen, setMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const r = document.documentElement
-    dark ? r.classList.add('dark') : r.classList.remove('dark')
-    localStorage.setItem('theme', dark ? 'dark' : 'light')
-  }, [dark])
 
   const handleNavClick = () => setMenuOpen(false)
 
   const navLinks = [
     { href: "#hero", label: "Hello" },
-    { href: "#about", label: "Why Me?" },
-    { href: "#tech", label: "Tech Stack" },
+    { href: "#about", label: "Proven Results" },
     { href: "#skills", label: "Skills Matrix" },
     { href: "#timeline", label: "Project Highlights" },
     { href: "#contact", label: "Get in Touch" },
@@ -64,6 +57,7 @@ export default function App() {
         sticky top-0 z-50 backdrop-blur 
         bg-white/70 text-stone-800 border-b border-stone-200
         dark:bg-stone-900/70 dark:text-stone-200 dark:border-stone-800
+        space:bg-stone-900/70 space:text-stone-200 space:border-stone-800
         light:bg-stone-100/80 light:text-stone-950 light:border-stone-300
         neon:bg-pink-700/80 neon:text-rose-100 neon:border-rose-200 
         tron:bg-black/80 tron:text-white tron:border-red-700
@@ -84,6 +78,7 @@ export default function App() {
                 className="
                   hover:text-lime-600 
                   dark:hover:text-lime-400 
+                  space:hover:text-yellow-400
                   light:hover:text-cyan-600 
                   neon:hover:text-rose-300
                 "
@@ -113,8 +108,8 @@ export default function App() {
         {menuOpen && (
           <div className="
             md:hidden border-t 
-            bg-white/95 dark:bg-stone-900/95 neon:bg-pink-800/90 tron:bg-black/90 
-            backdrop-blur-sm border-stone-200 dark:border-stone-700 neon:border-rose-200 tron:border-red-700
+            bg-white/95 dark:bg-stone-900/95 space:bg-stone-900/95 neon:bg-pink-800/90 tron:bg-black/90 
+            backdrop-blur-sm border-stone-200 dark:border-stone-700 space:border-stone-700 neon:border-rose-200 tron:border-red-700
             animate-fadeIn
           ">
             <nav className="flex flex-col text-sm px-6 py-4 space-y-3">
@@ -126,6 +121,7 @@ export default function App() {
                   className="
                     hover:text-lime-600 
                     dark:hover:text-lime-400 
+                    space:hover:text-yellow-400
                     light:hover:text-cyan-600 
                     neon:hover:text-rose-300
                   "
@@ -140,9 +136,10 @@ export default function App() {
       
       <main className="
         mx-auto max-w-6xl px-4 transition-colors duration-700
-        text-stone-800 dark:text-stone-200 light:text-stone-950 neon:text-zinc-950
+        text-stone-800 dark:text-stone-200 space:text-stone-200 light:text-stone-950 neon:text-zinc-950
         [&_h1]:text-lime-600 [&_h2]:text-lime-600
         dark:[&_h1]:text-lime-500 dark:[&_h2]:text-lime-500
+        space:[&_h1]:text-yellow-500 space:[&_h2]:text-yellow-500
         light:[&_h1]:text-cyan-600 light:[&_h2]:text-cyan-600
         neon:[&_h1]:text-rose-600 neon:[&_h2]:text-rose-600
         neon:bg-pink-200 
@@ -155,10 +152,6 @@ export default function App() {
         <Section id="about" title="Proven Results">
           <AboutResume />
         </Section>
-
-        {/* <Section id="tech" title="">
-          <TechTags />
-        </Section> */}
 
         <Section id="skills" title="Skills Matrix">
           <SkillsMatrix />

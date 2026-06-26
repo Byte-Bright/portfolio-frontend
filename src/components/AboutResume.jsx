@@ -29,21 +29,21 @@ export default function AboutResume() {
 function Fact({ k, v }) {
   return (
     <div className="
-    border border-stone-300 dark:border-stone-600 
-    bg-stone-50 dark:bg-stone-800 
-    text-stone-700 dark:text-stone-200 
+    border border-stone-300 dark:border-stone-600 space:border-stone-600
+    bg-stone-50 dark:bg-stone-800 space:bg-stone-800
+    text-stone-700 dark:text-stone-200 space:text-stone-200
     hover:shadow-md rounded-lg p-3 text-center duration-200 
     neon:bg-rose-600 light:bg-white transition-colors duration-400
     group tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:bg-black/50 tron:hover:shadow-tron tron:hover:animate-tronpulse
      ">
       <div className="
-      text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400
+      text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400 space:text-stone-400
       neon:text-rose-200
       neon:group-hover:text-yellow-400 duration-400
       tron:text-red-400 tron:group-hover:text-red-600 transition-colors duration-400
       ">{k}</div>
       <div className="
-      text-xl font-semibold provenData group-hover:text-lime-600
+      text-xl font-semibold provenData group-hover:text-lime-600 space:group-hover:text-yellow-500
       neon:text-white
       neon:group-hover:text-yellow-400 duration-400 
       tron:text-red-500 tron:group-hover:text-white transition-colors duration-400
