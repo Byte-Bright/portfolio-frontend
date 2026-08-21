@@ -12,7 +12,7 @@ export default function Hero() {
             Denver, CO · Front‑End Developer
           </p>
           <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight neon:text-rose-600">
-            Justin<br />Caldwell
+            Justin Caldwell
           </h1>
         </div>
 
