@@ -44,7 +44,6 @@ export default function App() {
   const handleNavClick = () => setMenuOpen(false)
 
   const navLinks = [
-    { href: "#hero", label: "Hello" },
     { href: "#about", label: "Proven Results" },
     { href: "#skills", label: "Skills Matrix" },
     { href: "#timeline", label: "Project Highlights" },

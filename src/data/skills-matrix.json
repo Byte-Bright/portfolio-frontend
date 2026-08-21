@@ -6,5 +6,5 @@
   { "name": "WordPress, Shopify, Squarespace, Drupal", "category": "CMS / SaaS" },
   { "name": "Accessibility (WCAG 2.2 / Section 508), Accessibility Audits, Screen Readers, Usability Testing", "category": "Accessibility", "evidence": "#" },
   { "name": "Git & GitHub, Netlify (CI/CD), Vite", "category": "DevOps" },
-  { "name": "AI Prompt Engineering, AI Agents, Machine Learning", "category": "AI / Automation" }
+  { "name": "Gemini, Cursor, Claude, Prompt Engineering", "category": "AI / Automation" }
 ]

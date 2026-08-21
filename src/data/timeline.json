@@ -3,7 +3,7 @@
     "title": "CMS Custom Website Design",
     "category": "Custom Web Development",
     "period": "2017-2025",
-    "summary": "150+ custom website templates developed for financial institutions using Squarespace, enhancing online presence, accessibility and user engagement.",
+    "summary": "200+ custom website templates developed for financial institutions using Squarespace, enhancing online presence, accessibility and user engagement.",
     "lightbox": true,
     "webcrop": true,
     "details": {
@@ -51,8 +51,9 @@
   },
   {
     "title": "Creative Brand Development",
-    "category": "Custom Web Development",
+    "category": "Print Design",
     "period": "2015–2025",
+    "visible": false,
     "summary": "A curated collection of independent design & development projects completed for various clients and creative collaborations. Focused on web design & user interface systems, blending aesthetics with usability.",
     "lightbox": true,
     "webcrop": false,
@@ -84,6 +85,7 @@
     "title": "Small and Large Format Printing",
     "category": "Print Design",
     "period": "2015–2025",
+    "visible": false,
     "summary": "A curated collection of printing projects completed for various clients and creative collaborations. Focused on small and large format printing, blending aesthetics with usability.",
     "lightbox": true,
     "webcrop": false,

@@ -3,15 +3,15 @@ export default function AboutResume() {
     <div className="grid gap-6">
       {/* Intro blurb */}
       <p className="text-lg">
-        Over the past decade, I’ve delivered 150+ high-performaning, accessible sites while leading projects that improve speed, quality, and developer workflows. 
+        Over the past decade, I’ve delivered 200+ high-performing, accessible sites while leading projects that improve speed, quality, and developer workflows.
         I focus on WCAG‑compliant UI, responsive systems, and developer tools that speed delivery and improve quality.
       </p>
 
       {/* Quick facts */}
       <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 ">
         <Fact k="Years" v="10+" />
-        <Fact k="Sites shipped" v="150+" />
-        <Fact k="Accessibility" v="WCAG / 508" />
+        <Fact k="Sites shipped" v="200+" />
+        <Fact k="WCAG 2.2 / 508" v="✓" sub="federal + international accessibility standards" />
         <Fact k="Leadership" v="Lead Dev (2023→)" />
       </div>
 
@@ -26,7 +26,7 @@ export default function AboutResume() {
   )
 }
 
-function Fact({ k, v }) {
+function Fact({ k, v, sub }) {
   return (
     <div className="
     border border-stone-300 dark:border-stone-600 space:border-stone-600
@@ -45,9 +45,12 @@ function Fact({ k, v }) {
       <div className="
       text-xl font-semibold provenData group-hover:text-lime-600 space:group-hover:text-yellow-500
       neon:text-white
-      neon:group-hover:text-yellow-400 duration-400 
+      neon:group-hover:text-yellow-400 duration-400
       tron:text-red-500 tron:group-hover:text-white transition-colors duration-400
       ">{v}</div>
+      {sub && (
+        <div className="text-xs mt-1 text-stone-400 dark:text-stone-500 space:text-stone-500 leading-tight">{sub}</div>
+      )}
     </div>
   )
 }

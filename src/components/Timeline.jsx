@@ -3,7 +3,7 @@ import timeline from '../data/timeline.json'
 
 export default function Timeline() {
   const categories = useMemo(() => {
-    const set = new Set(timeline.map(t => t.category || 'Other'))
+    const set = new Set(timeline.filter(t => t.visible !== false).map(t => t.category || 'Other'))
     return ['All', ...Array.from(set)]
   }, [])
 
@@ -16,11 +16,13 @@ export default function Timeline() {
     fade: true
   })
 
+  const visibleTimeline = useMemo(() => timeline.filter(t => t.visible !== false), [])
+
   const items = useMemo(() => {
     return active === 'All'
-      ? timeline
-      : timeline.filter(t => (t.category || 'Other') === active)
-  }, [active])
+      ? visibleTimeline
+      : visibleTimeline.filter(t => (t.category || 'Other') === active)
+  }, [active, visibleTimeline])
 
   const openLightbox = (project, index) => {
     if (!project.lightbox) return
