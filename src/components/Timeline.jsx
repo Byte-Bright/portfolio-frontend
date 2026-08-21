@@ -1,5 +1,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import timeline from '../data/timeline.json'
+import { useInView } from '../hooks/useInView'
+import { Tabs, TabsList, TabsTrigger } from './ui/tabs'
 
 export default function Timeline() {
   const categories = useMemo(() => {
@@ -17,6 +19,8 @@ export default function Timeline() {
   })
 
   const visibleTimeline = useMemo(() => timeline.filter(t => t.visible !== false), [])
+
+  const [listRef, listInView] = useInView()
 
   const items = useMemo(() => {
     return active === 'All'
@@ -79,42 +83,30 @@ export default function Timeline() {
 
   return (
     <div className="grid gap-6 max-w-full overflow-x-hidden px-3 sm:px-0">
-      
-      {/* Category Tabs */}
-      <div
-        role="tablist"
-        aria-label="Timeline categories"
-        className="flex flex-wrap gap-2 justify-start sm:justify-start"
-      >
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            role="tab"
-            aria-selected={active === cat}
-            onClick={() => setActive(cat)}
-            className={`px-3 py-1 rounded-lg border text-sm sm:text-base break-normal text-left
-              focus:outline-none focus:ring-2 focus:ring-offset-2
-              ${
-                active === cat
-                  ? 'bg-stone-900 text-white dark:bg-white dark:text-stone-900 space:bg-white space:text-stone-900 neon:bg-rose-600'
-                  : 'bg-white dark:bg-stone-900 space:bg-stone-900 neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700 tron:hover:shadow-tron tron:hover:animate-tronpulse'
-              }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+
+      {/* Category Tabs — shadcn/ui Tabs primitive */}
+      <Tabs value={active} onValueChange={setActive}>
+        <TabsList aria-label="Timeline categories">
+          {categories.map((cat) => (
+            <TabsTrigger key={cat} value={cat}>
+              {cat}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
 
       {/* Project Cards */}
-      <ul className="grid gap-4 sm:gap-6 max-w-full justify-start">
+      <ul ref={listRef} className="grid gap-4 sm:gap-6 max-w-full justify-start">
         {items.map((t, i) => (
           <li
             key={`${t.title}-${i}`}
-            className="border rounded-lg p-4 w-full break-words min-w-0 text-left
+            className={`fade-up ${listInView ? 'is-visible' : ''}
+              border rounded-lg p-4 w-full break-words min-w-0 text-left
               bg-stone-50 dark:bg-stone-800 dark:border-stone-600 space:bg-stone-800 space:border-stone-600
               neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px]
               tron:hover:shadow-tron tron:hover:animate-tronpulse
-              transition-colors duration-400 group"
+              transition-colors duration-400 group`}
+            style={{ transitionDelay: listInView ? `${i * 90}ms` : '0ms' }}
           >
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 min-w-0">
@@ -128,7 +120,7 @@ export default function Timeline() {
               <span className="text-xs sm:text-sm px-2 py-1 rounded-full border shrink-0 whitespace-normal
                 group-hover:text-white group-hover:bg-lime-600 space:group-hover:bg-yellow-600
                 dark:border-stone-500 space:border-stone-500
-                neon:border-rose-200 neon:bg-transparent neon:text-white 
+                neon:border-rose-200 neon:bg-transparent neon:text-white
                 neon:group-hover:bg-rose-600 neon:group-hover:text-white
                 tron:border-red-700 tron:text-red-400 tron:group-hover:text-red-400 tron:group-hover:bg-red-700/50
                 transition-colors duration-400">

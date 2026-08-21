@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import data from '../data/skills-matrix.json'
+import { useInView } from '../hooks/useInView'
 
 export default function SkillsMatrix() {
   // Build category list from data
@@ -16,6 +17,8 @@ export default function SkillsMatrix() {
     )
   }, [activeCat])
 
+  const [gridRef, gridInView] = useInView()
+
   return (
     <div className="grid gap-6">
       {/* Filters */}
@@ -24,19 +27,33 @@ export default function SkillsMatrix() {
       </div>
 
       {/* Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+      <div ref={gridRef} className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
         {filtered.map((s, i) => (
           <article
             key={`${s.name}-${i}`}
-            className="border border-stone-300 dark:border-stone-600 space:border-stone-600 bg-stone-50 dark:bg-stone-800 space:bg-stone-800 text-stone-700 dark:text-stone-200 space:text-stone-200 hover:shadow-md rounded-lg p-3 transition group neon:bg-rose-600 neon:text-white neon:hover:text-black neon:hover:bg-yellow-400 duration-400 
-             tron:bg-transparent tron:border-red-700 tron:border-[2px] tron:hover:shadow-tron tron:hover:animate-tronpulse
-            ">
+            className={`fade-up ${gridInView ? 'is-visible' : ''}
+              border border-stone-300 dark:border-stone-600 space:border-stone-600
+              bg-stone-50 dark:bg-stone-800 space:bg-stone-800
+              text-stone-700 dark:text-stone-200 space:text-stone-200
+              hover:shadow-md rounded-lg p-3 transition group
+              neon:bg-rose-600 neon:text-white neon:hover:text-black neon:hover:bg-yellow-400 duration-400
+              tron:bg-transparent tron:border-red-700 tron:border-[2px]
+              tron:hover:shadow-tron tron:hover:animate-tronpulse`}
+            style={{ transitionDelay: gridInView ? `${i * 55}ms` : '0ms' }}
+          >
             <div className="flex items-center justify-between gap-2">
-              <h3 className="font-medium text-stone-500 dark:text-stone-500 space:text-stone-500 group-hover:text-lime-600 space:group-hover:text-yellow-500 neon:text-rose-200 neon:group-hover:text-rose-600 tron:text-red-700 tron:group-hover:text-white transition-colors duration-400">
+              <h3 className="font-medium text-stone-500 dark:text-stone-500 space:text-stone-500
+                group-hover:text-lime-600 space:group-hover:text-yellow-500
+                neon:text-rose-200 neon:group-hover:text-rose-600
+                tron:text-red-700 tron:group-hover:text-white
+                transition-colors duration-400">
                 {s.name}
               </h3>
             </div>
-            <div className="text-xs mt-1 tron:text-red-400 tron:group-hover:text-red-700">{s.category || 'Other'}</div>
+            <div className="text-xs mt-1 tron:text-red-400 tron:group-hover:text-red-700">
+              {s.category || 'Other'}
+            </div>
+            {/* Evidence links re-enabled once real URLs are confirmed */}
             {/* {s.evidence && (
               <a
                 href={s.evidence}
@@ -68,7 +85,8 @@ function Filter({ label, options, value, onChange }) {
       <select
         value={value}
         onChange={e => onChange(e.target.value)}
-        className="rounded-md border bg-white dark:bg-stone-700/70 space:bg-stone-700/70 px-2 py-1 text-stone-600 dark:text-stone-300 space:text-stone-300"
+        className="rounded-md border bg-white dark:bg-stone-700/70 space:bg-stone-700/70
+          px-2 py-1 text-stone-600 dark:text-stone-300 space:text-stone-300"
       >
         {options.map(o => (
           <option key={o} value={o}>
