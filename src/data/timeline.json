@@ -35,7 +35,7 @@
     "problem": "Serious poker players have no purpose-built tool for tracking opponents, replaying hands, and learning from their sessions, and nothing on the market accounts for the physical reality of pulling out your phone at a table full of people you're quietly profiling.",
     "outcome": "Built a cross-platform mobile app in Flutter with a Supabase backend, offline-capable local database via Drift, player profiling with archetypes, and full session journaling. Includes a Stealth UX mode that disguises all poker data as a stocks app with a single tap, letting you take notes on the player across from you without tipping your hand. Pre-launch; targeting App Store and Google Play with a RevenueCat subscription model.",
     "details": {
-      "tools": ["Flutter", "Dart", "Supabase", "Drift", "RevenueCat", "Provider"]
+      "tools": ["Flutter", "Dart", "Supabase", "Drift", "RevenueCat"]
     }
   },
   {
