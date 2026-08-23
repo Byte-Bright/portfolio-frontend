@@ -2,8 +2,7 @@
   { "name": "Wireframing, Prototyping", "category": "UI/UX" },
   { "name": "Figma, Adobe Photoshop, Adobe Illustrator", "category": "UI/UX" },
   { "name": "React, JavaScript, HTML, CSS, Responsive Design", "category": "Frontend" },
-  { "name": "API, JSON, Render (Python API)", "category": "Backend" },
-  { "name": "WordPress, Shopify, Squarespace, Drupal", "category": "CMS / SaaS" },
+{ "name": "WordPress, Shopify, Squarespace, Drupal", "category": "CMS / SaaS" },
   { "name": "Accessibility (WCAG 2.2 / Section 508), Accessibility Audits, Screen Readers, Usability Testing", "category": "Accessibility", "evidence": "#" },
   { "name": "Git & GitHub, Netlify (CI/CD), Vite", "category": "DevOps" },
   { "name": "Gemini, Cursor, Claude, Prompt Engineering", "category": "AI / Automation" }
