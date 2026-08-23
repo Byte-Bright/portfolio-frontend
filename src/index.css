@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 /* Always reserve scrollbar width — prevents layout shift when scrollbar appears */
+/* Scrollbar is hidden visually but still functional and reserves space */
 html {
   overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 /*
