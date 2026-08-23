@@ -82,7 +82,7 @@ export default function Timeline() {
   }, [lightbox.open])
 
   return (
-    <div className="grid gap-6 max-w-full overflow-x-hidden px-3 sm:px-0">
+    <div className="grid gap-6 max-w-full overflow-hidden px-3 sm:px-0">
 
       {/* Category Tabs — shadcn/ui Tabs primitive */}
       <Tabs value={active} onValueChange={setActive}>
@@ -96,7 +96,7 @@ export default function Timeline() {
       </Tabs>
 
       {/* Project Cards */}
-      <ul ref={listRef} className="grid gap-4 sm:gap-6 max-w-full justify-start">
+      <ul ref={listRef} className="grid gap-4 sm:gap-6 max-w-full justify-start overflow-hidden pb-6">
         {items.map((t, i) => (
           <li
             key={`${t.title}-${i}`}
