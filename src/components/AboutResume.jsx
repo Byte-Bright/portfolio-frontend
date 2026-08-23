@@ -22,8 +22,8 @@ export default function AboutResume() {
       {/* Highlights */}
       <ul className={`space-y-2 fade-up ${inView ? 'is-visible' : ''}`} style={{ transitionDelay: inView ? '500ms' : '0ms' }}>
         <li>• Led development of internal tooling including a <strong>QA Helper</strong> that flags 20+ ADA/QA issues before review, and <strong>Graphics and Code Asset Libraries</strong> to cut install time and errors.</li>
-        <li>• Built Gem-powered code generators so any team member can paste a screenshot or data and get clean, ADA-compliant code — with a verification data attribute built in for QA.</li>
-        <li>• Created <strong>Cursor skills</strong> for common web elements and full Squarespace template installs, collapsing a 10+ step process across multiple files into a single prompt.</li>
+        <li>• Built Gem-powered <strong>AI code generators</strong> so any team member can paste a screenshot or data and get clean, ADA-compliant code.</li>
+        <li>• Created <strong>Cursor AI skills</strong> for common web elements and full Squarespace template installs, collapsing a 10+ step process across multiple files into a single prompt.</li>
       </ul>
     </div>
   )
