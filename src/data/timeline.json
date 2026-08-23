@@ -7,7 +7,7 @@
     "cardType": "project",
     "role": "Lead Front-End Developer",
     "problem": "Delivering 200+ custom, accessible websites for financial institutions on a platform originally designed for single-site DIY users — with no native component reuse, no multi-client tooling, and stock components that routinely fell short of ADA standards.",
-    "outcome": "Built scalable production workflows on Squarespace 7.0 developer mode, engineering custom accessible widgets from scratch wherever stock components couldn't meet WCAG 2.2 / Section 508 requirements. Delivered consistent, compliant web experiences across 200+ credit union websites.",
+    "outcome": "Built scalable production workflows on Squarespace 7.0 developer mode, engineering custom accessible widgets from scratch wherever stock components couldn't meet WCAG 2.2 / Section 508 requirements. Delivered consistent, compliant web experiences across 200+ credit union websites — part of an agency that has served 650+ clients total.",
     "details": {
       "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Adobe Suite", "Squarespace 7.0"]
     }
