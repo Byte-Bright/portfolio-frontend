@@ -23,7 +23,6 @@ export default function AboutResume() {
       <ul className={`space-y-2 fade-up ${inView ? 'is-visible' : ''}`} style={{ transitionDelay: inView ? '500ms' : '0ms' }}>
         <li>• Led development of a <strong>QA Helper</strong> that flags 20+ common ADA/QA issues before review.</li>
         <li>• Built <strong>Graphics Asset Library</strong> and <strong>Code Asset Library</strong> to cut install time &amp; errors.</li>
-        <li>• Collaborated across teams to <strong>align goals, refine processes, and streamline</strong> project flow.</li>
       </ul>
     </div>
   )
