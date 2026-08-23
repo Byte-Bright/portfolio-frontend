@@ -1,8 +1,8 @@
 [
   { "name": "Figma, Adobe Photoshop, Adobe Illustrator, Wireframing & Prototyping", "category": "UI/UX" },
-  { "name": "React, JavaScript, HTML, CSS, Responsive Design", "category": "Frontend" },
+  { "name": "React, JavaScript, HTML, CSS, Responsive Design, Vite", "category": "Frontend" },
   { "name": "WordPress, Shopify, Squarespace (Dev Mode), Drupal", "category": "CMS / SaaS" },
   { "name": "WCAG 2.2 / Section 508, Accessibility Audits & Usability Testing", "category": "Accessibility", "evidence": "#" },
-  { "name": "Git & GitHub, Netlify (CI/CD), Vite", "category": "DevOps" },
+  { "name": "Git & GitHub, Netlify, Cursor (VS Code), npm", "category": "DevOps" },
   { "name": "Prompt Engineering, AI Image Generation, Workflow Automation, AI-Assisted Development", "category": "AI / Automation" }
 ]
