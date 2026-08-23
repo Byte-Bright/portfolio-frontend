@@ -20,7 +20,7 @@
     "cardType": "project",
     "role": "Tooling Architect / Lead Developer",
     "problem": "A 600+ client agency running on a platform with no native component reuse, no asset management, and no quality tooling needed a better way to build — faster, more consistently, and with accessibility baked in from the start.",
-    "outcome": "Architected and led development of a full internal tooling ecosystem: a custom shortcode system for rapid page composition, a self-hosted QA Helper that flags 20+ ADA and QA issues via a single JS injection, a 75-item code and image asset library, two code generators (HTML tables and rate sliders), and LISA-LOCATOR — the first working fix for a platform-wide Squarespace search limitation. Also rebuilt the styles panel to match the actual agency workflow. As AI tooling has matured, the process has continued to evolve — manual tools are progressively being replaced by Gemini Gems and Cursor skills, shifting the team from hand-built workarounds toward AI-assisted workflows.",
+    "outcome": "Architected and led development of a full internal tooling ecosystem: a custom shortcode system for rapid page composition, a self-hosted QA Helper that flags 20+ ADA and QA issues via a single JS injection, a 75-item code and image asset library, two code generators (HTML tables and rate sliders). Also rebuilt the styles panel to match the actual agency workflow. As AI tooling has matured, the process has continued to evolve — manual tools are progressively being replaced by Gemini Gems and Cursor skills, shifting the team from hand-built workarounds toward AI-assisted workflows.",
     "details": {
       "tools": ["JavaScript", "HTML", "CSS", "Node.js", "Gemini", "Cursor"]
     }
