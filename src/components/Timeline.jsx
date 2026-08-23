@@ -86,7 +86,7 @@ export default function Timeline() {
 
       {/* Category Tabs — shadcn/ui Tabs primitive */}
       <Tabs value={active} onValueChange={setActive}>
-        <TabsList aria-label="Timeline categories">
+        <TabsList aria-label="Project categories">
           {categories.map((cat) => (
             <TabsTrigger key={cat} value={cat}>
               {cat}
@@ -135,26 +135,57 @@ export default function Timeline() {
               </div>
             )}
 
-            {/* Summary */}
-            {t.summary && (
-              <p className="text-sm mt-2 text-stone-700 dark:text-stone-200 space:text-stone-200
-                neon:text-white neon:group-hover:text-black
-                tron:text-red-400 tron:group-hover:text-white
-                transition-colors duration-400 break-normal">
-                {t.summary}
-              </p>
-            )}
-
-            {/* Details */}
-            {t.details && (
-              <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 space:border-stone-700 neon:border-rose-200 tron:border-red-700 min-w-0">
-                {t.details.description && (
-                  <p className="text-sm text-stone-700 dark:text-stone-200 space:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-normal">
-                    {t.details.description}
-                  </p>
+            {/* Project card body — role / problem / outcome */}
+            {t.cardType === 'project' ? (
+              <div className="mt-3 space-y-3">
+                {t.role && (
+                  <div className="text-sm font-medium italic
+                    text-stone-500 dark:text-stone-400 space:text-stone-400
+                    neon:text-rose-200 tron:text-red-400">
+                    {t.role}
+                  </div>
                 )}
 
-                {t.details.tools && (
+                {(t.problem || t.outcome) && (
+                  <div className="border-t pt-3 space-y-3
+                    border-stone-200 dark:border-stone-700 space:border-stone-700
+                    neon:border-rose-200 tron:border-red-700">
+
+                    {t.problem && (
+                      <div>
+                        <div className="text-xs uppercase tracking-wide mb-1
+                          text-stone-400 dark:text-stone-500 space:text-stone-500
+                          neon:text-rose-200 tron:text-red-600">
+                          Challenge
+                        </div>
+                        <p className="text-sm break-normal
+                          text-stone-700 dark:text-stone-200 space:text-stone-200
+                          neon:text-white tron:text-red-400
+                          transition-colors duration-400">
+                          {t.problem}
+                        </p>
+                      </div>
+                    )}
+
+                    {t.outcome && (
+                      <div>
+                        <div className="text-xs uppercase tracking-wide mb-1
+                          text-stone-400 dark:text-stone-500 space:text-stone-500
+                          neon:text-rose-200 tron:text-red-600">
+                          Outcome
+                        </div>
+                        <p className="text-sm break-normal
+                          text-stone-700 dark:text-stone-200 space:text-stone-200
+                          neon:text-white tron:text-red-400
+                          transition-colors duration-400">
+                          {t.outcome}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {t.details?.tools && (
                   <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
                     {t.details.tools.map((tool, j) => (
                       <span key={j}
@@ -166,22 +197,58 @@ export default function Timeline() {
                     ))}
                   </div>
                 )}
+              </div>
 
-                {/* Thumbnails */}
-                {t.details.screenshots && t.details.screenshots.length > 0 && (
-                  <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-stone-400 dark:scrollbar-thumb-stone-600 space:scrollbar-thumb-stone-600">
-                    {t.details.screenshots.map((src, idx) => (
-                      <img
-                        key={idx}
-                        src={src}
-                        alt=""
-                        onClick={() => openLightbox(t, idx)}
-                        className="h-24 sm:h-28 w-auto rounded cursor-pointer border hover:opacity-80 hover:scale-[1.02] transition"
-                      />
-                    ))}
+            ) : (
+              /* Standard screenshot-gallery card body */
+              <>
+                {t.summary && (
+                  <p className="text-sm mt-2 text-stone-700 dark:text-stone-200 space:text-stone-200
+                    neon:text-white neon:group-hover:text-black
+                    tron:text-red-400 tron:group-hover:text-white
+                    transition-colors duration-400 break-normal">
+                    {t.summary}
+                  </p>
+                )}
+
+                {t.details && (
+                  <div className="mt-3 space-y-3 border-t pt-3 border-stone-200 dark:border-stone-700 space:border-stone-700 neon:border-rose-200 tron:border-red-700 min-w-0">
+                    {t.details.description && (
+                      <p className="text-sm text-stone-700 dark:text-stone-200 space:text-stone-200 neon:text-white tron:text-red-400 transition-colors duration-400 break-normal">
+                        {t.details.description}
+                      </p>
+                    )}
+
+                    {t.details.tools && (
+                      <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
+                        {t.details.tools.map((tool, j) => (
+                          <span key={j}
+                            className="px-2 py-1 border rounded bg-stone-100 dark:bg-stone-700 space:bg-stone-700
+                              neon:bg-rose-400 neon:text-black tron:bg-transparent tron:border-red-700 tron:text-red-700
+                              transition-colors duration-400">
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Thumbnails */}
+                    {t.details.screenshots && t.details.screenshots.length > 0 && (
+                      <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-stone-400 dark:scrollbar-thumb-stone-600 space:scrollbar-thumb-stone-600">
+                        {t.details.screenshots.map((src, idx) => (
+                          <img
+                            key={idx}
+                            src={src}
+                            alt=""
+                            onClick={() => openLightbox(t, idx)}
+                            className="h-24 sm:h-28 w-auto rounded cursor-pointer border hover:opacity-80 hover:scale-[1.02] transition"
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
-              </div>
+              </>
             )}
           </li>
         ))}
