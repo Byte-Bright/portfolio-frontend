@@ -2,14 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Reserve scrollbar space so it never shifts layout */
+/* Always reserve scrollbar width — prevents layout shift when scrollbar appears */
 html {
-  scrollbar-gutter: stable;
-}
-
-/* Prevent translateY animation from briefly extending scroll area */
-main {
-  overflow: clip;
+  overflow-y: scroll;
 }
 
 /*
@@ -169,6 +164,7 @@ main .text-sm {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 0.55s ease, transform 0.55s ease;
+  will-change: opacity, transform;
 }
 
 .fade-up.is-visible {
@@ -214,12 +210,12 @@ main .text-sm {
   position: fixed;
   inset: 0;
   z-index: -10;
-  /* background-color: lightseagreen; */
   pointer-events: none;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .neon .aurora-wrap {
   background-image: url("pinkypopout.png"); 
