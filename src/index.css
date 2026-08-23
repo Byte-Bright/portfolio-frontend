@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reserve scrollbar space so it never shifts layout */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Prevent translateY animation from briefly extending scroll area */
+main {
+  overflow: clip;
+}
+
 /*
 :root { color-scheme: light dark; }
 html, body, #root { height: 100%; }
