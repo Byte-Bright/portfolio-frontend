@@ -35,7 +35,7 @@ function CountFact({ k, target, suffix = '', inView, delay = 0 }) {
   return (
     <div
       className={`fade-up ${inView ? 'is-visible' : ''}
-        border border-stone-300 dark:border-stone-600 space:border-stone-600
+        border border-stone-300 dark:border-stone-600 space:border-violet-400/30
         bg-stone-50 dark:bg-stone-800 space:bg-stone-800
         text-stone-700 dark:text-stone-200 space:text-stone-200
         hover:shadow-md rounded-lg p-3 text-center duration-200
@@ -51,7 +51,7 @@ function CountFact({ k, target, suffix = '', inView, delay = 0 }) {
         {k}
       </div>
       <div className="
-        text-xl font-semibold provenData group-hover:text-lime-600 space:group-hover:text-yellow-500
+        text-xl font-semibold provenData group-hover:text-lime-600 space:group-hover:text-violet-400
         neon:text-white neon:group-hover:text-yellow-400 duration-400
         tron:text-red-500 tron:group-hover:text-white transition-colors duration-400">
         {count}{suffix}
@@ -64,7 +64,7 @@ function Fact({ k, v, sub, inView, delay = 0 }) {
   return (
     <div
       className={`fade-up ${inView ? 'is-visible' : ''}
-        border border-stone-300 dark:border-stone-600 space:border-stone-600
+        border border-stone-300 dark:border-stone-600 space:border-violet-400/30
         bg-stone-50 dark:bg-stone-800 space:bg-stone-800
         text-stone-700 dark:text-stone-200 space:text-stone-200
         hover:shadow-md rounded-lg p-3 text-center duration-200
@@ -80,7 +80,7 @@ function Fact({ k, v, sub, inView, delay = 0 }) {
         {k}
       </div>
       <div className="
-        text-xl font-semibold provenData group-hover:text-lime-600 space:group-hover:text-yellow-500
+        text-xl font-semibold provenData group-hover:text-lime-600 space:group-hover:text-violet-400
         neon:text-white neon:group-hover:text-yellow-400 duration-400
         tron:text-red-500 tron:group-hover:text-white transition-colors duration-400">
         {v}

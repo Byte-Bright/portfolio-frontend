@@ -15,7 +15,7 @@ function Section({ id, title, children }) {
       className="
         py-16 border-t first:border-0 
         dark:border-stone-800 
-        space:border-stone-800
+        space:border-violet-400/20
         light:border-stone-300 
         neon:border-rose-400 
         tron:border-red-700
@@ -56,14 +56,14 @@ export default function App() {
         sticky top-0 z-50 backdrop-blur 
         bg-white/70 text-stone-800 border-b border-stone-200
         dark:bg-stone-900/70 dark:text-stone-200 dark:border-stone-800
-        space:bg-stone-900/70 space:text-stone-200 space:border-stone-800
+        space:bg-stone-900/70 space:text-stone-200 space:border-violet-400/20
         light:bg-stone-100/80 light:text-stone-950 light:border-stone-300
         neon:bg-pink-700/80 neon:text-rose-100 neon:border-rose-200 
         tron:bg-black/80 tron:text-white tron:border-red-700
       ">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           {/* Left: Brand */}
-          <a href="#hero" className="font-bold text-lg tracking-wide">
+          <a href="#hero" className="font-bold text-lg tracking-wide space:text-violet-400">
             Design Portfolio
           </a>
 
@@ -77,7 +77,7 @@ export default function App() {
                 className="
                   hover:text-lime-600 
                   dark:hover:text-lime-400 
-                  space:hover:text-yellow-400
+                  space:hover:text-violet-400
                   light:hover:text-cyan-600 
                   neon:hover:text-rose-300
                 "
@@ -108,7 +108,7 @@ export default function App() {
           <div className="
             md:hidden border-t 
             bg-white/95 dark:bg-stone-900/95 space:bg-stone-900/95 neon:bg-pink-800/90 tron:bg-black/90 
-            backdrop-blur-sm border-stone-200 dark:border-stone-700 space:border-stone-700 neon:border-rose-200 tron:border-red-700
+            backdrop-blur-sm border-stone-200 dark:border-stone-700 space:border-violet-400/20 neon:border-rose-200 tron:border-red-700
             animate-fadeIn
           ">
             <nav className="flex flex-col text-sm px-6 py-4 space-y-3">
@@ -120,7 +120,7 @@ export default function App() {
                   className="
                     hover:text-lime-600 
                     dark:hover:text-lime-400 
-                    space:hover:text-yellow-400
+                    space:hover:text-violet-400
                     light:hover:text-cyan-600 
                     neon:hover:text-rose-300
                   "
@@ -138,7 +138,7 @@ export default function App() {
         text-stone-800 dark:text-stone-200 space:text-stone-200 light:text-stone-950 neon:text-zinc-950
         [&_h1]:text-lime-600 [&_h2]:text-lime-600
         dark:[&_h1]:text-lime-500 dark:[&_h2]:text-lime-500
-        space:[&_h1]:text-yellow-500 space:[&_h2]:text-yellow-500
+        space:[&_h1]:text-violet-400 space:[&_h2]:text-violet-400
         light:[&_h1]:text-cyan-600 light:[&_h2]:text-cyan-600
         neon:[&_h1]:text-rose-600 neon:[&_h2]:text-rose-600
         neon:bg-pink-200 

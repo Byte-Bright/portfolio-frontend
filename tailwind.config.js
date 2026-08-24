@@ -36,7 +36,7 @@ export default {
   ],
   safelist: [
     {
-      pattern: /(text|bg|border)-(stone|rose|teal|amber|lime|red|white|zinc)-(100|200|300|400|500|600|700|800|900|950)/,
+      pattern: /(text|bg|border|ring)-(stone|rose|teal|amber|lime|red|white|zinc|violet)-(100|200|300|400|500|600|700|800|900|950)/,
       variants: ['hover', 'focus', 'dark', 'neon', 'tron', 'space', 'group-hover'],
     },
     {

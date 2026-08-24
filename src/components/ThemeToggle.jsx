@@ -48,7 +48,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div className="flex items-center gap-1 border rounded-lg overflow-hidden backdrop-blur-sm border-stone-400/50">
+    <div className="flex items-center gap-1 border rounded-lg overflow-hidden backdrop-blur-sm border-stone-400/50 space:border-violet-400/30">
       <button
         onClick={handleThemeChange}
         className={`px-3 py-1 text-sm transition border-r border-stone-400/50

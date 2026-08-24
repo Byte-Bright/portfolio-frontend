@@ -92,12 +92,13 @@ main .text-sm {
 }
 
 .space .defaultButton {
-    background-image: linear-gradient(to right, transparent 50%,  rgba(202, 138, 4, .7) 50%);
+    background-image: none;
 }
 .space .defaultButton:hover, .space .defaultButton:focus {    
-    background-position: right center;
-    color: #fff !important;
-    border-color: rgba(234, 179, 8, 1);
+    background-position: left center;
+    color: theme('colors.violet.400') !important;
+    border-color: theme('colors.violet.400');
+    background-color: rgb(167 139 250 / 0.1);
 }
 
 .neon .defaultButton {
@@ -233,6 +234,11 @@ main .text-sm {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 13vw auto;
+}
+
+.space {
+  --aurora-gold: 167, 139, 250; /* violet-400 */
+  --aurora-blue: 76, 29, 149;   /* violet-900 */
 }
 
 .space .aurora-wrap {
