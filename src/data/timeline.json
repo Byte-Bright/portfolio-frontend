@@ -1,44 +1,5 @@
 [
   {
-    "title": "Agency-Scale Web Production",
-    "category": "Agency at Scale",
-    "period": "2016–Present",
-    "visible": true,
-    "cardType": "project",
-    "role": "Lead Front-End Developer",
-    "problem": "Delivering 200+ custom, accessible websites for financial institutions on a platform originally designed for single-site DIY users, with no native component reuse, no multi-client tooling, and stock components that routinely fell short of ADA standards.",
-    "outcome": "Built scalable production workflows on Squarespace 7.0 developer mode, engineering custom accessible widgets from scratch wherever stock components couldn't meet WCAG 2.2 / Section 508 requirements. Delivered consistent, compliant web experiences across 200+ credit union websites, part of an agency that has served 650+ clients total.",
-    "details": {
-      "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Adobe Suite", "Squarespace 7.0"]
-    }
-  },
-  {
-    "title": "Internal Developer Ecosystem",
-    "category": "Built the Toolbox",
-    "period": "2023–Present",
-    "visible": true,
-    "cardType": "project",
-    "role": "Tooling Architect / Lead Developer",
-    "problem": "A 600+ client agency running on a platform with no native component reuse, no asset management, and no quality tooling needed a better way to build: faster, more consistently, and with accessibility baked in from the start.",
-    "outcome": "Architected and led development of a full internal tooling ecosystem: a custom shortcode system for rapid page composition, a self-hosted QA Helper that flags 20+ ADA and QA issues via a single JS injection, a 75-item code and image asset library, two code generators (HTML tables and rate sliders). Also rebuilt the styles panel to match the actual agency workflow. As AI tooling has matured, the process has continued to evolve, with manual tools progressively being replaced by Gemini Gems and Cursor skills, shifting the team from hand-built workarounds toward AI-assisted workflows.",
-    "details": {
-      "tools": ["JavaScript", "HTML", "CSS", "Node.js", "Gemini", "Cursor"]
-    }
-  },
-  {
-    "title": "The Ledger: Pro Poker Journal",
-    "category": "The Ledger",
-    "period": "2025–Present",
-    "visible": true,
-    "cardType": "project",
-    "role": "Solo Developer / Product Designer",
-    "problem": "Serious poker players have no purpose-built tool for tracking opponents, replaying hands, and learning from their sessions, and nothing on the market accounts for the physical reality of pulling out your phone at a table full of people you're quietly profiling.",
-    "outcome": "Built a cross-platform mobile app in Flutter with a Supabase backend, offline-capable local database via Drift, player profiling with archetypes, and full session journaling. Includes a Stealth UX mode that disguises all poker data as a stocks app with a single tap, letting you take notes on the player across from you without tipping your hand. Pre-launch; targeting App Store and Google Play with a RevenueCat subscription model.",
-    "details": {
-      "tools": ["Flutter", "Dart", "Supabase", "Drift", "RevenueCat"]
-    }
-  },
-  {
     "title": "Website Layout Examples",
     "category": "Website Examples",
     "period": "2017–2025",
@@ -87,6 +48,45 @@
         "/assets/portfolio-images/omnicommander/website-mockups/SACU.jpg",
         "/assets/portfolio-images/omnicommander/website-mockups/valley-first.jpg"
       ]
+    }
+  },
+  {
+    "title": "Agency-Scale Web Production",
+    "category": "Agency at Scale",
+    "period": "2016–Present",
+    "visible": true,
+    "cardType": "project",
+    "role": "Lead Front-End Developer",
+    "problem": "Delivering 200+ custom, accessible websites for financial institutions on a platform originally designed for single-site DIY users, with no native component reuse, no multi-client tooling, and stock components that routinely fell short of ADA standards.",
+    "outcome": "Built scalable production workflows on Squarespace 7.0 developer mode, engineering custom accessible widgets from scratch wherever stock components couldn't meet WCAG 2.2 / Section 508 requirements. Delivered consistent, compliant web experiences across 200+ credit union websites, part of an agency that has served 650+ clients total.",
+    "details": {
+      "tools": ["HTML5", "CSS3", "JavaScript", "JSON", "Adobe Suite", "Squarespace 7.0"]
+    }
+  },
+  {
+    "title": "Internal Developer Ecosystem",
+    "category": "Built the Toolbox",
+    "period": "2023–Present",
+    "visible": true,
+    "cardType": "project",
+    "role": "Tooling Architect / Lead Developer",
+    "problem": "A 600+ client agency running on a platform with no native component reuse, no asset management, and no quality tooling needed a better way to build: faster, more consistently, and with accessibility baked in from the start.",
+    "outcome": "Architected and led development of a full internal tooling ecosystem: a custom shortcode system for rapid page composition, a self-hosted QA Helper that flags 20+ ADA and QA issues via a single JS injection, a 75-item code and image asset library, two code generators (HTML tables and rate sliders). Also rebuilt the styles panel to match the actual agency workflow. As AI tooling has matured, the process has continued to evolve, with manual tools progressively being replaced by Gemini Gems and Cursor skills, shifting the team from hand-built workarounds toward AI-assisted workflows.",
+    "details": {
+      "tools": ["JavaScript", "HTML", "CSS", "Node.js", "Gemini", "Cursor"]
+    }
+  },
+  {
+    "title": "The Ledger: Pro Poker Journal",
+    "category": "The Ledger",
+    "period": "2025–Present",
+    "visible": true,
+    "cardType": "project",
+    "role": "Solo Developer / Product Designer",
+    "problem": "Serious poker players have no purpose-built tool for tracking opponents, replaying hands, and learning from their sessions, and nothing on the market accounts for the physical reality of pulling out your phone at a table full of people you're quietly profiling.",
+    "outcome": "Built a cross-platform mobile app in Flutter with a Supabase backend, offline-capable local database via Drift, player profiling with archetypes, and full session journaling. Includes a Stealth UX mode that disguises all poker data as a stocks app with a single tap, letting you take notes on the player across from you without tipping your hand. Pre-launch; targeting App Store and Google Play with a RevenueCat subscription model.",
+    "details": {
+      "tools": ["Flutter", "Dart", "Supabase", "Drift", "RevenueCat"]
     }
   },
   {
