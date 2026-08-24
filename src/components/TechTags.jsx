@@ -15,10 +15,10 @@ export default function TechTags() {
                 className="relative group"
               >
                 <span
-                  className="px-3 py-1 rounded-lg border border-stone-300 dark:border-stone-600 space:border-violet-400/30
+                  className="px-3 py-1 rounded-lg border border-stone-300 dark:border-stone-600 space:border-stone-600
                   hover:bg-lime-600 hover:text-white neon:border-rose-600
                   bg-stone-50 dark:bg-stone-800 space:bg-stone-800 neon:bg-rose-600 text-sm 
-                  neon:hover:bg-yellow-400 dark:hover:bg-lime-600 space:hover:bg-violet-400/10 space:hover:border-violet-400 space:hover:text-violet-400
+                  neon:hover:bg-yellow-400 dark:hover:bg-lime-600 space:hover:bg-yellow-600
                   text-stone-700 dark:text-stone-200 space:text-stone-200 neon:text-white hover:neon:text-black
                   hover:shadow-md hover:scale-105 transform transition duration-400
                   ">

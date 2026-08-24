@@ -1,6 +1,6 @@
 export default function Hero() {
   const btnClass =
-    "defaultButton no-underline rounded-lg border border-stone-400 px-4 py-2 transition-all space:border-violet-400 space:text-violet-400 space:hover:bg-violet-400/10 tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white"
+    "defaultButton no-underline rounded-lg border border-stone-400 px-4 py-2 transition-all tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white"
 
   return (
     <div className="space-y-6">
@@ -11,7 +11,7 @@ export default function Hero() {
           <p className="text-sm tracking-widest uppercase mb-3 opacity-60">
             Denver, CO · Front‑End Developer
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight neon:text-rose-600 space:text-violet-400">
+          <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight text-teal-600 neon:text-rose-600">
             Justin Caldwell
           </h1>
         </div>
@@ -20,7 +20,7 @@ export default function Hero() {
         <img
           src="/assets/jcaldwell-headshot.jpg"
           alt="Justin Caldwell"
-          className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md flex-shrink-0 mt-6 ring-2 ring-stone-200 dark:ring-stone-700 space:ring-violet-400 space:ring-offset-2 space:ring-offset-black space:shadow-[0_0_20px_rgba(167,139,250,0.4)]"
+          className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md flex-shrink-0 mt-6 ring-2 ring-stone-200 dark:ring-stone-700 space:ring-yellow-600/40"
         />
       </div>
 

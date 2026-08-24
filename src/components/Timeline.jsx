@@ -102,7 +102,7 @@ export default function Timeline() {
             key={`${t.title}-${i}`}
             className={`fade-up ${listInView ? 'is-visible' : ''}
               border rounded-lg p-4 w-full break-words min-w-0 text-left
-              bg-stone-50 dark:bg-stone-800 dark:border-stone-600 space:bg-stone-800 space:border-violet-400/30
+              bg-stone-50 dark:bg-stone-800 dark:border-stone-600 space:bg-stone-800 space:border-stone-600
               neon:bg-rose-600 neon:hover:bg-yellow-400 tron:bg-transparent tron:border-red-700 tron:border-[2px]
               tron:hover:shadow-tron tron:hover:animate-tronpulse
               transition-colors duration-400 group`}
@@ -111,15 +111,15 @@ export default function Timeline() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 min-w-0">
               <h3 className="text-base sm:text-lg font-semibold leading-snug flex-1 min-w-0 break-normal
-                group-hover:text-lime-600 dark:group-hover:text-lime-500 space:group-hover:text-violet-400
+                group-hover:text-lime-600 dark:group-hover:text-lime-500 space:group-hover:text-yellow-500
                 neon:text-rose-200 neon:group-hover:text-rose-600
                 tron:text-red-700 tron:group-hover:text-white
                 transition-colors duration-400">
                 {t.title}
               </h3>
               <span className="text-xs sm:text-sm px-2 py-1 rounded-full border shrink-0 whitespace-normal
-                group-hover:text-white group-hover:bg-lime-600 space:group-hover:bg-violet-400/20 space:group-hover:text-violet-400
-                dark:border-stone-500 space:border-violet-400/30
+                group-hover:text-white group-hover:bg-lime-600 space:group-hover:bg-yellow-600
+                dark:border-stone-500 space:border-stone-500
                 neon:border-rose-200 neon:bg-transparent neon:text-white
                 neon:group-hover:bg-rose-600 neon:group-hover:text-white
                 tron:border-red-700 tron:text-red-400 tron:group-hover:text-red-400 tron:group-hover:bg-red-700/50

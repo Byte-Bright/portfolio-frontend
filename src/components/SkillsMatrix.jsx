@@ -32,7 +32,7 @@ export default function SkillsMatrix() {
           <article
             key={`${s.name}-${i}`}
             className={`fade-up ${gridInView ? 'is-visible' : ''}
-              border border-stone-300 dark:border-stone-600 space:border-violet-400/30
+              border border-stone-300 dark:border-stone-600 space:border-stone-600
               bg-stone-50 dark:bg-stone-800 space:bg-stone-800
               text-stone-700 dark:text-stone-200 space:text-stone-200
               hover:shadow-md rounded-lg p-3 transition group
@@ -43,7 +43,7 @@ export default function SkillsMatrix() {
           >
             <div className="flex items-center justify-between gap-2">
               <h3 className="font-medium text-stone-500 dark:text-stone-500 space:text-stone-500
-                group-hover:text-lime-600 space:group-hover:text-violet-400
+                group-hover:text-lime-600 space:group-hover:text-yellow-500
                 neon:text-rose-200 neon:group-hover:text-rose-600
                 tron:text-red-700 tron:group-hover:text-white
                 transition-colors duration-400">
@@ -85,7 +85,7 @@ function Filter({ label, options, value, onChange }) {
       <select
         value={value}
         onChange={e => onChange(e.target.value)}
-        className="rounded-md border bg-white dark:bg-stone-700/70 space:bg-stone-700/70 space:border-violet-400/30
+        className="rounded-md border bg-white dark:bg-stone-700/70 space:bg-stone-700/70
           px-2 py-1 text-stone-600 dark:text-stone-300 space:text-stone-300"
       >
         {options.map(o => (
