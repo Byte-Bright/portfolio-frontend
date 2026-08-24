@@ -2,14 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Always reserve scrollbar width — prevents layout shift when scrollbar appears */
-/* Scrollbar is hidden visually but still functional and reserves space */
+/* Always reserve scrollbar width — prevents layout shift when the bar appears */
 html {
   overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
 }
-html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+
+/* Light mode: teal thumb + arrows on scrollbars */
+html.light {
+  --scrollbar-thumb: theme("colors.teal.600");
+  --scrollbar-thumb-hover: theme("colors.teal.700");
+  --scrollbar-track: theme("colors.stone.200");
+}
+
+html.light,
+html.light * {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+html.light::-webkit-scrollbar,
+html.light *::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+html.light::-webkit-scrollbar-track,
+html.light *::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+html.light::-webkit-scrollbar-thumb,
+html.light *::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 3px solid var(--scrollbar-track);
+  background-clip: padding-box;
+}
+
+html.light::-webkit-scrollbar-thumb:hover,
+html.light *::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+html.light::-webkit-scrollbar-corner,
+html.light *::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
+
+html.light::-webkit-scrollbar-button:single-button,
+html.light *::-webkit-scrollbar-button:single-button {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--scrollbar-track);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7px 7px;
+}
+
+/* Keep one arrow at each end (WebKit otherwise draws extras) */
+html.light::-webkit-scrollbar-button:decrement:end,
+html.light::-webkit-scrollbar-button:increment:start,
+html.light *::-webkit-scrollbar-button:decrement:end,
+html.light *::-webkit-scrollbar-button:increment:start {
+  display: none;
+}
+
+html.light::-webkit-scrollbar-button:single-button:horizontal:decrement,
+html.light *::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M11.5 2.5 4.5 8l7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M4.5 2.5 11.5 8l-7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M2.5 11.5 8 4.5l5.5 7z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M2.5 4.5 8 11.5l5.5-7z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M11.5 2.5 4.5 8l7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M4.5 2.5 11.5 8l-7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M2.5 11.5 8 4.5l5.5 7z'/%3E%3C/svg%3E");
+}
+
+html.light *::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M2.5 4.5 8 11.5l5.5-7z'/%3E%3C/svg%3E");
 }
 
 /*

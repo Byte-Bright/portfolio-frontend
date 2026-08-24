@@ -1,34 +1,13 @@
-import { useMemo, useState } from 'react'
 import data from '../data/skills-matrix.json'
 import { useInView } from '../hooks/useInView'
 
 export default function SkillsMatrix() {
-  // Build category list from data
-  const categories = useMemo(() => {
-    const set = new Set(data.map(s => s.category || 'Other'))
-    return ['All', ...Array.from(set)]
-  }, [])
-
-  const [activeCat, setActiveCat] = useState('All')
-
-  const filtered = useMemo(() => {
-    return data.filter(s =>
-      activeCat === 'All' || (s.category || 'Other') === activeCat
-    )
-  }, [activeCat])
-
   const [gridRef, gridInView] = useInView()
 
   return (
     <div className="grid gap-6">
-      {/* Filters */}
-      <div className="flex flex-wrap gap-3 items-center">
-        <Filter label="Stack" options={categories} value={activeCat} onChange={setActiveCat} />
-      </div>
-
-      {/* Grid */}
       <div ref={gridRef} className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-        {filtered.map((s, i) => (
+        {data.map((s, i) => (
           <article
             key={`${s.name}-${i}`}
             className={`fade-up ${gridInView ? 'is-visible' : ''}
@@ -67,33 +46,6 @@ export default function SkillsMatrix() {
           </article>
         ))}
       </div>
-
-      {/* Empty state */}
-      {filtered.length === 0 && (
-        <p className="text-sm">
-          No skills match the selected filters.
-        </p>
-      )}
     </div>
-  )
-}
-
-function Filter({ label, options, value, onChange }) {
-  return (
-    <label className="text-sm flex items-center gap-2">
-      <span>{label}</span>
-      <select
-        value={value}
-        onChange={e => onChange(e.target.value)}
-        className="rounded-md border bg-white dark:bg-stone-700/70 space:bg-stone-700/70
-          px-2 py-1 text-stone-600 dark:text-stone-300 space:text-stone-300"
-      >
-        {options.map(o => (
-          <option key={o} value={o}>
-            {o}
-          </option>
-        ))}
-      </select>
-    </label>
   )
 }
