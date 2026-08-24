@@ -4,5 +4,5 @@
   { "name": "WordPress, Shopify, Squarespace (Dev Mode), Drupal", "category": "CMS / SaaS" },
   { "name": "WCAG 2.2 / Section 508, Accessibility Audits & Usability Testing", "category": "Accessibility", "evidence": "#" },
   { "name": "Git & GitHub, Netlify, Cursor (VS Code), npm", "category": "DevOps" },
-  { "name": "Prompt Engineering, AI Image Generation, Workflow Automation, AI-Assisted Development", "category": "AI / Automation" }
+  { "name": "Prompt Engineering, AI Image Generation, AI-Assisted Development", "category": "AI / Automation" }
 ]
