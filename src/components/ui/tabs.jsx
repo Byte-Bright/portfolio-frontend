@@ -32,6 +32,7 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
       // inactive
       'bg-white dark:bg-stone-900 space:bg-stone-900 space:border-violet-400/30 space:text-stone-300',
       'neon:bg-yellow-400 tron:bg-transparent tron:border-[2px] tron:border-red-700',
+      'data-[state=inactive]:hover:text-teal-600 data-[state=inactive]:hover:border-teal-600 dark:data-[state=inactive]:hover:text-lime-500 dark:data-[state=inactive]:hover:border-lime-500 space:data-[state=inactive]:hover:text-violet-400 space:data-[state=inactive]:hover:border-violet-400 neon:data-[state=inactive]:hover:text-rose-600 neon:data-[state=inactive]:hover:border-rose-200 tron:data-[state=inactive]:hover:text-red-400 tron:data-[state=inactive]:hover:border-red-700',
       'space:focus:ring-violet-400 space:focus:ring-offset-black',
       // active (data-state="active")
       'data-[state=active]:bg-teal-600 data-[state=active]:text-white',

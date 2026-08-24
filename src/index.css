@@ -72,7 +72,7 @@ main .text-sm {
 
 .defaultButton {
     text-decoration: none;
-    background-image: linear-gradient(to right, transparent 50%,  rgba(101, 163, 13, .7) 50%);
+    background-image: linear-gradient(to right, transparent 50%,  rgba(13, 148, 136, .7) 50%);
     background-size: 250% 100%;
     background-position: left center;
 }
@@ -80,7 +80,7 @@ main .text-sm {
     background-position: right center;
     color: #fff !important;
     transition: all 0.3s;
-    border-color: rgba(131, 120, 27, 1);
+    border-color: rgb(15, 118, 110);
 }
 .dark .defaultButton {
     background-image: linear-gradient(to right, transparent 50%,  rgba(101, 163, 13, .7) 50%);
