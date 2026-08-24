@@ -27,7 +27,7 @@ export default function Hero() {
       {/* Two-sentence blurb */}
       <p className="text-lg md:text-xl max-w-2xl leading-relaxed">
         10+ years crafting responsive UIs, WCAG best practices, and developer‑friendly systems.
-        I build clean, accessible, high‑performance web apps accessible to all users.
+        I build clean, high‑performance web apps accessible to all users.
       </p>
 
       {/* CTA buttons: LinkedIn → Email → GitHub → Resume ↓ */}
