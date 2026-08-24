@@ -397,42 +397,11 @@ html.light .heroCta-quiet:focus {
   transform: translateY(0);
 }
 
-/* Card hover/focus lift — Proven Results & Skills Matrix */
-.card-lift {
-  position: relative;
-  z-index: 1;
-  transition:
-    opacity 0.55s ease var(--enter-delay, 0ms),
-    transform 0.55s ease var(--enter-delay, 0ms),
-    box-shadow 0.3s ease,
-    z-index 0s linear 0.55s;
-}
-
-.card-lift:hover,
-.card-lift:focus,
-.card-lift:focus-visible {
-  z-index: 11;
-  transform: scale(1.2);
-  box-shadow: 0 0 12px black;
-  transition:
-    opacity 0.55s ease,
-    transform 0.55s ease 200ms,
-    box-shadow 0.3s ease 200ms,
-    z-index 0s linear 200ms;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .fade-up {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-
-  .card-lift:hover,
-  .card-lift:focus,
-  .card-lift:focus-visible {
-    transform: none;
-    transition-delay: 0ms;
   }
 }
 
