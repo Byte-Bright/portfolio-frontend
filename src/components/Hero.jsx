@@ -11,7 +11,7 @@ export default function Hero() {
           <p className="text-sm tracking-widest uppercase mb-3 opacity-60">
             Denver, CO · Front‑End Developer
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight text-teal-600 neon:text-rose-600">
+          <h1 className="text-5xl md:text-7xl font-bold leading-none tracking-tight text-teal-600 space:text-violet-400 neon:text-rose-600">
             Justin Caldwell
           </h1>
         </div>

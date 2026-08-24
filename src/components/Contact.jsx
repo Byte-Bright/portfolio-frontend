@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="mailto:justinstede@yahoo.com?subject=Portfolio Inquiry"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-teal-600 hover:border-teal-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 space:hover:bg-yellow-600/50 space:hover:border-yellow-600 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-teal-600 hover:border-teal-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 space:hover:bg-violet-400/10 space:hover:border-violet-400 space:hover:text-violet-400 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
           >
             Email Me
           </a>
@@ -17,7 +17,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/justinstede"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-teal-600 hover:border-teal-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 space:hover:bg-yellow-600/50 space:hover:border-yellow-600 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
+            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-teal-600 hover:border-teal-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 space:hover:bg-violet-400/10 space:hover:border-violet-400 space:hover:text-violet-400 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
           >
             LinkedIn
           </a>

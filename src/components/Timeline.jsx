@@ -111,14 +111,14 @@ export default function Timeline() {
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 min-w-0">
               <h3 className="text-base sm:text-lg font-semibold leading-snug flex-1 min-w-0 break-normal
-                group-hover:text-teal-600 dark:group-hover:text-lime-500 space:group-hover:text-yellow-500
+                group-hover:text-teal-600 dark:group-hover:text-lime-500 space:group-hover:text-violet-400
                 neon:text-rose-200 neon:group-hover:text-rose-600
                 tron:text-red-700 tron:group-hover:text-white
                 transition-colors duration-400">
                 {t.title}
               </h3>
               <span className="text-xs sm:text-sm px-2 py-1 rounded-full border shrink-0 whitespace-normal
-                group-hover:text-white group-hover:bg-teal-600 dark:group-hover:bg-lime-600 space:group-hover:bg-yellow-600
+                group-hover:text-white group-hover:bg-teal-600 dark:group-hover:bg-lime-600 space:group-hover:bg-violet-400 space:group-hover:text-white
                 dark:border-stone-500 space:border-stone-500
                 neon:border-rose-200 neon:bg-transparent neon:text-white
                 neon:group-hover:bg-rose-600 neon:group-hover:text-white

@@ -26,7 +26,7 @@ function Section({ id, title, children }) {
           text-2xl font-semibold mb-4 
           [&]:text-teal-600 
           dark:[&]:text-stone-200 
-          space:[&]:text-stone-200
+          space:[&]:text-violet-400
           light:[&]:text-teal-600 
           neon:[&]:text-zinc-950
         ">
@@ -63,7 +63,7 @@ export default function App() {
       ">
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           {/* Left: Brand */}
-          <a href="#hero" className="font-bold text-lg tracking-wide hover:text-teal-600 dark:hover:text-lime-400 space:hover:text-yellow-400 light:hover:text-teal-600 neon:hover:text-rose-300">
+          <a href="#hero" className="font-bold text-lg tracking-wide hover:text-teal-600 dark:hover:text-lime-400 space:hover:text-violet-400 light:hover:text-teal-600 neon:hover:text-rose-300">
             Design Portfolio
           </a>
 
@@ -77,7 +77,7 @@ export default function App() {
                 className="
                   hover:text-teal-600 
                   dark:hover:text-lime-400 
-                  space:hover:text-yellow-400
+                  space:hover:text-violet-400
                   light:hover:text-teal-600 
                   neon:hover:text-rose-300
                 "
@@ -120,7 +120,7 @@ export default function App() {
                   className="
                     hover:text-teal-600 
                     dark:hover:text-lime-400 
-                    space:hover:text-yellow-400
+                    space:hover:text-violet-400
                     light:hover:text-teal-600 
                     neon:hover:text-rose-300
                   "
@@ -138,7 +138,7 @@ export default function App() {
         text-stone-800 dark:text-stone-200 space:text-stone-200 light:text-stone-950 neon:text-zinc-950
         [&_h1]:text-teal-600 [&_h2]:text-teal-600
         dark:[&_h1]:text-lime-500 dark:[&_h2]:text-lime-500
-        space:[&_h1]:text-yellow-500 space:[&_h2]:text-yellow-500
+        space:[&_h1]:text-violet-400 space:[&_h2]:text-violet-400
         light:[&_h1]:text-teal-600 light:[&_h2]:text-teal-600
         neon:[&_h1]:text-rose-600 neon:[&_h2]:text-rose-600
         neon:bg-pink-200 

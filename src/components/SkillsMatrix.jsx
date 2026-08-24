@@ -43,7 +43,7 @@ export default function SkillsMatrix() {
           >
             <div className="flex items-center justify-between gap-2">
               <h3 className="font-medium text-stone-500 dark:text-stone-500 space:text-stone-500
-                group-hover:text-teal-600 dark:group-hover:text-lime-600 space:group-hover:text-yellow-500
+                group-hover:text-teal-600 dark:group-hover:text-lime-600 space:group-hover:text-violet-400
                 neon:text-rose-200 neon:group-hover:text-rose-600
                 tron:text-red-700 tron:group-hover:text-white
                 transition-colors duration-400">

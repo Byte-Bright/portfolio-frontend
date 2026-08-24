@@ -51,7 +51,7 @@ function CountFact({ k, target, suffix = '', inView, delay = 0 }) {
         {k}
       </div>
       <div className="
-        text-xl font-semibold provenData group-hover:text-teal-600 dark:group-hover:text-lime-600 space:group-hover:text-yellow-500
+        text-xl font-semibold provenData group-hover:text-teal-600 dark:group-hover:text-lime-600 space:group-hover:text-violet-400
         neon:text-white neon:group-hover:text-yellow-400 duration-400
         tron:text-red-500 tron:group-hover:text-white transition-colors duration-400">
         {count}{suffix}
@@ -80,7 +80,7 @@ function Fact({ k, v, sub, inView, delay = 0 }) {
         {k}
       </div>
       <div className="
-        text-xl font-semibold provenData group-hover:text-teal-600 dark:group-hover:text-lime-600 space:group-hover:text-yellow-500
+        text-xl font-semibold provenData group-hover:text-teal-600 dark:group-hover:text-lime-600 space:group-hover:text-violet-400
         neon:text-white neon:group-hover:text-yellow-400 duration-400
         tron:text-red-500 tron:group-hover:text-white transition-colors duration-400">
         {v}
