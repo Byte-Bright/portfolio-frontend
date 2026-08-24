@@ -31,9 +31,9 @@ export default function Hero() {
       </p>
 
       {/* CTA buttons: LinkedIn → Email → GitHub → Resume ↓ */}
-      <div className="flex flex-wrap gap-3 pt-1">
+      <div className="flex flex-wrap gap-3 pt-1 items-center">
         <a
-          className={btnClass}
+          className={`${btnClass} space:bg-violet-400 space:text-stone-950 space:border-violet-400 space:font-semibold space:px-5 space:shadow-[0_0_16px_rgba(167,139,250,0.28)] heroCta-primary`}
           href="https://www.linkedin.com/in/justinstede"
           target="_blank"
           rel="noreferrer"
@@ -41,7 +41,7 @@ export default function Hero() {
           LinkedIn
         </a>
         <a
-          className={btnClass}
+          className={`${btnClass} space:border-violet-400 space:text-violet-400 heroCta-secondary`}
           href={`mailto:justinstede@yahoo.com?subject=${encodeURIComponent('Portfolio inquiry — Justin Caldwell')}`}
         >
           Email me
@@ -55,7 +55,7 @@ export default function Hero() {
           GitHub
         </a>
         <a
-          className={btnClass}
+          className={`${btnClass} space:border-stone-700 space:text-stone-400 heroCta-quiet`}
           href="/justin-caldwell-resume.pdf"
           target="_blank"
           rel="noreferrer"

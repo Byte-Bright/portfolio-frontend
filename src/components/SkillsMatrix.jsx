@@ -6,19 +6,20 @@ export default function SkillsMatrix() {
 
   return (
     <div className="grid gap-6">
-      <div ref={gridRef} className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+      <div ref={gridRef} className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 overflow-visible">
         {data.map((s, i) => (
           <article
             key={`${s.name}-${i}`}
-            className={`fade-up ${gridInView ? 'is-visible' : ''}
+            className={`fade-up card-lift ${gridInView ? 'is-visible' : ''}
               border border-stone-300 dark:border-stone-600 space:border-stone-600
               bg-stone-50 dark:bg-stone-800 space:bg-stone-800
               text-stone-700 dark:text-stone-200 space:text-stone-200
-              hover:shadow-md rounded-lg p-3 transition group
+              rounded-lg p-3 transition group
               neon:bg-rose-600 neon:text-white neon:hover:text-black neon:hover:bg-yellow-400 duration-400
               tron:bg-transparent tron:border-red-700 tron:border-[2px]
               tron:hover:shadow-tron tron:hover:animate-tronpulse`}
-            style={{ transitionDelay: gridInView ? `${i * 55}ms` : '0ms' }}
+            style={{ '--enter-delay': gridInView ? `${i * 55}ms` : '0ms' }}
+            tabIndex={0}
           >
             <div className="flex items-center justify-between gap-2">
               <h3 className="font-medium text-stone-500 dark:text-stone-500 space:text-stone-500

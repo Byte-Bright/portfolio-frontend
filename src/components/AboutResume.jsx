@@ -12,7 +12,7 @@ export default function AboutResume() {
       </p>
 
       {/* Quick facts — staggered counter tiles */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 overflow-visible">
         <CountFact k="Years"        target={10}  suffix="+" inView={inView} delay={80}  />
         <CountFact k="Sites shipped" target={200} suffix="+" inView={inView} delay={200} />
         <Fact k="WCAG 2.2 / 508" v="✓" sub="federal + international accessibility standards" inView={inView} delay={320} />
@@ -34,15 +34,16 @@ function CountFact({ k, target, suffix = '', inView, delay = 0 }) {
 
   return (
     <div
-      className={`fade-up ${inView ? 'is-visible' : ''}
+      className={`fade-up card-lift ${inView ? 'is-visible' : ''}
         border border-stone-300 dark:border-stone-600 space:border-stone-600
         bg-stone-50 dark:bg-stone-800 space:bg-stone-800
         text-stone-700 dark:text-stone-200 space:text-stone-200
-        hover:shadow-md rounded-lg p-3 text-center duration-200
+        rounded-lg p-3 text-center duration-200
         neon:bg-rose-600 light:bg-white transition-colors duration-400
         group tron:bg-transparent tron:border-red-700 tron:border-[2px]
         tron:hover:bg-black/50 tron:hover:shadow-tron tron:hover:animate-tronpulse`}
-      style={{ transitionDelay: inView ? `${delay}ms` : '0ms' }}
+      style={{ '--enter-delay': inView ? `${delay}ms` : '0ms' }}
+      tabIndex={0}
     >
       <div className="
         text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400 space:text-stone-400
@@ -63,15 +64,16 @@ function CountFact({ k, target, suffix = '', inView, delay = 0 }) {
 function Fact({ k, v, sub, inView, delay = 0 }) {
   return (
     <div
-      className={`fade-up ${inView ? 'is-visible' : ''}
+      className={`fade-up card-lift ${inView ? 'is-visible' : ''}
         border border-stone-300 dark:border-stone-600 space:border-stone-600
         bg-stone-50 dark:bg-stone-800 space:bg-stone-800
         text-stone-700 dark:text-stone-200 space:text-stone-200
-        hover:shadow-md rounded-lg p-3 text-center duration-200
+        rounded-lg p-3 text-center duration-200
         neon:bg-rose-600 light:bg-white transition-colors duration-400
         group tron:bg-transparent tron:border-red-700 tron:border-[2px]
         tron:hover:bg-black/50 tron:hover:shadow-tron tron:hover:animate-tronpulse`}
-      style={{ transitionDelay: inView ? `${delay}ms` : '0ms' }}
+      style={{ '--enter-delay': inView ? `${delay}ms` : '0ms' }}
+      tabIndex={0}
     >
       <div className="
         text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400 space:text-stone-400

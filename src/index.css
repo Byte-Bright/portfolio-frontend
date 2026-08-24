@@ -7,32 +7,46 @@ html {
   overflow-y: scroll;
 }
 
-/* Light mode: teal thumb + arrows on scrollbars */
+/* Light: teal thumb + arrows. Space: violet-400 thumb + arrows on dark-gray track. */
 html.light {
   --scrollbar-thumb: theme("colors.teal.600");
   --scrollbar-thumb-hover: theme("colors.teal.700");
   --scrollbar-track: theme("colors.stone.200");
 }
 
+html.space {
+  --scrollbar-thumb: theme("colors.violet.400");
+  --scrollbar-thumb-hover: theme("colors.violet.300");
+  --scrollbar-track: theme("colors.stone.900");
+}
+
 html.light,
-html.light * {
+html.light *,
+html.space,
+html.space * {
   scrollbar-width: auto;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 html.light::-webkit-scrollbar,
-html.light *::-webkit-scrollbar {
+html.light *::-webkit-scrollbar,
+html.space::-webkit-scrollbar,
+html.space *::-webkit-scrollbar {
   width: 14px;
   height: 14px;
 }
 
 html.light::-webkit-scrollbar-track,
-html.light *::-webkit-scrollbar-track {
+html.light *::-webkit-scrollbar-track,
+html.space::-webkit-scrollbar-track,
+html.space *::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
 }
 
 html.light::-webkit-scrollbar-thumb,
-html.light *::-webkit-scrollbar-thumb {
+html.light *::-webkit-scrollbar-thumb,
+html.space::-webkit-scrollbar-thumb,
+html.space *::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb);
   border-radius: 9999px;
   border: 3px solid var(--scrollbar-track);
@@ -40,17 +54,23 @@ html.light *::-webkit-scrollbar-thumb {
 }
 
 html.light::-webkit-scrollbar-thumb:hover,
-html.light *::-webkit-scrollbar-thumb:hover {
+html.light *::-webkit-scrollbar-thumb:hover,
+html.space::-webkit-scrollbar-thumb:hover,
+html.space *::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-hover);
 }
 
 html.light::-webkit-scrollbar-corner,
-html.light *::-webkit-scrollbar-corner {
+html.light *::-webkit-scrollbar-corner,
+html.space::-webkit-scrollbar-corner,
+html.space *::-webkit-scrollbar-corner {
   background: var(--scrollbar-track);
 }
 
 html.light::-webkit-scrollbar-button:single-button,
-html.light *::-webkit-scrollbar-button:single-button {
+html.light *::-webkit-scrollbar-button:single-button,
+html.space::-webkit-scrollbar-button:single-button,
+html.space *::-webkit-scrollbar-button:single-button {
   display: block;
   width: 14px;
   height: 14px;
@@ -64,7 +84,11 @@ html.light *::-webkit-scrollbar-button:single-button {
 html.light::-webkit-scrollbar-button:decrement:end,
 html.light::-webkit-scrollbar-button:increment:start,
 html.light *::-webkit-scrollbar-button:decrement:end,
-html.light *::-webkit-scrollbar-button:increment:start {
+html.light *::-webkit-scrollbar-button:increment:start,
+html.space::-webkit-scrollbar-button:decrement:end,
+html.space::-webkit-scrollbar-button:increment:start,
+html.space *::-webkit-scrollbar-button:decrement:end,
+html.space *::-webkit-scrollbar-button:increment:start {
   display: none;
 }
 
@@ -73,32 +97,80 @@ html.light *::-webkit-scrollbar-button:single-button:horizontal:decrement {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M11.5 2.5 4.5 8l7 5.5z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:horizontal:increment,
 html.light *::-webkit-scrollbar-button:single-button:horizontal:increment {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M4.5 2.5 11.5 8l-7 5.5z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:vertical:decrement,
 html.light *::-webkit-scrollbar-button:single-button:vertical:decrement {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M2.5 11.5 8 4.5l5.5 7z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:vertical:increment,
 html.light *::-webkit-scrollbar-button:single-button:vertical:increment {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230d9488' d='M2.5 4.5 8 11.5l5.5-7z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:horizontal:decrement:hover,
 html.light *::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M11.5 2.5 4.5 8l7 5.5z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:horizontal:increment:hover,
 html.light *::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M4.5 2.5 11.5 8l-7 5.5z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
 html.light *::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M2.5 11.5 8 4.5l5.5 7z'/%3E%3C/svg%3E");
 }
 
+html.light::-webkit-scrollbar-button:single-button:vertical:increment:hover,
 html.light *::-webkit-scrollbar-button:single-button:vertical:increment:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%230f766e' d='M2.5 4.5 8 11.5l5.5-7z'/%3E%3C/svg%3E");
+}
+
+/* Space arrows: violet-400, hover violet-300 */
+html.space::-webkit-scrollbar-button:single-button:horizontal:decrement,
+html.space *::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23a78bfa' d='M11.5 2.5 4.5 8l7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:horizontal:increment,
+html.space *::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23a78bfa' d='M4.5 2.5 11.5 8l-7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:vertical:decrement,
+html.space *::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23a78bfa' d='M2.5 11.5 8 4.5l5.5 7z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:vertical:increment,
+html.space *::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23a78bfa' d='M2.5 4.5 8 11.5l5.5-7z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:horizontal:decrement:hover,
+html.space *::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c4b5fd' d='M11.5 2.5 4.5 8l7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:horizontal:increment:hover,
+html.space *::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c4b5fd' d='M4.5 2.5 11.5 8l-7 5.5z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
+html.space *::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c4b5fd' d='M2.5 11.5 8 4.5l5.5 7z'/%3E%3C/svg%3E");
+}
+
+html.space::-webkit-scrollbar-button:single-button:vertical:increment:hover,
+html.space *::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c4b5fd' d='M2.5 4.5 8 11.5l5.5-7z'/%3E%3C/svg%3E");
 }
 
 /*
@@ -190,6 +262,59 @@ main .text-sm {
     background-color: rgb(167 139 250 / 0.1);
 }
 
+.space .heroCta-primary:hover,
+.space .heroCta-primary:focus {
+    color: theme('colors.stone.950') !important;
+    background-color: theme('colors.violet.300');
+    border-color: theme('colors.violet.300');
+}
+
+.space .heroCta-quiet:hover,
+.space .heroCta-quiet:focus {
+    color: theme('colors.stone.300') !important;
+    border-color: theme('colors.stone.500');
+    background-color: transparent;
+}
+
+/* Light mode hero CTAs: LinkedIn → Email → GitHub → Resume */
+html.light .heroCta-primary {
+    background-image: none;
+    background-color: theme('colors.teal.600');
+    color: #fff;
+    border-color: theme('colors.teal.600');
+    font-weight: 600;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    box-shadow: 0 4px 14px rgba(13, 148, 136, 0.28);
+}
+html.light .heroCta-primary:hover,
+html.light .heroCta-primary:focus {
+    background-position: left center;
+    background-color: theme('colors.teal.700');
+    border-color: theme('colors.teal.700');
+    color: #fff !important;
+    box-shadow: 0 6px 18px rgba(13, 148, 136, 0.38);
+}
+
+html.light .heroCta-secondary {
+    color: theme('colors.teal.600');
+    border-color: theme('colors.teal.600');
+    font-weight: 500;
+}
+
+html.light .heroCta-quiet {
+    color: theme('colors.stone.500');
+    border-color: theme('colors.stone.300');
+}
+html.light .heroCta-quiet:hover,
+html.light .heroCta-quiet:focus {
+    background-image: none;
+    background-position: left center;
+    color: theme('colors.stone.700') !important;
+    border-color: theme('colors.stone.400');
+    background-color: theme('colors.stone.100');
+}
+
 .neon .defaultButton {
     border-color: rgba(226, 194, 59, 1);
     background-image: linear-gradient(to right, transparent 50%,  rgba(201, 46, 62, 1) 50%);
@@ -272,11 +397,42 @@ main .text-sm {
   transform: translateY(0);
 }
 
+/* Card hover/focus lift — Proven Results & Skills Matrix */
+.card-lift {
+  position: relative;
+  z-index: 1;
+  transition:
+    opacity 0.55s ease var(--enter-delay, 0ms),
+    transform 0.55s ease var(--enter-delay, 0ms),
+    box-shadow 0.3s ease,
+    z-index 0s linear 0.55s;
+}
+
+.card-lift:hover,
+.card-lift:focus,
+.card-lift:focus-visible {
+  z-index: 11;
+  transform: scale(1.2);
+  box-shadow: 0 0 12px black;
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease 200ms,
+    box-shadow 0.3s ease 200ms,
+    z-index 0s linear 200ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fade-up {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .card-lift:hover,
+  .card-lift:focus,
+  .card-lift:focus-visible {
+    transform: none;
+    transition-delay: 0ms;
   }
 }
 

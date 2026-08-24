@@ -234,7 +234,7 @@ export default function Timeline() {
 
                     {/* Thumbnails */}
                     {t.details.screenshots && t.details.screenshots.length > 0 && (
-                      <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-teal-600 dark:scrollbar-thumb-stone-600 space:scrollbar-thumb-stone-600">
+                      <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-thin scrollbar-thumb-teal-600 dark:scrollbar-thumb-stone-600 space:scrollbar-thumb-violet-400">
                         {t.details.screenshots.map((src, idx) => (
                           <img
                             key={idx}
