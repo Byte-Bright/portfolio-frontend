@@ -20,7 +20,7 @@ export default function Hero() {
         <img
           src="/assets/jcaldwell-headshot.jpg"
           alt="Justin Caldwell"
-          className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md flex-shrink-0 mt-6 ring-2 ring-stone-200 dark:ring-stone-700 space:ring-yellow-600/40"
+          className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md flex-shrink-0 mt-6 ring-2 ring-stone-200 dark:ring-stone-700 space:ring-violet-400/50"
         />
       </div>
 
