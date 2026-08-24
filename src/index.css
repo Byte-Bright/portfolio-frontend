@@ -35,6 +35,7 @@ a { @apply underline decoration-2 underline-offset-4; }
 main {
   padding-left: 16px !important;
   padding-right: 16px !important;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 640px) {
   main {
