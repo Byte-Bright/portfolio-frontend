@@ -118,7 +118,7 @@ export default function Timeline() {
                 {t.title}
               </h3>
               <span className="text-xs sm:text-sm px-2 py-1 rounded-full border shrink-0 whitespace-normal
-                group-hover:text-white group-hover:bg-teal-600 dark:group-hover:bg-lime-600 space:group-hover:bg-violet-400 space:group-hover:text-white
+                group-hover:text-white group-hover:bg-teal-600 dark:group-hover:bg-lime-600 space:group-hover:bg-violet-400 space:group-hover:text-black space:group-focus-within:bg-violet-400 space:group-focus-within:text-black
                 dark:border-stone-500 space:border-stone-500
                 neon:border-rose-200 neon:bg-transparent neon:text-white
                 neon:group-hover:bg-rose-600 neon:group-hover:text-white
