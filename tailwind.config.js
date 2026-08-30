@@ -29,6 +29,7 @@ export default {
   },
   plugins: [
     function ({ addVariant }) {
+      addVariant("light", ".light &");
       addVariant("neon", ".neon &"); 
       addVariant("tron", ".tron &");
       addVariant("space", ".space &");
