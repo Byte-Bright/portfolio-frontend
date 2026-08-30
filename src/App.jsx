@@ -64,7 +64,7 @@ export default function App() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           {/* Left: Brand */}
           <a href="#hero" className="font-bold text-lg tracking-wide hover:text-teal-600 dark:hover:text-lime-400 space:hover:text-violet-400 light:hover:text-teal-600 neon:hover:text-rose-300">
-            Design Portfolio
+            Development Portfolio
           </a>
 
           {/* Middle: Desktop Nav */}
