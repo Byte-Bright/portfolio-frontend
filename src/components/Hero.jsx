@@ -56,7 +56,7 @@ export default function Hero() {
         </a>
         <a
           className={`${btnClass} space:border-stone-700 space:text-stone-400 heroCta-quiet`}
-          href="/justin-caldwell-resume.pdf"
+          href="/assets/caldwell-justin-front-end-developer-resume.pdf"
           target="_blank"
           rel="noreferrer"
         >
