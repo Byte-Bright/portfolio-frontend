@@ -46,6 +46,7 @@ export default function Hero() {
         >
           Email me
         </a>
+        {/* GitHub CTA hidden for now
         <a
           className={btnClass}
           href="https://github.com/jstede"
@@ -54,6 +55,7 @@ export default function Hero() {
         >
           GitHub
         </a>
+        */}
         <a
           className={`${btnClass} space:border-stone-700 space:text-stone-400 heroCta-quiet`}
           href="/assets/caldwell-justin-front-end-developer-resume.pdf"
