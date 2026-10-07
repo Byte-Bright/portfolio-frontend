@@ -1,6 +1,24 @@
+import { useRef, useState } from 'react'
+
+const EMAIL = 'justinstede@yahoo.com'
+
 export default function Hero() {
+  const [copied, setCopied] = useState(false)
+  const copyTimer = useRef(null)
+
   const btnClass =
     "defaultButton no-underline rounded-lg border border-stone-400 px-4 py-2 transition-all tron:border-red-700 tron:hover:bg-red-700/50 tron:hover:text-white"
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+      setCopied(true)
+      clearTimeout(copyTimer.current)
+      copyTimer.current = setTimeout(() => setCopied(false), 2000)
+    } catch {
+      setCopied(false)
+    }
+  }
 
   return (
     <div className="space-y-6">
@@ -40,12 +58,21 @@ export default function Hero() {
         >
           LinkedIn
         </a>
-        <a
-          className={`${btnClass} space:border-violet-400 space:text-violet-400 heroCta-secondary`}
-          href={`mailto:justinstede@yahoo.com?subject=${encodeURIComponent('Portfolio inquiry — Justin Caldwell')}`}
-        >
-          Email me
-        </a>
+        <div className="relative">
+          <button
+            type="button"
+            className={`${btnClass} cursor-pointer bg-transparent space:border-violet-400 space:text-violet-400 heroCta-secondary`}
+            onClick={copyEmail}
+          >
+            Email me
+          </button>
+          <p
+            className={`absolute left-0 top-full mt-1 whitespace-nowrap text-sm text-teal-600 space:text-violet-400 transition-opacity duration-200 ${copied ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+            aria-live="polite"
+          >
+            {copied ? 'Email address copied' : ''}
+          </p>
+        </div>
         {/* GitHub CTA hidden for now
         <a
           className={btnClass}

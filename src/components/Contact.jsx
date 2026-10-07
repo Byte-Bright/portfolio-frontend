@@ -1,4 +1,22 @@
+import { useRef, useState } from 'react'
+
+const EMAIL = 'justinstede@yahoo.com'
+
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+  const copyTimer = useRef(null)
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+      setCopied(true)
+      clearTimeout(copyTimer.current)
+      copyTimer.current = setTimeout(() => setCopied(false), 2000)
+    } catch {
+      setCopied(false)
+    }
+  }
+
   return (
     <section id="contact" className="py-12">
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -7,12 +25,21 @@ export default function Contact() {
           Have a project in mind or want to connect? I’d love to hear from you.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="mailto:justinstede@yahoo.com?subject=Portfolio Inquiry"
-            className="px-5 py-2 rounded-lg focus:outline-none border border-stone-500 hover:bg-teal-600 hover:border-teal-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 space:hover:bg-violet-400/10 space:hover:border-violet-400 space:hover:text-violet-400 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
-          >
-            Email Me
-          </a>
+          <div className="relative">
+            <button
+              type="button"
+              onClick={copyEmail}
+              className="px-5 py-2 rounded-lg cursor-pointer bg-transparent focus:outline-none border border-stone-500 hover:bg-teal-600 hover:border-teal-600 hover:text-white neon:border-yellow-400 neon:bg-yellow-400 neon:hover:bg-rose-600 neon:hover:border-rose-700 dark:hover:bg-lime-600/50 space:hover:bg-violet-400/10 space:hover:border-violet-400 space:hover:text-violet-400 tron:hover:bg-red-700/50 tron:hover:border-red-800 transition-colors duration-400"
+            >
+              Email Me
+            </button>
+            <p
+              className={`absolute left-1/2 top-full mt-1 -translate-x-1/2 whitespace-nowrap text-sm text-teal-600 space:text-violet-400 transition-opacity duration-200 ${copied ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+              aria-live="polite"
+            >
+              {copied ? 'Email address copied' : ''}
+            </p>
+          </div>
           <a
             href="https://www.linkedin.com/in/justinstede"
             target="_blank"
