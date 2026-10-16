@@ -453,15 +453,6 @@ html.light .heroCta-quiet:focus {
   --aurora-blue: 76, 29, 149;   /* violet-900 */
 }
 
-.space .aurora-wrap {
-  background-image: url("/assets/nebula-drk.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-
 /* Big soft blobs with blend for glow */
 .aurora-blob {
   position: absolute;
